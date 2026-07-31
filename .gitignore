@@ -1,0 +1,34 @@
+# Flutter
+.dart_tool/
+.packages
+.pub/
+build/
+
+android/.gradle/
+android/local.properties
+
+ios/Pods/
+ios/.symlinks/
+
+*.iml
+*.log
+*.tmp
+*.lock
+
+coverage/
+
+# VSCode
+.vscode/
+
+# Android Studio
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Keystore
+android/key.properties
+android/app/release.keystore
