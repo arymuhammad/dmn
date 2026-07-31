@@ -1,0 +1,33 @@
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+build/
+
+# Android
+android/.gradle/
+android/local.properties
+android/key.properties
+android/release.keystore
+
+# iOS
+ios/Pods/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Build output
+*.apk
+*.aab
+
+# Video lokal
+assets/videos/
+
+# Generated
+coverage/
