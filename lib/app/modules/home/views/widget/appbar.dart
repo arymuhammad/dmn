@@ -1,3 +1,4 @@
+import 'package:dmn_play/app/data/helpers/app_icon.dart';
 import 'package:flutter/material.dart';
 
 class HomeAppBar extends StatelessWidget {
@@ -10,16 +11,7 @@ class HomeAppBar extends StatelessWidget {
       child: Row(
         children: [
           // const Icon(Icons.play_circle_fill, color: Colors.red, size: 28),
-          Container(
-            height: 35,
-            width: 35,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/icon/icon.png'),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
+          AppIcon(height: 35, width: 35),
           const SizedBox(width: 8),
 
           const Text(

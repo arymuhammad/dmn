@@ -66,7 +66,7 @@ class EpisodePlayerController extends GetxController {
 
               const SizedBox(height: 16),
 
-              const TabBar(
+               TabBar(
                 //  dividerColor: Colors.transparent,
                 indicatorSize: TabBarIndicatorSize.label,
                 labelColor: Colors.white,
@@ -74,8 +74,8 @@ class EpisodePlayerController extends GetxController {
                 labelPadding: EdgeInsets.only(right: 50),
                 indicatorColor: AppColors.contentColorYellow,
                 tabs: [
-                  Tab(text: 'Sinopsis'),
-                  Tab(text: 'Episodes'),
+                  Tab(text: 'sinopsis'.tr),
+                  Tab(text: 'episodes'.tr),
                   Tab(text: ''),
                 ],
               ),
@@ -87,7 +87,7 @@ class EpisodePlayerController extends GetxController {
                     SingleChildScrollView(
                       padding: const EdgeInsets.all(16),
                       child: Text(
-                        'Sinopsis',
+                        'sinopsis__2'.tr,
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 15,

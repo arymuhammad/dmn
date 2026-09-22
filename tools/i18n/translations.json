@@ -1,0 +1,3374 @@
+{
+  "en_US": {
+    "a56145270ce6b3bebd1dd012b73948677dd618d496488bc608a3cb43ce3547dd": {
+      "source": "id",
+      "translated": "id"
+    },
+    "dbd3a49d0d906b4ed9216b73330d2fb080ef2f758c12f3885068222e5e17151c": {
+      "source": "en",
+      "translated": "en"
+    },
+    "d8056ded45ebed137c65f9cd486673d27faebe7eac49460cabeea19e62d2525b": {
+      "source": "#979B999",
+      "translated": "#979B999"
+    },
+    "f179a509d32bd92c923f236324daef85551c03a761bf0188be286a585281b4ac": {
+      "source": "center",
+      "translated": "center"
+    },
+    "cf38d95c9c6b1d9d5125c04d41a54df57727ef4cfb3f5116a602fe2b25115c13": {
+      "source": "amount",
+      "translated": "amount"
+    },
+    "073c1634c496cdb649d1afe0a312bbb4b7e1741b271542e4a436c3b8824b1761": {
+      "source": "status",
+      "translated": "status"
+    },
+    "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89": {
+      "source": "name",
+      "translated": "name"
+    },
+    "c9046f7a37ad0ea7cee73355984fa5428982f8b37c8f7bcec91f7ac71a7cd104": {
+      "source": "description",
+      "translated": "description"
+    },
+    "683b531f41ec88a2f345b727afe59757b73162a340a65c86bba62866f8fe556c": {
+      "source": "price",
+      "translated": "price"
+    },
+    "caa79af4db67695cce51988cda2f98423bb7420fbaee8968cd4aca151f55d3a2": {
+      "source": "duration",
+      "translated": "duration"
+    },
+    "944c27e5b97ab7793e4b6e9ff29384890ece0c7c04d2e2bf81c5f763469cc66b": {
+      "source": "day",
+      "translated": "day"
+    },
+    "a5c7d1719e284f2c9485405d44f62d152cde9e6ede83e1a79a2442b65f6a8735": {
+      "source": "month",
+      "translated": "month"
+    },
+    "4cb4ea25583c25647247ae96fc90225d99ad7a6fabc3e2c2fd13c502e323cd9e": {
+      "source": "year",
+      "translated": "year"
+    },
+    "a6216ea03e578f212dd604ec5d675c5274a86891bac4e87f80bea10ef511f533": {
+      "source": "categories",
+      "translated": "categories"
+    },
+    "aaf2320646108059a87ab5017a86aee454f5378ed95003dbb2e12f4ca5266e0e": {
+      "source": "title",
+      "translated": "title"
+    },
+    "293b9207228b7854bc3ccb2959ebea1583e066d41983124a5b381d6fdf6575f8": {
+      "source": "poster",
+      "translated": "poster"
+    },
+    "8d9f80b4fe92a9bee5010901ed802de759062f64b022552f3e7298107a0a8d36": {
+      "source": "synopsis",
+      "translated": "synopsis"
+    },
+    "cd03861f0ff8922a279f1eab771f91f6336df9e7dd9412355ec6a1a79c244a5e": {
+      "source": "slug",
+      "translated": "slug"
+    },
+    "a941e049e9b1a5f8f3e2c1d39ee03082c184e89224e519c0bef6d8694743159a": {
+      "source": "movies",
+      "translated": "movies"
+    },
+    "74883614c4c79e12bebc45efa35a381bf131416e74f2500c72450a92d39f429c": {
+      "source": "views",
+      "translated": "views"
+    },
+    "b04e5ea201bb040cae53f693f6a38a3e00b62da6039ca248fecd59b7fc842894": {
+      "source": "published",
+      "translated": "published"
+    },
+    "b5f90a96e680140d51e2ba945461716e44cc385940aee21f66020e66193647b7": {
+      "source": "progress",
+      "translated": "progress"
+    },
+    "80adc17f4177175afa07b61686a3362867ba3bdea792c2dc7cd840615787de95": {
+      "source": "watched",
+      "translated": "watched"
+    },
+    "0e4a8753470e0c08a28b3ee4d48d7866930da01b7c3dc9fda9ad7dd2adbc7813": {
+      "source": "qualities",
+      "translated": "qualities"
+    },
+    "74fc0bb544bf4f6dcedbe0c7de813c5419da6e884e2af83331befc1d2537a909": {
+      "source": "subtitles",
+      "translated": "subtitles"
+    },
+    "8c7ed2d9be59e21cf7cfc7da75c6c0cb7dd751f4a870f0f9236f0f35cbaf584e": {
+      "source": "banner",
+      "translated": "banner"
+    },
+    "5e1e2bcac305958b27077ca136f35f0abae7cf38c9af678f7d220ed0cb51d4f8": {
+      "source": "latest",
+      "translated": "latest"
+    },
+    "e5b00078095d49863c6f1634a35d39e772cb8ea760e1d3af8271d4c811a2f8f7": {
+      "source": "trending",
+      "translated": "trending"
+    },
+    "dd6d876548037ec722252b45795206575e7040eba1ca076cf1732a4a903cadba": {
+      "source": "recommended",
+      "translated": "recommended"
+    },
+    "d73fcf1a50a2172430a81da0c4a130cd25267dd0d503c03a41d373578df00a4a": {
+      "source": "genres",
+      "translated": "genres"
+    },
+    "9cac91c1f544236a75db4457d3f608dc9c4c6d02b7df74a1b7eed08ccc24437c": {
+      "source": "subscriptions",
+      "translated": "subscriptions"
+    },
+    "a8ace1a76c218f36a59a58224a92cf9557122411652d96633dc1cbf8c26e65b1": {
+      "source": "episodes",
+      "translated": "episodes"
+    },
+    "1303c06b0b014d0ce7b988ab173a13f31227d417058ff4bbe6f8c222b4ad913c": {
+      "source": "type",
+      "translated": "type"
+    },
+    "603705cc260e946d130a1ceb6b6d9bfcd20312da055292ae3c16c7a3d693b410": {
+      "source": "cast",
+      "translated": "cast"
+    },
+    "acef2c15bcd349db900dffece73e1256e881c4416fc1f2d3a494640183490d9a": {
+      "source": "quality",
+      "translated": "quality"
+    },
+    "76cd21db00b2a3eee39dff599ad245a3c5088395388942fde3d2363da968bc1a": {
+      "source": "playlist",
+      "translated": "playlist"
+    },
+    "2c7210c5b950d31204e6a8e9383ea5b5fc5372b8bf827a647a9d05aa005bc3d7": {
+      "source": "bandwidth",
+      "translated": "bandwidth"
+    },
+    "dec0f004eaa07c2a283ea326df8f00c2c3c60b002c9bb8d452b1dcff5ba795cb": {
+      "source": "width",
+      "translated": "width"
+    },
+    "39e0f5efdc39ec10992833ad019f0ddf2b42b49b098313df991b8229a37aed21": {
+      "source": "height",
+      "translated": "height"
+    },
+    "f7b3781c5eafc2779a96bae2e4875a83ecce46f198e9f81916521d9d218c7da7": {
+      "source": "hari",
+      "translated": "hari"
+    },
+    "a735806c0ca2d06d994830f37402c52cfbee63012298668439cfb8bd7e8a8597": {
+      "source": "bulan",
+      "translated": "bulan"
+    },
+    "5ff9aa4ca343f62b132e136628f2ba7f0407384c6bad59123f5d063ff86a1c3c": {
+      "source": "tahun",
+      "translated": "tahun"
+    },
+    "7244b466327ec6f5f8be71a92f31dbddd8ce41f344ce3b1754fa10cbc326f218": {
+      "source": "fullname",
+      "translated": "fullname"
+    },
+    "82244417f956ac7c599f191593f7e441a4fafa20a4158fd52e154f1dc4c8ed92": {
+      "source": "email",
+      "translated": "email"
+    },
+    "87bbe879c7a5f5784a70384bb49fa9513a6a3fbe4c2d388635e3c87611c03fae": {
+      "source": "avatar",
+      "translated": "avatar"
+    },
+    "80f61f96184524ba54db767ed49487392430ad26bf5cf2ef689905f3400325d7": {
+      "source": "thumbnail",
+      "translated": "thumbnail"
+    },
+    "b0aa8a6c35b4deec55bc1f31b9be4c50a4426ada09b58c4e1dcaf9a81f913903": {
+      "source": "likes",
+      "translated": "likes"
+    },
+    "5a452459503be70d2ed2fca46dd91e05e820a957f175686a77d03fff80f664fe": {
+      "source": "position",
+      "translated": "position"
+    },
+    "4ddb3e96801a1ee2b77dc5247c0db478d5f97a93b90e7cdb09f5f51d43764b08": {
+      "source": "completed",
+      "translated": "completed"
+    },
+    "cbe729b22ca6d1dba8a9689739ac89c02cda72dcfea48df322b2f2b45981ac4c": {
+      "source": "auth/google",
+      "translated": "auth/google"
+    },
+    "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27": {
+      "source": "success",
+      "translated": "success"
+    },
+    "ab530a13e45914982b79f9b7e3fba994cfd1f3fb22f71cea1afbf02b460c6d1d": {
+      "source": "message",
+      "translated": "message"
+    },
+    "3a6eb0790f39ac87c94f3856b2dd2c5d110e6811602261a9a923d3bb23adc8b7": {
+      "source": "data",
+      "translated": "data"
+    },
+    "3c469e9d6c5875d37a43f353d4f88e61fcf812c66eee3457465a40b0da4153e0": {
+      "source": "token",
+      "translated": "token"
+    },
+    "04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb": {
+      "source": "user",
+      "translated": "user"
+    },
+    "4ec9531752967ed3e4d17b00d4f20446d8cdb1ac1ea5cc21181d16de3667c8d8": {
+      "source": "auth/me",
+      "translated": "auth/me"
+    },
+    "59f006d63bd009b7f1f1d7bd7e29e1f3b9db6505ce784ca3216ea90c6d6dcb11": {
+      "source": "seconds",
+      "translated": "seconds"
+    },
+    "4ea140588150773ce3aace786aeef7f4049ce100fa649c94fbbddb960f1da942": {
+      "source": "home",
+      "translated": "home"
+    },
+    "917f1a3e38ebb8c761fe4b2fe70d85bb6c05231fea6b173989c05383601c518e": {
+      "source": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com",
+      "translated": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com"
+    },
+    "bacb769b46f6d169fb227ea026550f411d46cbe66a9c2a6ba36449c8cf8e4dea": {
+      "source": "application/json",
+      "translated": "application/json"
+    },
+    "d0f9bc7a3b0119a356b27ea861c367722bbbe5ac27f544cbb9035926bb8fcc19": {
+      "source": "Account Settings",
+      "translated": "Account Settings"
+    },
+    "21ecba52f7c36529eaeba29b11c061ccf1e1dc48c554540d7a8781a0ba7c13c4": {
+      "source": "Manage Device",
+      "translated": "Manage Device"
+    },
+    "ca91f790667a1ea41eaebff23ddc7d4904290dc3f0ff791a2ebbdbbf69b62e01": {
+      "source": "Payment & Transaction",
+      "translated": "Payment & Transaction"
+    },
+    "1c8b07d56c07434b317a92ab2c88d40684d165a3d5a2be2757ff3289a6ad32fc": {
+      "source": "Subscription Plan",
+      "translated": "Subscription Plan"
+    },
+    "f5f3290484410904e90e6334a452d7c0ccac80b038fb97c6a1ab737d523f9588": {
+      "source": "subscription data is still loading",
+      "translated": "subscription data is still loading"
+    },
+    "669cd31f76367c2de677001106b458f40cbb1dd8952d115a222edf3e497a8e64": {
+      "source": "Transaction History",
+      "translated": "Transaction History"
+    },
+    "a78cebc44214256ba361dcee3f1cc1408e55ea6940c65067615abd4fdcc2d788": {
+      "source": "Help Center",
+      "translated": "Help Center"
+    },
+    "506ff394621596dd88138642eddfc1e41833b3ae92d95e5c77c94327098abd9a": {
+      "source": "Privacy Policy",
+      "translated": "Privacy Policy"
+    },
+    "12a0015fa32217778863154566bce500732726db6ea596518712c12955d9a225": {
+      "source": "Terms of Use",
+      "translated": "Terms of Use"
+    },
+    "108ac1ea94920737dfe95398871cec04a1a019bb929edc254ab3ffd53b7d144b": {
+      "source": "Version 1.0.0",
+      "translated": "Version 1.0.0"
+    },
+    "34687b57738ab35e80fdb5dfa1c256dbc66f5b5952ad2a5473caf330e17e9b66": {
+      "source": "Belum Login",
+      "translated": "Belum Login"
+    },
+    "3b7564525cce872216cd28776d1e94d23048eeedf4c7340c665b1854a7e53e30": {
+      "source": "Login >",
+      "translated": "Login >"
+    },
+    "5fd6ad84c80e016fbdfa2927d0cf4e3061d6673d37062c41abe7257cc50dafda": {
+      "source": "\\B(?=(\\d{3})+(?!\\d))",
+      "translated": "\\B(?=(\\d{3})+(?!\\d))"
+    },
+    "826086bf58f0134f0e3675be4dfab26f667d2cd7e3d529056bc4c511e0caea44": {
+      "source": "Tidak ada paket tersedia",
+      "translated": "Tidak ada paket tersedia"
+    },
+    "2335642d95717cc45071c76406086ca81bc66b97809178eb7d259a34b9f2581b": {
+      "source": "Pilih Paket VIP",
+      "translated": "Pilih Paket VIP"
+    },
+    "0274498181bac49a152ac1f3ebfaf4832d0511e65563c702136b38feee11fbbb": {
+      "source": "Nikmati semua konten premium dan akses tanpa batas.",
+      "translated": "Nikmati semua konten premium dan akses tanpa batas."
+    },
+    "9ce0bef781caae1bae58816888a54def04118d0b7a9b0d6f6740cf9307b3206c": {
+      "source": "Akses semua konten VIP",
+      "translated": "Akses semua konten VIP"
+    },
+    "8a84a61c846fcf582b47967d471048ed6d6a7a50ac01fadc16e4c5ef655cd620": {
+      "source": "Kualitas video premium",
+      "translated": "Kualitas video premium"
+    },
+    "3de389b982fb9912fb01c2e12c450e7046da2c698975a4d45037751edfc2f20d": {
+      "source": "Tanpa batas menonton",
+      "translated": "Tanpa batas menonton"
+    },
+    "594e8ba5b894d96805621daab564d0de4a0d1b2f81daf9f58c8f24122846d227": {
+      "source": "Paket Saat Ini",
+      "translated": "Paket Saat Ini"
+    },
+    "688e03801386103240d1be1bed0fbff74b5cab6c816cda96f8b24eaae35ae443": {
+      "source": "Free Member",
+      "translated": "Free Member"
+    },
+    "4d15dabc4fd63a376d67cde46955a40ccd10fe3c0435c4f3e2895b431d53cb1c": {
+      "source": "Upgrade untuk menikmati konten VIP",
+      "translated": "Upgrade untuk menikmati konten VIP"
+    },
+    "29db58dcc31cbce91c3acb87be3d81c0f6186cc43d42fee5c3cd0bda6c547e9e": {
+      "source": "dibayar",
+      "translated": "dibayar"
+    },
+    "1182ca0e4249bc85ef7b5e63d96da4972828d1a86efb0e0e86f2a60f0090efcf": {
+      "source": "Berlaku sampai",
+      "translated": "Berlaku sampai"
+    },
+    "d388942ba926ada027a9cc7100f95d2f4265026dcebe94adbd1d9180a2495e8d": {
+      "source": "dd MMM yyyy",
+      "translated": "dd MMM yyyy"
+    },
+    "109928873dc38ec8b6e6281c6d9f1c300ff2866a7a706632246b25ee14780bb2": {
+      "source": "Harga promo terbatas",
+      "translated": "Harga promo terbatas"
+    },
+    "afca35780a80004ffa239801b17d853cc369cc85ba58cc8b9dc0a3609ee7ca13": {
+      "source": "VIP ACCOUNT",
+      "translated": "VIP ACCOUNT"
+    },
+    "d5d5e5fa6c7d8ad96f2da0f9371342379491c03dcfd0912beda1a9ccfaa5fdbd": {
+      "source": "Become a VIP Member",
+      "translated": "Become a VIP Member"
+    },
+    "5681aa51ee48832a1fbb367e73982b38e86ebafb560ef6934cc13aa0db8b807a": {
+      "source": "Ads Free",
+      "translated": "Ads Free"
+    },
+    "e1b65987a5a1ca15838225c12ef9b84ae95f6c59974052b22720dc9af3f62c79": {
+      "source": "Exclusive Drama",
+      "translated": "Exclusive Drama"
+    },
+    "168bbbb72663565b4eb0306bd383a927041adb963e786b164556f6a6e59670de": {
+      "source": "Anything Streaming",
+      "translated": "Anything Streaming"
+    },
+    "2a39bbaf6ca2efddcd559607a1eae1dcec317b0a9070298baf3effbfb3d11c12": {
+      "source": "Unlimited Viewing",
+      "translated": "Unlimited Viewing"
+    },
+    "8182ef9296aaf9454295bc0052192df3ff5a4d5b2fa9ace189be836162b05b7c": {
+      "source": "Personal Content",
+      "translated": "Personal Content"
+    },
+    "66a1419ec8d30b70b11c06a3a1b5c2f48f0de0a2637c6d76bfe0135315fe29c9": {
+      "source": "Upgrade Now",
+      "translated": "Upgrade Now"
+    },
+    "a79273a892acf3f845fdf1a49e80d6a2c744db275f279b9e712526e658889fba": {
+      "source": "VIP Episode",
+      "translated": "VIP Episode"
+    },
+    "b6eb8fe19a3dfa516d472198a3d9e4cc9c447b4a3194d892d6efcb72fc0bcc2e": {
+      "source": "Become a VIP member to unlock all exclusive episodes without limits",
+      "translated": "Become a VIP member to unlock all exclusive episodes without limits"
+    },
+    "a46e7b9e85c03fcce5896c7dd4cd360183311974becdbb0f8154c7fe5712d8b7": {
+      "source": "Unlock / Upgrade to VIP",
+      "translated": "Unlock / Upgrade to VIP"
+    },
+    "9c595c02fe734511c4cc475493eb0416767dbea344fd9348ba17d9704640a4b1": {
+      "source": "VIP Mingguan",
+      "translated": "VIP Mingguan"
+    },
+    "030f15fb4a494b809a08f8686781798e49012f905775e1f9d59fe4d3c3936999": {
+      "source": "Rp 15.000",
+      "translated": "Rp 15.000"
+    },
+    "86eef4d93ed6b19087fb3189083fc6d020776f54f6ebc1f7237f15b6c2578f8f": {
+      "source": "Akses penuh selama 7 hari",
+      "translated": "Akses penuh selama 7 hari"
+    },
+    "424c3b6d3dc9297e6082bf561ff2f95a3c8d4a04c32efbc26f76d84e47219dba": {
+      "source": "VIP Bulanan",
+      "translated": "VIP Bulanan"
+    },
+    "8700e1380cbf2a26cf726be08e00cd17d2e1a403231e87304ab71ba7bee460cb": {
+      "source": "Rp 39.000",
+      "translated": "Rp 39.000"
+    },
+    "1caabd882b01b5715301667d091acf2c532bc0a27c0d79a412e91a0c34d2b67c": {
+      "source": "Paling populer",
+      "translated": "Paling populer"
+    },
+    "ad3eca61c1d1da46d08b10d1c69645475895f0bcd64384475b6deec0a5ee8754": {
+      "source": "VIP Tahunan paling populer",
+      "translated": "VIP Tahunan paling populer"
+    },
+    "3dcef4e2b03004b5233331099a35f61595874e4288705dfb9093f2592a4655d3": {
+      "source": "Rp 299.000",
+      "translated": "Rp 299.000"
+    },
+    "70b5190f8672bb815816173ca3d4dca7a7b4aa3a4b353da23e0ec3ec2b5ec567": {
+      "source": "Hemat hingga 35%",
+      "translated": "Hemat hingga 35%"
+    },
+    "e57fd6b3bb98d9631453e1d44e9fa6b8d2e68daf8dcd0aac3114961b835b9660": {
+      "source": "BEST VALUE",
+      "translated": "BEST VALUE"
+    },
+    "220a072bf6f1a9f8e7b95d7b793ef87cbf75f5b45442576ce2681125f5cf8b1c": {
+      "source": "bookmarkview",
+      "translated": "bookmarkview"
+    },
+    "30177d27a64a8107865e0ae10a54407794bda1326caee388fdb101edc43008fb": {
+      "source": "BookmarkView is working",
+      "translated": "BookmarkView is working"
+    },
+    "acd27229f790a067317d3e89a0315440e4cee05dd5ae67c6d8ed898475acafa6": {
+      "source": "episodeview",
+      "translated": "episodeview"
+    },
+    "92d4464e25db1f83d33e124661368da10f42b34258908e8e972a590923a68f4f": {
+      "source": "EpisodeView is working",
+      "translated": "EpisodeView is working"
+    },
+    "15902f81dcfa9cf8d35146f6b1554ea4c140524c18e3f44eb1598e1c13957f63": {
+      "source": "sinopsis",
+      "translated": "sinopsis"
+    },
+    "7e414e6ac41ac7a0658ce2807548af8fb48b145f9b74aa77c9b526c569804bbc": {
+      "source": "episode",
+      "translated": "episode"
+    },
+    "fe01db15cb5d31216cf91fd9f02f5ced2b155dced67c31b78bbabf48665e1f73": {
+      "source": "historyview",
+      "translated": "historyview"
+    },
+    "edb23882f4c65072f24b4ed41726142ce9d87509eb6e1d6bf8e410f6b75308df": {
+      "source": "HistoryView is working",
+      "translated": "HistoryView is working"
+    },
+    "34d8eb01e1bffebf9479381ec4f5393d816d70e34e08b909979855632b338eaa": {
+      "source": "Continue Watching",
+      "translated": "Continue Watching"
+    },
+    "44c9d36485b791c3bb9243af06a1b34c1b0f662594d698da5db17368a91a225f": {
+      "source": "See All",
+      "translated": "See All"
+    },
+    "671a97c1d922d7eb5ce517e73d24c43237a21770c45e019d4d64298d263c9d65": {
+      "source": "Home Refreshed",
+      "translated": "Home Refreshed"
+    },
+    "8a7d8cb4e86e45c24506911b60ea353b25036d4b473e239777b093a6e03ec01c": {
+      "source": "Failed to refresh",
+      "translated": "Failed to refresh"
+    },
+    "b3d12dcd12598450369f1e1de686b5612846b5d334446180613e08cd58f52354": {
+      "source": "DMN Play",
+      "translated": "DMN Play"
+    },
+    "428821350e9691491f616b754cd8315fb86d797ab35d843479e732ef90665324": {
+      "source": "login",
+      "translated": "login"
+    },
+    "be10b2f905f868ed50d992d183bec4314b7bddc5dad30b8985c5333b42db5c24": {
+      "source": "Coming Soon",
+      "translated": "Coming Soon"
+    },
+    "8378c006e5505ccf0b25b5f2d40ce7d3bf1a7194d3d6b2feb103917b6a112a31": {
+      "source": "Are you sure you want to log out?",
+      "translated": "Are you sure you want to log out?"
+    },
+    "280d44ab1e9f79b5cce2dd4f58f5fe91f0fbacdac9f7447dffc318ceb79f2d02": {
+      "source": "welcome",
+      "translated": "welcome"
+    },
+    "bb033b5377edb722c9d6fe5f6303ecfb4a28b3b096127fc02db35d065a4706dc": {
+      "source": "Login to enjoy all DMN Play features",
+      "translated": "Login to enjoy all DMN Play features"
+    },
+    "1f96f5d016bd94a83f38c77e810b0754e3ca60ebf8470e7ebaaf8b5b8d0946d7": {
+      "source": "Signing in...",
+      "translated": "Signing in..."
+    },
+    "cce937e891444a7417c696cdd80c0eed11deb383f3c42bdb8b591d5dfcaa398e": {
+      "source": "Continue with Google",
+      "translated": "Continue with Google"
+    },
+    "f154b630d75d2f28837a6da7a1d7a61705198cd01a5907b02278ed9842a1d5fa": {
+      "source": "Continue with Facebook",
+      "translated": "Continue with Facebook"
+    },
+    "340ac4c3fd1f01233e46a45276a529a4fa607074b0efe745ffc11f9cf152d27c": {
+      "source": "Continue with Apple",
+      "translated": "Continue with Apple"
+    },
+    "ce0e8e74c551dcbe127effff35dcbeacc2b4728168bd9ba89a1f896efa041302": {
+      "source": "Continue with Email",
+      "translated": "Continue with Email"
+    },
+    "2bcc2316d5a32baef258c5c2204c427e3ed153acf74b94eb3f09bee8837e9cbc": {
+      "source": "By continuing, you agree to the\\nTerms & Conditions and Privacy Policy",
+      "translated": "By continuing, you agree to the\\nTerms & Conditions and Privacy Policy"
+    },
+    "a786e238ede4a3e4cd62d767098977e13e2eacff9cbb7743f5e4927099819de6": {
+      "source": "Movie tidak ditemukan",
+      "translated": "Movie tidak ditemukan"
+    },
+    "def4205254cadd3bd57a9a7561cbdb596cd16b33feb2c8c2f82645c5dfcb500d": {
+      "source": "Page Refreshed",
+      "translated": "Page Refreshed"
+    },
+    "8a6ba32c9bed6ce703f999f9af6ec23686d44e144e4da572d94c8daca4a9cbab": {
+      "source": "movie",
+      "translated": "movie"
+    },
+    "03aa472bcfd8e09831f51505a2aa332ca9340d446d933f6ca4e44aeab8467146": {
+      "source": "You May Also Like",
+      "translated": "You May Also Like"
+    },
+    "a268145ba26f17348fc2f077890ea4a012a4588644050cda5e05e70427cb46a5": {
+      "source": "OPEN DONE",
+      "translated": "OPEN DONE"
+    },
+    "2e01a0a7955a95ab2b168e24fcd787353879e8ba3edff8c47b188f7edd2bdb75": {
+      "source": "navbar",
+      "translated": "navbar"
+    },
+    "230d8358dc8e8890b4c58deeb62912ee2f20357ae92a5cc861b98e68fe31acb5": {
+      "source": "body",
+      "translated": "body"
+    },
+    "d43a4070f872dbf440225eb96e1f95f3c008cf4eadec79a722717717982fb227": {
+      "source": "profileview",
+      "translated": "profileview"
+    },
+    "56df8f85a553155de41316c6f2cfb8c4381d908eef9d1a48ab88e974544125e7": {
+      "source": "ProfileView is working",
+      "translated": "ProfileView is working"
+    }
+  },
+  "id_ID": {
+    "a56145270ce6b3bebd1dd012b73948677dd618d496488bc608a3cb43ce3547dd": {
+      "source": "id",
+      "translated": "id"
+    },
+    "dbd3a49d0d906b4ed9216b73330d2fb080ef2f758c12f3885068222e5e17151c": {
+      "source": "en",
+      "translated": "en"
+    },
+    "d8056ded45ebed137c65f9cd486673d27faebe7eac49460cabeea19e62d2525b": {
+      "source": "#979B999",
+      "translated": "# 979B999"
+    },
+    "f179a509d32bd92c923f236324daef85551c03a761bf0188be286a585281b4ac": {
+      "source": "center",
+      "translated": "tengah"
+    },
+    "cf38d95c9c6b1d9d5125c04d41a54df57727ef4cfb3f5116a602fe2b25115c13": {
+      "source": "amount",
+      "translated": "jumlah"
+    },
+    "073c1634c496cdb649d1afe0a312bbb4b7e1741b271542e4a436c3b8824b1761": {
+      "source": "status",
+      "translated": "status"
+    },
+    "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89": {
+      "source": "name",
+      "translated": "nama"
+    },
+    "c9046f7a37ad0ea7cee73355984fa5428982f8b37c8f7bcec91f7ac71a7cd104": {
+      "source": "description",
+      "translated": "deskripsi"
+    },
+    "683b531f41ec88a2f345b727afe59757b73162a340a65c86bba62866f8fe556c": {
+      "source": "price",
+      "translated": "Harga"
+    },
+    "caa79af4db67695cce51988cda2f98423bb7420fbaee8968cd4aca151f55d3a2": {
+      "source": "duration",
+      "translated": "durasi"
+    },
+    "944c27e5b97ab7793e4b6e9ff29384890ece0c7c04d2e2bf81c5f763469cc66b": {
+      "source": "day",
+      "translated": "hari"
+    },
+    "a5c7d1719e284f2c9485405d44f62d152cde9e6ede83e1a79a2442b65f6a8735": {
+      "source": "month",
+      "translated": "bulan"
+    },
+    "4cb4ea25583c25647247ae96fc90225d99ad7a6fabc3e2c2fd13c502e323cd9e": {
+      "source": "year",
+      "translated": "tahun"
+    },
+    "a6216ea03e578f212dd604ec5d675c5274a86891bac4e87f80bea10ef511f533": {
+      "source": "categories",
+      "translated": "kategori"
+    },
+    "aaf2320646108059a87ab5017a86aee454f5378ed95003dbb2e12f4ca5266e0e": {
+      "source": "title",
+      "translated": "judul"
+    },
+    "293b9207228b7854bc3ccb2959ebea1583e066d41983124a5b381d6fdf6575f8": {
+      "source": "poster",
+      "translated": "poster"
+    },
+    "8d9f80b4fe92a9bee5010901ed802de759062f64b022552f3e7298107a0a8d36": {
+      "source": "synopsis",
+      "translated": "sinopsis"
+    },
+    "cd03861f0ff8922a279f1eab771f91f6336df9e7dd9412355ec6a1a79c244a5e": {
+      "source": "slug",
+      "translated": "siput"
+    },
+    "a941e049e9b1a5f8f3e2c1d39ee03082c184e89224e519c0bef6d8694743159a": {
+      "source": "movies",
+      "translated": "film"
+    },
+    "74883614c4c79e12bebc45efa35a381bf131416e74f2500c72450a92d39f429c": {
+      "source": "views",
+      "translated": "tampilan"
+    },
+    "b04e5ea201bb040cae53f693f6a38a3e00b62da6039ca248fecd59b7fc842894": {
+      "source": "published",
+      "translated": "diterbitkan"
+    },
+    "b5f90a96e680140d51e2ba945461716e44cc385940aee21f66020e66193647b7": {
+      "source": "progress",
+      "translated": "kemajuan"
+    },
+    "80adc17f4177175afa07b61686a3362867ba3bdea792c2dc7cd840615787de95": {
+      "source": "watched",
+      "translated": "menyaksikan"
+    },
+    "0e4a8753470e0c08a28b3ee4d48d7866930da01b7c3dc9fda9ad7dd2adbc7813": {
+      "source": "qualities",
+      "translated": "Kualitas"
+    },
+    "74fc0bb544bf4f6dcedbe0c7de813c5419da6e884e2af83331befc1d2537a909": {
+      "source": "subtitles",
+      "translated": "Subjudul"
+    },
+    "8c7ed2d9be59e21cf7cfc7da75c6c0cb7dd751f4a870f0f9236f0f35cbaf584e": {
+      "source": "banner",
+      "translated": "banner"
+    },
+    "5e1e2bcac305958b27077ca136f35f0abae7cf38c9af678f7d220ed0cb51d4f8": {
+      "source": "latest",
+      "translated": "terakhir"
+    },
+    "e5b00078095d49863c6f1634a35d39e772cb8ea760e1d3af8271d4c811a2f8f7": {
+      "source": "trending",
+      "translated": "trending"
+    },
+    "dd6d876548037ec722252b45795206575e7040eba1ca076cf1732a4a903cadba": {
+      "source": "recommended",
+      "translated": "disarankan"
+    },
+    "d73fcf1a50a2172430a81da0c4a130cd25267dd0d503c03a41d373578df00a4a": {
+      "source": "genres",
+      "translated": "genres"
+    },
+    "9cac91c1f544236a75db4457d3f608dc9c4c6d02b7df74a1b7eed08ccc24437c": {
+      "source": "subscriptions",
+      "translated": "berlangganan"
+    },
+    "a8ace1a76c218f36a59a58224a92cf9557122411652d96633dc1cbf8c26e65b1": {
+      "source": "episodes",
+      "translated": "episoda"
+    },
+    "1303c06b0b014d0ce7b988ab173a13f31227d417058ff4bbe6f8c222b4ad913c": {
+      "source": "type",
+      "translated": "jenis"
+    },
+    "603705cc260e946d130a1ceb6b6d9bfcd20312da055292ae3c16c7a3d693b410": {
+      "source": "cast",
+      "translated": "cast"
+    },
+    "acef2c15bcd349db900dffece73e1256e881c4416fc1f2d3a494640183490d9a": {
+      "source": "quality",
+      "translated": "kualitas"
+    },
+    "76cd21db00b2a3eee39dff599ad245a3c5088395388942fde3d2363da968bc1a": {
+      "source": "playlist",
+      "translated": "daftar putar"
+    },
+    "2c7210c5b950d31204e6a8e9383ea5b5fc5372b8bf827a647a9d05aa005bc3d7": {
+      "source": "bandwidth",
+      "translated": "lebar bandwidth"
+    },
+    "dec0f004eaa07c2a283ea326df8f00c2c3c60b002c9bb8d452b1dcff5ba795cb": {
+      "source": "width",
+      "translated": "lebar"
+    },
+    "39e0f5efdc39ec10992833ad019f0ddf2b42b49b098313df991b8229a37aed21": {
+      "source": "height",
+      "translated": "tinggi"
+    },
+    "f7b3781c5eafc2779a96bae2e4875a83ecce46f198e9f81916521d9d218c7da7": {
+      "source": "hari",
+      "translated": "hari"
+    },
+    "a735806c0ca2d06d994830f37402c52cfbee63012298668439cfb8bd7e8a8597": {
+      "source": "bulan",
+      "translated": "bulan"
+    },
+    "5ff9aa4ca343f62b132e136628f2ba7f0407384c6bad59123f5d063ff86a1c3c": {
+      "source": "tahun",
+      "translated": "tahn"
+    },
+    "7244b466327ec6f5f8be71a92f31dbddd8ce41f344ce3b1754fa10cbc326f218": {
+      "source": "fullname",
+      "translated": "nama lengkap"
+    },
+    "82244417f956ac7c599f191593f7e441a4fafa20a4158fd52e154f1dc4c8ed92": {
+      "source": "email",
+      "translated": "surel"
+    },
+    "87bbe879c7a5f5784a70384bb49fa9513a6a3fbe4c2d388635e3c87611c03fae": {
+      "source": "avatar",
+      "translated": "avatar"
+    },
+    "80f61f96184524ba54db767ed49487392430ad26bf5cf2ef689905f3400325d7": {
+      "source": "thumbnail",
+      "translated": "thumbnail"
+    },
+    "b0aa8a6c35b4deec55bc1f31b9be4c50a4426ada09b58c4e1dcaf9a81f913903": {
+      "source": "likes",
+      "translated": "Suka"
+    },
+    "5a452459503be70d2ed2fca46dd91e05e820a957f175686a77d03fff80f664fe": {
+      "source": "position",
+      "translated": "posisi"
+    },
+    "4ddb3e96801a1ee2b77dc5247c0db478d5f97a93b90e7cdb09f5f51d43764b08": {
+      "source": "completed",
+      "translated": "selesai"
+    },
+    "cbe729b22ca6d1dba8a9689739ac89c02cda72dcfea48df322b2f2b45981ac4c": {
+      "source": "auth/google",
+      "translated": "auth / Google"
+    },
+    "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27": {
+      "source": "success",
+      "translated": "Sukses"
+    },
+    "ab530a13e45914982b79f9b7e3fba994cfd1f3fb22f71cea1afbf02b460c6d1d": {
+      "source": "message",
+      "translated": "pesan"
+    },
+    "3a6eb0790f39ac87c94f3856b2dd2c5d110e6811602261a9a923d3bb23adc8b7": {
+      "source": "data",
+      "translated": "data"
+    },
+    "3c469e9d6c5875d37a43f353d4f88e61fcf812c66eee3457465a40b0da4153e0": {
+      "source": "token",
+      "translated": "token"
+    },
+    "04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb": {
+      "source": "user",
+      "translated": "pengguna"
+    },
+    "4ec9531752967ed3e4d17b00d4f20446d8cdb1ac1ea5cc21181d16de3667c8d8": {
+      "source": "auth/me",
+      "translated": "auth / me"
+    },
+    "59f006d63bd009b7f1f1d7bd7e29e1f3b9db6505ce784ca3216ea90c6d6dcb11": {
+      "source": "seconds",
+      "translated": "detik"
+    },
+    "4ea140588150773ce3aace786aeef7f4049ce100fa649c94fbbddb960f1da942": {
+      "source": "home",
+      "translated": "rumah"
+    },
+    "917f1a3e38ebb8c761fe4b2fe70d85bb6c05231fea6b173989c05383601c518e": {
+      "source": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com",
+      "translated": "6955897266-f64eq3b3k0idjq6ns3ebtnfeos7c2h.aps.googleglesconsut.com"
+    },
+    "bacb769b46f6d169fb227ea026550f411d46cbe66a9c2a6ba36449c8cf8e4dea": {
+      "source": "application/json",
+      "translated": "aplikasi / json"
+    },
+    "d0f9bc7a3b0119a356b27ea861c367722bbbe5ac27f544cbb9035926bb8fcc19": {
+      "source": "Account Settings",
+      "translated": "Pengaturan Akun"
+    },
+    "21ecba52f7c36529eaeba29b11c061ccf1e1dc48c554540d7a8781a0ba7c13c4": {
+      "source": "Manage Device",
+      "translated": "Kelola Perangkat"
+    },
+    "ca91f790667a1ea41eaebff23ddc7d4904290dc3f0ff791a2ebbdbbf69b62e01": {
+      "source": "Payment & Transaction",
+      "translated": "Pembayaran & Transaksi"
+    },
+    "1c8b07d56c07434b317a92ab2c88d40684d165a3d5a2be2757ff3289a6ad32fc": {
+      "source": "Subscription Plan",
+      "translated": "Rencana Berlangganan"
+    },
+    "f5f3290484410904e90e6334a452d7c0ccac80b038fb97c6a1ab737d523f9588": {
+      "source": "subscription data is still loading",
+      "translated": "Data berlangganan masih dimuat"
+    },
+    "669cd31f76367c2de677001106b458f40cbb1dd8952d115a222edf3e497a8e64": {
+      "source": "Transaction History",
+      "translated": "Riwayat Transaksi"
+    },
+    "a78cebc44214256ba361dcee3f1cc1408e55ea6940c65067615abd4fdcc2d788": {
+      "source": "Help Center",
+      "translated": "Pusat Bantuan"
+    },
+    "506ff394621596dd88138642eddfc1e41833b3ae92d95e5c77c94327098abd9a": {
+      "source": "Privacy Policy",
+      "translated": "Kebijakan Privasi"
+    },
+    "12a0015fa32217778863154566bce500732726db6ea596518712c12955d9a225": {
+      "source": "Terms of Use",
+      "translated": "Terminal Penggunaan"
+    },
+    "108ac1ea94920737dfe95398871cec04a1a019bb929edc254ab3ffd53b7d144b": {
+      "source": "Version 1.0.0",
+      "translated": "Versi 1.0.0"
+    },
+    "34687b57738ab35e80fdb5dfa1c256dbc66f5b5952ad2a5473caf330e17e9b66": {
+      "source": "Belum Login",
+      "translated": "Log Masuk Belum"
+    },
+    "3b7564525cce872216cd28776d1e94d23048eeedf4c7340c665b1854a7e53e30": {
+      "source": "Login >",
+      "translated": "Log masuk >"
+    },
+    "5fd6ad84c80e016fbdfa2927d0cf4e3061d6673d37062c41abe7257cc50dafda": {
+      "source": "\\B(?=(\\d{3})+(?!\\d))",
+      "translated": "\\ B (? = (\\ d {3}) + (?\\ d))"
+    },
+    "826086bf58f0134f0e3675be4dfab26f667d2cd7e3d529056bc4c511e0caea44": {
+      "source": "Tidak ada paket tersedia",
+      "translated": "Tidak ada paket tersedia"
+    },
+    "2335642d95717cc45071c76406086ca81bc66b97809178eb7d259a34b9f2581b": {
+      "source": "Pilih Paket VIP",
+      "translated": "Pilih Paket VIP"
+    },
+    "0274498181bac49a152ac1f3ebfaf4832d0511e65563c702136b38feee11fbbb": {
+      "source": "Nikmati semua konten premium dan akses tanpa batas.",
+      "translated": "Nikmati semua konten premium dan akses tanpa batas."
+    },
+    "9ce0bef781caae1bae58816888a54def04118d0b7a9b0d6f6740cf9307b3206c": {
+      "source": "Akses semua konten VIP",
+      "translated": "Akses semua konten VIP"
+    },
+    "8a84a61c846fcf582b47967d471048ed6d6a7a50ac01fadc16e4c5ef655cd620": {
+      "source": "Kualitas video premium",
+      "translated": "Video premium Kualitas"
+    },
+    "3de389b982fb9912fb01c2e12c450e7046da2c698975a4d45037751edfc2f20d": {
+      "source": "Tanpa batas menonton",
+      "translated": "Tanpa batas menonton"
+    },
+    "594e8ba5b894d96805621daab564d0de4a0d1b2f81daf9f58c8f24122846d227": {
+      "source": "Paket Saat Ini",
+      "translated": "Paket Saat Ini"
+    },
+    "688e03801386103240d1be1bed0fbff74b5cab6c816cda96f8b24eaae35ae443": {
+      "source": "Free Member",
+      "translated": "Anggota Bebas"
+    },
+    "4d15dabc4fd63a376d67cde46955a40ccd10fe3c0435c4f3e2895b431d53cb1c": {
+      "source": "Upgrade untuk menikmati konten VIP",
+      "translated": "Upgrade untuk menikmati konten VIP"
+    },
+    "29db58dcc31cbce91c3acb87be3d81c0f6186cc43d42fee5c3cd0bda6c547e9e": {
+      "source": "dibayar",
+      "translated": "dibayar"
+    },
+    "1182ca0e4249bc85ef7b5e63d96da4972828d1a86efb0e0e86f2a60f0090efcf": {
+      "source": "Berlaku sampai",
+      "translated": "Berjuku sampai"
+    },
+    "d388942ba926ada027a9cc7100f95d2f4265026dcebe94adbd1d9180a2495e8d": {
+      "source": "dd MMM yyyy",
+      "translated": "dd MMM yyyy"
+    },
+    "109928873dc38ec8b6e6281c6d9f1c300ff2866a7a706632246b25ee14780bb2": {
+      "source": "Harga promo terbatas",
+      "translated": "Harga Promo Terbatas"
+    },
+    "afca35780a80004ffa239801b17d853cc369cc85ba58cc8b9dc0a3609ee7ca13": {
+      "source": "VIP ACCOUNT",
+      "translated": "Akunt VIP"
+    },
+    "d5d5e5fa6c7d8ad96f2da0f9371342379491c03dcfd0912beda1a9ccfaa5fdbd": {
+      "source": "Become a VIP Member",
+      "translated": "Menjadi Anggota VIP"
+    },
+    "5681aa51ee48832a1fbb367e73982b38e86ebafb560ef6934cc13aa0db8b807a": {
+      "source": "Ads Free",
+      "translated": "Iklan Bebas"
+    },
+    "e1b65987a5a1ca15838225c12ef9b84ae95f6c59974052b22720dc9af3f62c79": {
+      "source": "Exclusive Drama",
+      "translated": "Drama Eksklusif"
+    },
+    "168bbbb72663565b4eb0306bd383a927041adb963e786b164556f6a6e59670de": {
+      "source": "Anything Streaming",
+      "translated": "Apapun Streaming"
+    },
+    "2a39bbaf6ca2efddcd559607a1eae1dcec317b0a9070298baf3effbfb3d11c12": {
+      "source": "Unlimited Viewing",
+      "translated": "Pandangan Tak Terbatas"
+    },
+    "8182ef9296aaf9454295bc0052192df3ff5a4d5b2fa9ace189be836162b05b7c": {
+      "source": "Personal Content",
+      "translated": "Isi Pribadi"
+    },
+    "66a1419ec8d30b70b11c06a3a1b5c2f48f0de0a2637c6d76bfe0135315fe29c9": {
+      "source": "Upgrade Now",
+      "translated": "Tingkatkan Sekarang"
+    },
+    "a79273a892acf3f845fdf1a49e80d6a2c744db275f279b9e712526e658889fba": {
+      "source": "VIP Episode",
+      "translated": "Episode VIP"
+    },
+    "b6eb8fe19a3dfa516d472198a3d9e4cc9c447b4a3194d892d6efcb72fc0bcc2e": {
+      "source": "Become a VIP member to unlock all exclusive episodes without limits",
+      "translated": "Menjadi anggota VIP untuk membuka semua episode eksklusif tanpa batas"
+    },
+    "a46e7b9e85c03fcce5896c7dd4cd360183311974becdbb0f8154c7fe5712d8b7": {
+      "source": "Unlock / Upgrade to VIP",
+      "translated": "Buka kunci / Upgrade ke VIP"
+    },
+    "9c595c02fe734511c4cc475493eb0416767dbea344fd9348ba17d9704640a4b1": {
+      "source": "VIP Mingguan",
+      "translated": "VIP Mingguan"
+    },
+    "030f15fb4a494b809a08f8686781798e49012f905775e1f9d59fe4d3c3936999": {
+      "source": "Rp 15.000",
+      "translated": "Rp 15,000"
+    },
+    "86eef4d93ed6b19087fb3189083fc6d020776f54f6ebc1f7237f15b6c2578f8f": {
+      "source": "Akses penuh selama 7 hari",
+      "translated": "Akses penuh selama 7 hari"
+    },
+    "424c3b6d3dc9297e6082bf561ff2f95a3c8d4a04c32efbc26f76d84e47219dba": {
+      "source": "VIP Bulanan",
+      "translated": "VIP Bulanan"
+    },
+    "8700e1380cbf2a26cf726be08e00cd17d2e1a403231e87304ab71ba7bee460cb": {
+      "source": "Rp 39.000",
+      "translated": "Rp 39,000"
+    },
+    "1caabd882b01b5715301667d091acf2c532bc0a27c0d79a412e91a0c34d2b67c": {
+      "source": "Paling populer",
+      "translated": "Poler menyerah"
+    },
+    "ad3eca61c1d1da46d08b10d1c69645475895f0bcd64384475b6deec0a5ee8754": {
+      "source": "VIP Tahunan paling populer",
+      "translated": "VIP Talunan paling populer"
+    },
+    "3dcef4e2b03004b5233331099a35f61595874e4288705dfb9093f2592a4655d3": {
+      "source": "Rp 299.000",
+      "translated": "Rp 299.000"
+    },
+    "70b5190f8672bb815816173ca3d4dca7a7b4aa3a4b353da23e0ec3ec2b5ec567": {
+      "source": "Hemat hingga 35%",
+      "translated": "Hemat hingga 35%"
+    },
+    "e57fd6b3bb98d9631453e1d44e9fa6b8d2e68daf8dcd0aac3114961b835b9660": {
+      "source": "BEST VALUE",
+      "translated": "BAST NILAI"
+    },
+    "220a072bf6f1a9f8e7b95d7b793ef87cbf75f5b45442576ce2681125f5cf8b1c": {
+      "source": "bookmarkview",
+      "translated": "bookmarkview"
+    },
+    "30177d27a64a8107865e0ae10a54407794bda1326caee388fdb101edc43008fb": {
+      "source": "BookmarkView is working",
+      "translated": "BookmarkView bekerja"
+    },
+    "acd27229f790a067317d3e89a0315440e4cee05dd5ae67c6d8ed898475acafa6": {
+      "source": "episodeview",
+      "translated": "Egyodeview"
+    },
+    "92d4464e25db1f83d33e124661368da10f42b34258908e8e972a590923a68f4f": {
+      "source": "EpisodeView is working",
+      "translated": "EpisodeView sedang bekerja"
+    },
+    "15902f81dcfa9cf8d35146f6b1554ea4c140524c18e3f44eb1598e1c13957f63": {
+      "source": "sinopsis",
+      "translated": "sinopsis"
+    },
+    "7e414e6ac41ac7a0658ce2807548af8fb48b145f9b74aa77c9b526c569804bbc": {
+      "source": "episode",
+      "translated": "episoda"
+    },
+    "fe01db15cb5d31216cf91fd9f02f5ced2b155dced67c31b78bbabf48665e1f73": {
+      "source": "historyview",
+      "translated": "historyview"
+    },
+    "edb23882f4c65072f24b4ed41726142ce9d87509eb6e1d6bf8e410f6b75308df": {
+      "source": "HistoryView is working",
+      "translated": "History View sedang bekerja"
+    },
+    "34d8eb01e1bffebf9479381ec4f5393d816d70e34e08b909979855632b338eaa": {
+      "source": "Continue Watching",
+      "translated": "Lanjutkan Menonton"
+    },
+    "44c9d36485b791c3bb9243af06a1b34c1b0f662594d698da5db17368a91a225f": {
+      "source": "See All",
+      "translated": "Lihat Semua"
+    },
+    "671a97c1d922d7eb5ce517e73d24c43237a21770c45e019d4d64298d263c9d65": {
+      "source": "Home Refreshed",
+      "translated": "Home Disegarkan"
+    },
+    "8a7d8cb4e86e45c24506911b60ea353b25036d4b473e239777b093a6e03ec01c": {
+      "source": "Failed to refresh",
+      "translated": "Gagal menyegarkan"
+    },
+    "b3d12dcd12598450369f1e1de686b5612846b5d334446180613e08cd58f52354": {
+      "source": "DMN Play",
+      "translated": "DMN Play"
+    },
+    "428821350e9691491f616b754cd8315fb86d797ab35d843479e732ef90665324": {
+      "source": "login",
+      "translated": "login"
+    },
+    "be10b2f905f868ed50d992d183bec4314b7bddc5dad30b8985c5333b42db5c24": {
+      "source": "Coming Soon",
+      "translated": "Segera datang."
+    },
+    "8378c006e5505ccf0b25b5f2d40ce7d3bf1a7194d3d6b2feb103917b6a112a31": {
+      "source": "Are you sure you want to log out?",
+      "translated": "Anda yakin ingin log keluar?"
+    },
+    "280d44ab1e9f79b5cce2dd4f58f5fe91f0fbacdac9f7447dffc318ceb79f2d02": {
+      "source": "welcome",
+      "translated": "selamat datang"
+    },
+    "bb033b5377edb722c9d6fe5f6303ecfb4a28b3b096127fc02db35d065a4706dc": {
+      "source": "Login to enjoy all DMN Play features",
+      "translated": "Log masuk untuk menikmati seluruh fitur DMN Play"
+    },
+    "1f96f5d016bd94a83f38c77e810b0754e3ca60ebf8470e7ebaaf8b5b8d0946d7": {
+      "source": "Signing in...",
+      "translated": "Masuk..."
+    },
+    "cce937e891444a7417c696cdd80c0eed11deb383f3c42bdb8b591d5dfcaa398e": {
+      "source": "Continue with Google",
+      "translated": "Lanjutkan dengan Google"
+    },
+    "f154b630d75d2f28837a6da7a1d7a61705198cd01a5907b02278ed9842a1d5fa": {
+      "source": "Continue with Facebook",
+      "translated": "Lanjutkan dengan Facebook"
+    },
+    "340ac4c3fd1f01233e46a45276a529a4fa607074b0efe745ffc11f9cf152d27c": {
+      "source": "Continue with Apple",
+      "translated": "Lanjutkan dengan Apple"
+    },
+    "ce0e8e74c551dcbe127effff35dcbeacc2b4728168bd9ba89a1f896efa041302": {
+      "source": "Continue with Email",
+      "translated": "Lanjutkan dengan Email"
+    },
+    "2bcc2316d5a32baef258c5c2204c427e3ed153acf74b94eb3f09bee8837e9cbc": {
+      "source": "By continuing, you agree to the\\nTerms & Conditions and Privacy Policy",
+      "translated": "Dengan melanjutkan, Anda menyetujui\\ nTerms & Kondisi dan Kebijakan Privasi"
+    },
+    "a786e238ede4a3e4cd62d767098977e13e2eacff9cbb7743f5e4927099819de6": {
+      "source": "Movie tidak ditemukan",
+      "translated": "Movie tidak dit"
+    },
+    "def4205254cadd3bd57a9a7561cbdb596cd16b33feb2c8c2f82645c5dfcb500d": {
+      "source": "Page Refreshed",
+      "translated": "Halaman Disegarkan"
+    },
+    "8a6ba32c9bed6ce703f999f9af6ec23686d44e144e4da572d94c8daca4a9cbab": {
+      "source": "movie",
+      "translated": "film"
+    },
+    "03aa472bcfd8e09831f51505a2aa332ca9340d446d933f6ca4e44aeab8467146": {
+      "source": "You May Also Like",
+      "translated": "Anda Mei Juga Seperti"
+    },
+    "a268145ba26f17348fc2f077890ea4a012a4588644050cda5e05e70427cb46a5": {
+      "source": "OPEN DONE",
+      "translated": "OPEN DONE"
+    },
+    "2e01a0a7955a95ab2b168e24fcd787353879e8ba3edff8c47b188f7edd2bdb75": {
+      "source": "navbar",
+      "translated": "baris navbar"
+    },
+    "230d8358dc8e8890b4c58deeb62912ee2f20357ae92a5cc861b98e68fe31acb5": {
+      "source": "body",
+      "translated": "tubuh"
+    },
+    "d43a4070f872dbf440225eb96e1f95f3c008cf4eadec79a722717717982fb227": {
+      "source": "profileview",
+      "translated": "profilevew"
+    },
+    "56df8f85a553155de41316c6f2cfb8c4381d908eef9d1a48ab88e974544125e7": {
+      "source": "ProfileView is working",
+      "translated": "ProfileView sedang bekerja"
+    }
+  },
+  "ja_JP": {
+    "a56145270ce6b3bebd1dd012b73948677dd618d496488bc608a3cb43ce3547dd": {
+      "source": "id",
+      "translated": "ログイン"
+    },
+    "dbd3a49d0d906b4ed9216b73330d2fb080ef2f758c12f3885068222e5e17151c": {
+      "source": "en",
+      "translated": "お問い合わせ"
+    },
+    "d8056ded45ebed137c65f9cd486673d27faebe7eac49460cabeea19e62d2525b": {
+      "source": "#979B999",
+      "translated": "#979B999の特長"
+    },
+    "f179a509d32bd92c923f236324daef85551c03a761bf0188be286a585281b4ac": {
+      "source": "center",
+      "translated": "センター"
+    },
+    "cf38d95c9c6b1d9d5125c04d41a54df57727ef4cfb3f5116a602fe2b25115c13": {
+      "source": "amount",
+      "translated": "ボリューム"
+    },
+    "073c1634c496cdb649d1afe0a312bbb4b7e1741b271542e4a436c3b8824b1761": {
+      "source": "status",
+      "translated": "ステータス"
+    },
+    "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89": {
+      "source": "name",
+      "translated": "お名前 (必須)"
+    },
+    "c9046f7a37ad0ea7cee73355984fa5428982f8b37c8f7bcec91f7ac71a7cd104": {
+      "source": "description",
+      "translated": "コンテンツ"
+    },
+    "683b531f41ec88a2f345b727afe59757b73162a340a65c86bba62866f8fe556c": {
+      "source": "price",
+      "translated": "販売価格"
+    },
+    "caa79af4db67695cce51988cda2f98423bb7420fbaee8968cd4aca151f55d3a2": {
+      "source": "duration",
+      "translated": "期間"
+    },
+    "944c27e5b97ab7793e4b6e9ff29384890ece0c7c04d2e2bf81c5f763469cc66b": {
+      "source": "day",
+      "translated": "日 日"
+    },
+    "a5c7d1719e284f2c9485405d44f62d152cde9e6ede83e1a79a2442b65f6a8735": {
+      "source": "month",
+      "translated": "月 日"
+    },
+    "4cb4ea25583c25647247ae96fc90225d99ad7a6fabc3e2c2fd13c502e323cd9e": {
+      "source": "year",
+      "translated": "年間行事"
+    },
+    "a6216ea03e578f212dd604ec5d675c5274a86891bac4e87f80bea10ef511f533": {
+      "source": "categories",
+      "translated": "カテゴリー"
+    },
+    "aaf2320646108059a87ab5017a86aee454f5378ed95003dbb2e12f4ca5266e0e": {
+      "source": "title",
+      "translated": "タイトル"
+    },
+    "293b9207228b7854bc3ccb2959ebea1583e066d41983124a5b381d6fdf6575f8": {
+      "source": "poster",
+      "translated": "ポスター"
+    },
+    "8d9f80b4fe92a9bee5010901ed802de759062f64b022552f3e7298107a0a8d36": {
+      "source": "synopsis",
+      "translated": "シンプシス"
+    },
+    "cd03861f0ff8922a279f1eab771f91f6336df9e7dd9412355ec6a1a79c244a5e": {
+      "source": "slug",
+      "translated": "スラグ"
+    },
+    "a941e049e9b1a5f8f3e2c1d39ee03082c184e89224e519c0bef6d8694743159a": {
+      "source": "movies",
+      "translated": "映画映画"
+    },
+    "74883614c4c79e12bebc45efa35a381bf131416e74f2500c72450a92d39f429c": {
+      "source": "views",
+      "translated": "ニュース"
+    },
+    "b04e5ea201bb040cae53f693f6a38a3e00b62da6039ca248fecd59b7fc842894": {
+      "source": "published",
+      "translated": "インタビュー"
+    },
+    "b5f90a96e680140d51e2ba945461716e44cc385940aee21f66020e66193647b7": {
+      "source": "progress",
+      "translated": "プロフィール"
+    },
+    "80adc17f4177175afa07b61686a3362867ba3bdea792c2dc7cd840615787de95": {
+      "source": "watched",
+      "translated": "ウォッチ"
+    },
+    "0e4a8753470e0c08a28b3ee4d48d7866930da01b7c3dc9fda9ad7dd2adbc7813": {
+      "source": "qualities",
+      "translated": "こだわり"
+    },
+    "74fc0bb544bf4f6dcedbe0c7de813c5419da6e884e2af83331befc1d2537a909": {
+      "source": "subtitles",
+      "translated": "字幕"
+    },
+    "8c7ed2d9be59e21cf7cfc7da75c6c0cb7dd751f4a870f0f9236f0f35cbaf584e": {
+      "source": "banner",
+      "translated": "バナー"
+    },
+    "5e1e2bcac305958b27077ca136f35f0abae7cf38c9af678f7d220ed0cb51d4f8": {
+      "source": "latest",
+      "translated": "最新情報"
+    },
+    "e5b00078095d49863c6f1634a35d39e772cb8ea760e1d3af8271d4c811a2f8f7": {
+      "source": "trending",
+      "translated": "トレンド"
+    },
+    "dd6d876548037ec722252b45795206575e7040eba1ca076cf1732a4a903cadba": {
+      "source": "recommended",
+      "translated": "おすすめ"
+    },
+    "d73fcf1a50a2172430a81da0c4a130cd25267dd0d503c03a41d373578df00a4a": {
+      "source": "genres",
+      "translated": "ジャンル"
+    },
+    "9cac91c1f544236a75db4457d3f608dc9c4c6d02b7df74a1b7eed08ccc24437c": {
+      "source": "subscriptions",
+      "translated": "サブスクリプション"
+    },
+    "a8ace1a76c218f36a59a58224a92cf9557122411652d96633dc1cbf8c26e65b1": {
+      "source": "episodes",
+      "translated": "エピソード"
+    },
+    "1303c06b0b014d0ce7b988ab173a13f31227d417058ff4bbe6f8c222b4ad913c": {
+      "source": "type",
+      "translated": "タイプ:"
+    },
+    "603705cc260e946d130a1ceb6b6d9bfcd20312da055292ae3c16c7a3d693b410": {
+      "source": "cast",
+      "translated": "キャスト"
+    },
+    "acef2c15bcd349db900dffece73e1256e881c4416fc1f2d3a494640183490d9a": {
+      "source": "quality",
+      "translated": "品質・品質"
+    },
+    "76cd21db00b2a3eee39dff599ad245a3c5088395388942fde3d2363da968bc1a": {
+      "source": "playlist",
+      "translated": "プレイリスト"
+    },
+    "2c7210c5b950d31204e6a8e9383ea5b5fc5372b8bf827a647a9d05aa005bc3d7": {
+      "source": "bandwidth",
+      "translated": "帯域幅"
+    },
+    "dec0f004eaa07c2a283ea326df8f00c2c3c60b002c9bb8d452b1dcff5ba795cb": {
+      "source": "width",
+      "translated": "アクセス"
+    },
+    "39e0f5efdc39ec10992833ad019f0ddf2b42b49b098313df991b8229a37aed21": {
+      "source": "height",
+      "translated": "高さ"
+    },
+    "f7b3781c5eafc2779a96bae2e4875a83ecce46f198e9f81916521d9d218c7da7": {
+      "source": "hari",
+      "translated": "ログイン"
+    },
+    "a735806c0ca2d06d994830f37402c52cfbee63012298668439cfb8bd7e8a8597": {
+      "source": "bulan",
+      "translated": "ログイン"
+    },
+    "5ff9aa4ca343f62b132e136628f2ba7f0407384c6bad59123f5d063ff86a1c3c": {
+      "source": "tahun",
+      "translated": "タフン"
+    },
+    "7244b466327ec6f5f8be71a92f31dbddd8ce41f344ce3b1754fa10cbc326f218": {
+      "source": "fullname",
+      "translated": "フルネーム"
+    },
+    "82244417f956ac7c599f191593f7e441a4fafa20a4158fd52e154f1dc4c8ed92": {
+      "source": "email",
+      "translated": "電子メール"
+    },
+    "87bbe879c7a5f5784a70384bb49fa9513a6a3fbe4c2d388635e3c87611c03fae": {
+      "source": "avatar",
+      "translated": "アバター"
+    },
+    "80f61f96184524ba54db767ed49487392430ad26bf5cf2ef689905f3400325d7": {
+      "source": "thumbnail",
+      "translated": "サムネイル"
+    },
+    "b0aa8a6c35b4deec55bc1f31b9be4c50a4426ada09b58c4e1dcaf9a81f913903": {
+      "source": "likes",
+      "translated": "いいね!"
+    },
+    "5a452459503be70d2ed2fca46dd91e05e820a957f175686a77d03fff80f664fe": {
+      "source": "position",
+      "translated": "ポジション"
+    },
+    "4ddb3e96801a1ee2b77dc5247c0db478d5f97a93b90e7cdb09f5f51d43764b08": {
+      "source": "completed",
+      "translated": "完了完了"
+    },
+    "cbe729b22ca6d1dba8a9689739ac89c02cda72dcfea48df322b2f2b45981ac4c": {
+      "source": "auth/google",
+      "translated": "auth/グーグル"
+    },
+    "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27": {
+      "source": "success",
+      "translated": "成功事例"
+    },
+    "ab530a13e45914982b79f9b7e3fba994cfd1f3fb22f71cea1afbf02b460c6d1d": {
+      "source": "message",
+      "translated": "メッセージ"
+    },
+    "3a6eb0790f39ac87c94f3856b2dd2c5d110e6811602261a9a923d3bb23adc8b7": {
+      "source": "data",
+      "translated": "データデータ"
+    },
+    "3c469e9d6c5875d37a43f353d4f88e61fcf812c66eee3457465a40b0da4153e0": {
+      "source": "token",
+      "translated": "トークン"
+    },
+    "04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb": {
+      "source": "user",
+      "translated": "ユーザー"
+    },
+    "4ec9531752967ed3e4d17b00d4f20446d8cdb1ac1ea5cc21181d16de3667c8d8": {
+      "source": "auth/me",
+      "translated": "青/目"
+    },
+    "59f006d63bd009b7f1f1d7bd7e29e1f3b9db6505ce784ca3216ea90c6d6dcb11": {
+      "source": "seconds",
+      "translated": "秒単位"
+    },
+    "4ea140588150773ce3aace786aeef7f4049ce100fa649c94fbbddb960f1da942": {
+      "source": "home",
+      "translated": "ホーム"
+    },
+    "917f1a3e38ebb8c761fe4b2fe70d85bb6c05231fea6b173989c05383601c518e": {
+      "source": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com",
+      "translated": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com 。"
+    },
+    "bacb769b46f6d169fb227ea026550f411d46cbe66a9c2a6ba36449c8cf8e4dea": {
+      "source": "application/json",
+      "translated": "アプリケーション/json"
+    },
+    "d0f9bc7a3b0119a356b27ea861c367722bbbe5ac27f544cbb9035926bb8fcc19": {
+      "source": "Account Settings",
+      "translated": "アカウント設定"
+    },
+    "21ecba52f7c36529eaeba29b11c061ccf1e1dc48c554540d7a8781a0ba7c13c4": {
+      "source": "Manage Device",
+      "translated": "デバイスを管理する"
+    },
+    "ca91f790667a1ea41eaebff23ddc7d4904290dc3f0ff791a2ebbdbbf69b62e01": {
+      "source": "Payment & Transaction",
+      "translated": "支払いと取引"
+    },
+    "1c8b07d56c07434b317a92ab2c88d40684d165a3d5a2be2757ff3289a6ad32fc": {
+      "source": "Subscription Plan",
+      "translated": "サブスクリプションプラン"
+    },
+    "f5f3290484410904e90e6334a452d7c0ccac80b038fb97c6a1ab737d523f9588": {
+      "source": "subscription data is still loading",
+      "translated": "サブスクリプションデータはまだ読み込み"
+    },
+    "669cd31f76367c2de677001106b458f40cbb1dd8952d115a222edf3e497a8e64": {
+      "source": "Transaction History",
+      "translated": "取引履歴"
+    },
+    "a78cebc44214256ba361dcee3f1cc1408e55ea6940c65067615abd4fdcc2d788": {
+      "source": "Help Center",
+      "translated": "ヘルプセンター"
+    },
+    "506ff394621596dd88138642eddfc1e41833b3ae92d95e5c77c94327098abd9a": {
+      "source": "Privacy Policy",
+      "translated": "プライバシーポリシー"
+    },
+    "12a0015fa32217778863154566bce500732726db6ea596518712c12955d9a225": {
+      "source": "Terms of Use",
+      "translated": "利用規約"
+    },
+    "108ac1ea94920737dfe95398871cec04a1a019bb929edc254ab3ffd53b7d144b": {
+      "source": "Version 1.0.0",
+      "translated": "バージョン1.0.0"
+    },
+    "34687b57738ab35e80fdb5dfa1c256dbc66f5b5952ad2a5473caf330e17e9b66": {
+      "source": "Belum Login",
+      "translated": "Belum ログイン"
+    },
+    "3b7564525cce872216cd28776d1e94d23048eeedf4c7340c665b1854a7e53e30": {
+      "source": "Login >",
+      "translated": "ログイン >"
+    },
+    "5fd6ad84c80e016fbdfa2927d0cf4e3061d6673d37062c41abe7257cc50dafda": {
+      "source": "\\B(?=(\\d{3})+(?!\\d))",
+      "translated": "\\B(?=(\\d{3})+(?!\\d)"
+    },
+    "826086bf58f0134f0e3675be4dfab26f667d2cd7e3d529056bc4c511e0caea44": {
+      "source": "Tidak ada paket tersedia",
+      "translated": "ティダック・ダ・パケット・テルセディア"
+    },
+    "2335642d95717cc45071c76406086ca81bc66b97809178eb7d259a34b9f2581b": {
+      "source": "Pilih Paket VIP",
+      "translated": "Pilihの小箱VIP"
+    },
+    "0274498181bac49a152ac1f3ebfaf4832d0511e65563c702136b38feee11fbbb": {
+      "source": "Nikmati semua konten premium dan akses tanpa batas.",
+      "translated": "Nikmati semua konten プレミアム dan akses tanpa batas."
+    },
+    "9ce0bef781caae1bae58816888a54def04118d0b7a9b0d6f6740cf9307b3206c": {
+      "source": "Akses semua konten VIP",
+      "translated": "Akses semua kontenVIP"
+    },
+    "8a84a61c846fcf582b47967d471048ed6d6a7a50ac01fadc16e4c5ef655cd620": {
+      "source": "Kualitas video premium",
+      "translated": "Kualitas ビデオプレミアム"
+    },
+    "3de389b982fb9912fb01c2e12c450e7046da2c698975a4d45037751edfc2f20d": {
+      "source": "Tanpa batas menonton",
+      "translated": "タンパ・アットマントン"
+    },
+    "594e8ba5b894d96805621daab564d0de4a0d1b2f81daf9f58c8f24122846d227": {
+      "source": "Paket Saat Ini",
+      "translated": "Paket Saat Ini(パケットサット)"
+    },
+    "688e03801386103240d1be1bed0fbff74b5cab6c816cda96f8b24eaae35ae443": {
+      "source": "Free Member",
+      "translated": "無料会員"
+    },
+    "4d15dabc4fd63a376d67cde46955a40ccd10fe3c0435c4f3e2895b431d53cb1c": {
+      "source": "Upgrade untuk menikmati konten VIP",
+      "translated": "アップグレード untuk menikmati konten VIP"
+    },
+    "29db58dcc31cbce91c3acb87be3d81c0f6186cc43d42fee5c3cd0bda6c547e9e": {
+      "source": "dibayar",
+      "translated": "ディバイアー"
+    },
+    "1182ca0e4249bc85ef7b5e63d96da4972828d1a86efb0e0e86f2a60f0090efcf": {
+      "source": "Berlaku sampai",
+      "translated": "ベルラク・サンパイ"
+    },
+    "d388942ba926ada027a9cc7100f95d2f4265026dcebe94adbd1d9180a2495e8d": {
+      "source": "dd MMM yyyy",
+      "translated": "dd MMMのyyyy"
+    },
+    "109928873dc38ec8b6e6281c6d9f1c300ff2866a7a706632246b25ee14780bb2": {
+      "source": "Harga promo terbatas",
+      "translated": "ハルガプロモーションターフォールズ"
+    },
+    "afca35780a80004ffa239801b17d853cc369cc85ba58cc8b9dc0a3609ee7ca13": {
+      "source": "VIP ACCOUNT",
+      "translated": "VIPアカウント"
+    },
+    "d5d5e5fa6c7d8ad96f2da0f9371342379491c03dcfd0912beda1a9ccfaa5fdbd": {
+      "source": "Become a VIP Member",
+      "translated": "VIP会員になる"
+    },
+    "5681aa51ee48832a1fbb367e73982b38e86ebafb560ef6934cc13aa0db8b807a": {
+      "source": "Ads Free",
+      "translated": "広告 無料"
+    },
+    "e1b65987a5a1ca15838225c12ef9b84ae95f6c59974052b22720dc9af3f62c79": {
+      "source": "Exclusive Drama",
+      "translated": "独占ドラマ"
+    },
+    "168bbbb72663565b4eb0306bd383a927041adb963e786b164556f6a6e59670de": {
+      "source": "Anything Streaming",
+      "translated": "どんなストリーミング"
+    },
+    "2a39bbaf6ca2efddcd559607a1eae1dcec317b0a9070298baf3effbfb3d11c12": {
+      "source": "Unlimited Viewing",
+      "translated": "無制限のビューイング"
+    },
+    "8182ef9296aaf9454295bc0052192df3ff5a4d5b2fa9ace189be836162b05b7c": {
+      "source": "Personal Content",
+      "translated": "パーソナルコンテンツ"
+    },
+    "66a1419ec8d30b70b11c06a3a1b5c2f48f0de0a2637c6d76bfe0135315fe29c9": {
+      "source": "Upgrade Now",
+      "translated": "今すぐアップグレード"
+    },
+    "a79273a892acf3f845fdf1a49e80d6a2c744db275f279b9e712526e658889fba": {
+      "source": "VIP Episode",
+      "translated": "VIPエピソード"
+    },
+    "b6eb8fe19a3dfa516d472198a3d9e4cc9c447b4a3194d892d6efcb72fc0bcc2e": {
+      "source": "Become a VIP member to unlock all exclusive episodes without limits",
+      "translated": "VIP会員になり、制限なくすべての排他的なエピソードをアンロック"
+    },
+    "a46e7b9e85c03fcce5896c7dd4cd360183311974becdbb0f8154c7fe5712d8b7": {
+      "source": "Unlock / Upgrade to VIP",
+      "translated": "VIPへのロック解除/アップグレード"
+    },
+    "9c595c02fe734511c4cc475493eb0416767dbea344fd9348ba17d9704640a4b1": {
+      "source": "VIP Mingguan",
+      "translated": "VIP Mingguan, オーストラリア"
+    },
+    "030f15fb4a494b809a08f8686781798e49012f905775e1f9d59fe4d3c3936999": {
+      "source": "Rp 15.000",
+      "translated": "Rp 15.000の"
+    },
+    "86eef4d93ed6b19087fb3189083fc6d020776f54f6ebc1f7237f15b6c2578f8f": {
+      "source": "Akses penuh selama 7 hari",
+      "translated": "Akses penuh selama 7 hari"
+    },
+    "424c3b6d3dc9297e6082bf561ff2f95a3c8d4a04c32efbc26f76d84e47219dba": {
+      "source": "VIP Bulanan",
+      "translated": "VIP フラナン"
+    },
+    "8700e1380cbf2a26cf726be08e00cd17d2e1a403231e87304ab71ba7bee460cb": {
+      "source": "Rp 39.000",
+      "translated": "Rp 39.000の"
+    },
+    "1caabd882b01b5715301667d091acf2c532bc0a27c0d79a412e91a0c34d2b67c": {
+      "source": "Paling populer",
+      "translated": "ポップアップ"
+    },
+    "ad3eca61c1d1da46d08b10d1c69645475895f0bcd64384475b6deec0a5ee8754": {
+      "source": "VIP Tahunan paling populer",
+      "translated": "VIP タフナンパリングポウラー"
+    },
+    "3dcef4e2b03004b5233331099a35f61595874e4288705dfb9093f2592a4655d3": {
+      "source": "Rp 299.000",
+      "translated": "Rp 299.000の"
+    },
+    "70b5190f8672bb815816173ca3d4dca7a7b4aa3a4b353da23e0ec3ec2b5ec567": {
+      "source": "Hemat hingga 35%",
+      "translated": "ヘマトヒンガ 35%"
+    },
+    "e57fd6b3bb98d9631453e1d44e9fa6b8d2e68daf8dcd0aac3114961b835b9660": {
+      "source": "BEST VALUE",
+      "translated": "ベストバリュー"
+    },
+    "220a072bf6f1a9f8e7b95d7b793ef87cbf75f5b45442576ce2681125f5cf8b1c": {
+      "source": "bookmarkview",
+      "translated": "ブックマークビュー"
+    },
+    "30177d27a64a8107865e0ae10a54407794bda1326caee388fdb101edc43008fb": {
+      "source": "BookmarkView is working",
+      "translated": "BookmarkViewが機能している"
+    },
+    "acd27229f790a067317d3e89a0315440e4cee05dd5ae67c6d8ed898475acafa6": {
+      "source": "episodeview",
+      "translated": "エピソードビュー"
+    },
+    "92d4464e25db1f83d33e124661368da10f42b34258908e8e972a590923a68f4f": {
+      "source": "EpisodeView is working",
+      "translated": "EpisodeViewが機能している"
+    },
+    "15902f81dcfa9cf8d35146f6b1554ea4c140524c18e3f44eb1598e1c13957f63": {
+      "source": "sinopsis",
+      "translated": "シンポシス"
+    },
+    "7e414e6ac41ac7a0658ce2807548af8fb48b145f9b74aa77c9b526c569804bbc": {
+      "source": "episode",
+      "translated": "エピソード"
+    },
+    "fe01db15cb5d31216cf91fd9f02f5ced2b155dced67c31b78bbabf48665e1f73": {
+      "source": "historyview",
+      "translated": "歴史ビュー"
+    },
+    "edb23882f4c65072f24b4ed41726142ce9d87509eb6e1d6bf8e410f6b75308df": {
+      "source": "HistoryView is working",
+      "translated": "HistoryViewが機能している"
+    },
+    "34d8eb01e1bffebf9479381ec4f5393d816d70e34e08b909979855632b338eaa": {
+      "source": "Continue Watching",
+      "translated": "続きを見る"
+    },
+    "44c9d36485b791c3bb9243af06a1b34c1b0f662594d698da5db17368a91a225f": {
+      "source": "See All",
+      "translated": "すべてを見る"
+    },
+    "671a97c1d922d7eb5ce517e73d24c43237a21770c45e019d4d64298d263c9d65": {
+      "source": "Home Refreshed",
+      "translated": "ホーム リフレッシュ"
+    },
+    "8a7d8cb4e86e45c24506911b60ea353b25036d4b473e239777b093a6e03ec01c": {
+      "source": "Failed to refresh",
+      "translated": "リフレッシュできない"
+    },
+    "b3d12dcd12598450369f1e1de686b5612846b5d334446180613e08cd58f52354": {
+      "source": "DMN Play",
+      "translated": "DMNプレイ"
+    },
+    "428821350e9691491f616b754cd8315fb86d797ab35d843479e732ef90665324": {
+      "source": "login",
+      "translated": "ログイン"
+    },
+    "be10b2f905f868ed50d992d183bec4314b7bddc5dad30b8985c5333b42db5c24": {
+      "source": "Coming Soon",
+      "translated": "近日公開"
+    },
+    "8378c006e5505ccf0b25b5f2d40ce7d3bf1a7194d3d6b2feb103917b6a112a31": {
+      "source": "Are you sure you want to log out?",
+      "translated": "ログアウトしたいですか?"
+    },
+    "280d44ab1e9f79b5cce2dd4f58f5fe91f0fbacdac9f7447dffc318ceb79f2d02": {
+      "source": "welcome",
+      "translated": "お問い合わせ"
+    },
+    "bb033b5377edb722c9d6fe5f6303ecfb4a28b3b096127fc02db35d065a4706dc": {
+      "source": "Login to enjoy all DMN Play features",
+      "translated": "すべてのDMNプレイ機能を楽しむためにログイン"
+    },
+    "1f96f5d016bd94a83f38c77e810b0754e3ca60ebf8470e7ebaaf8b5b8d0946d7": {
+      "source": "Signing in...",
+      "translated": "サインイン"
+    },
+    "cce937e891444a7417c696cdd80c0eed11deb383f3c42bdb8b591d5dfcaa398e": {
+      "source": "Continue with Google",
+      "translated": "Googleでフォローする"
+    },
+    "f154b630d75d2f28837a6da7a1d7a61705198cd01a5907b02278ed9842a1d5fa": {
+      "source": "Continue with Facebook",
+      "translated": "Facebookでフォローする"
+    },
+    "340ac4c3fd1f01233e46a45276a529a4fa607074b0efe745ffc11f9cf152d27c": {
+      "source": "Continue with Apple",
+      "translated": "Appleで続ける"
+    },
+    "ce0e8e74c551dcbe127effff35dcbeacc2b4728168bd9ba89a1f896efa041302": {
+      "source": "Continue with Email",
+      "translated": "メールでのお問い合わせ"
+    },
+    "2bcc2316d5a32baef258c5c2204c427e3ed153acf74b94eb3f09bee8837e9cbc": {
+      "source": "By continuing, you agree to the\\nTerms & Conditions and Privacy Policy",
+      "translated": "継続して、あなたは\\nTerms & Conditions and Privacy Policyに同意します"
+    },
+    "a786e238ede4a3e4cd62d767098977e13e2eacff9cbb7743f5e4927099819de6": {
+      "source": "Movie tidak ditemukan",
+      "translated": "映画ティダック・ディテムカン"
+    },
+    "def4205254cadd3bd57a9a7561cbdb596cd16b33feb2c8c2f82645c5dfcb500d": {
+      "source": "Page Refreshed",
+      "translated": "ページの更新"
+    },
+    "8a6ba32c9bed6ce703f999f9af6ec23686d44e144e4da572d94c8daca4a9cbab": {
+      "source": "movie",
+      "translated": "映画映画"
+    },
+    "03aa472bcfd8e09831f51505a2aa332ca9340d446d933f6ca4e44aeab8467146": {
+      "source": "You May Also Like",
+      "translated": "あなたも好きかもしれない"
+    },
+    "a268145ba26f17348fc2f077890ea4a012a4588644050cda5e05e70427cb46a5": {
+      "source": "OPEN DONE",
+      "translated": "オープンドン"
+    },
+    "2e01a0a7955a95ab2b168e24fcd787353879e8ba3edff8c47b188f7edd2bdb75": {
+      "source": "navbar",
+      "translated": "ナヴバー"
+    },
+    "230d8358dc8e8890b4c58deeb62912ee2f20357ae92a5cc861b98e68fe31acb5": {
+      "source": "body",
+      "translated": "ボディ"
+    },
+    "d43a4070f872dbf440225eb96e1f95f3c008cf4eadec79a722717717982fb227": {
+      "source": "profileview",
+      "translated": "プロフィールビュー"
+    },
+    "56df8f85a553155de41316c6f2cfb8c4381d908eef9d1a48ab88e974544125e7": {
+      "source": "ProfileView is working",
+      "translated": "ProfileViewが機能している"
+    }
+  },
+  "ko_KR": {
+    "a56145270ce6b3bebd1dd012b73948677dd618d496488bc608a3cb43ce3547dd": {
+      "source": "id",
+      "translated": "이름 *"
+    },
+    "dbd3a49d0d906b4ed9216b73330d2fb080ef2f758c12f3885068222e5e17151c": {
+      "source": "en",
+      "translated": "이름 *"
+    },
+    "d8056ded45ebed137c65f9cd486673d27faebe7eac49460cabeea19e62d2525b": {
+      "source": "#979B999",
+      "translated": "#979B999 ·"
+    },
+    "f179a509d32bd92c923f236324daef85551c03a761bf0188be286a585281b4ac": {
+      "source": "center",
+      "translated": "주요연혁"
+    },
+    "cf38d95c9c6b1d9d5125c04d41a54df57727ef4cfb3f5116a602fe2b25115c13": {
+      "source": "amount",
+      "translated": "6,000원"
+    },
+    "073c1634c496cdb649d1afe0a312bbb4b7e1741b271542e4a436c3b8824b1761": {
+      "source": "status",
+      "translated": "(주)"
+    },
+    "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89": {
+      "source": "name",
+      "translated": "이름 *"
+    },
+    "c9046f7a37ad0ea7cee73355984fa5428982f8b37c8f7bcec91f7ac71a7cd104": {
+      "source": "description",
+      "translated": "이름 *"
+    },
+    "683b531f41ec88a2f345b727afe59757b73162a340a65c86bba62866f8fe556c": {
+      "source": "price",
+      "translated": "가격 :"
+    },
+    "caa79af4db67695cce51988cda2f98423bb7420fbaee8968cd4aca151f55d3a2": {
+      "source": "duration",
+      "translated": "내 계정"
+    },
+    "944c27e5b97ab7793e4b6e9ff29384890ece0c7c04d2e2bf81c5f763469cc66b": {
+      "source": "day",
+      "translated": "일 시"
+    },
+    "a5c7d1719e284f2c9485405d44f62d152cde9e6ede83e1a79a2442b65f6a8735": {
+      "source": "month",
+      "translated": "1 개월"
+    },
+    "4cb4ea25583c25647247ae96fc90225d99ad7a6fabc3e2c2fd13c502e323cd9e": {
+      "source": "year",
+      "translated": "1 년"
+    },
+    "a6216ea03e578f212dd604ec5d675c5274a86891bac4e87f80bea10ef511f533": {
+      "source": "categories",
+      "translated": "한국어"
+    },
+    "aaf2320646108059a87ab5017a86aee454f5378ed95003dbb2e12f4ca5266e0e": {
+      "source": "title",
+      "translated": "이름 *"
+    },
+    "293b9207228b7854bc3ccb2959ebea1583e066d41983124a5b381d6fdf6575f8": {
+      "source": "poster",
+      "translated": "인기 게시물"
+    },
+    "8d9f80b4fe92a9bee5010901ed802de759062f64b022552f3e7298107a0a8d36": {
+      "source": "synopsis",
+      "translated": "관련 기사"
+    },
+    "cd03861f0ff8922a279f1eab771f91f6336df9e7dd9412355ec6a1a79c244a5e": {
+      "source": "slug",
+      "translated": "뚱 베어"
+    },
+    "a941e049e9b1a5f8f3e2c1d39ee03082c184e89224e519c0bef6d8694743159a": {
+      "source": "movies",
+      "translated": "한국어"
+    },
+    "74883614c4c79e12bebc45efa35a381bf131416e74f2500c72450a92d39f429c": {
+      "source": "views",
+      "translated": "뚱 베어"
+    },
+    "b04e5ea201bb040cae53f693f6a38a3e00b62da6039ca248fecd59b7fc842894": {
+      "source": "published",
+      "translated": "관련 기사"
+    },
+    "b5f90a96e680140d51e2ba945461716e44cc385940aee21f66020e66193647b7": {
+      "source": "progress",
+      "translated": "주요연혁"
+    },
+    "80adc17f4177175afa07b61686a3362867ba3bdea792c2dc7cd840615787de95": {
+      "source": "watched",
+      "translated": "뚱 베어"
+    },
+    "0e4a8753470e0c08a28b3ee4d48d7866930da01b7c3dc9fda9ad7dd2adbc7813": {
+      "source": "qualities",
+      "translated": "제품정보"
+    },
+    "74fc0bb544bf4f6dcedbe0c7de813c5419da6e884e2af83331befc1d2537a909": {
+      "source": "subtitles",
+      "translated": "이름 *"
+    },
+    "8c7ed2d9be59e21cf7cfc7da75c6c0cb7dd751f4a870f0f9236f0f35cbaf584e": {
+      "source": "banner",
+      "translated": "공지사항"
+    },
+    "5e1e2bcac305958b27077ca136f35f0abae7cf38c9af678f7d220ed0cb51d4f8": {
+      "source": "latest",
+      "translated": "(주)"
+    },
+    "e5b00078095d49863c6f1634a35d39e772cb8ea760e1d3af8271d4c811a2f8f7": {
+      "source": "trending",
+      "translated": "회사 소개"
+    },
+    "dd6d876548037ec722252b45795206575e7040eba1ca076cf1732a4a903cadba": {
+      "source": "recommended",
+      "translated": "(주)"
+    },
+    "d73fcf1a50a2172430a81da0c4a130cd25267dd0d503c03a41d373578df00a4a": {
+      "source": "genres",
+      "translated": "이름 *"
+    },
+    "9cac91c1f544236a75db4457d3f608dc9c4c6d02b7df74a1b7eed08ccc24437c": {
+      "source": "subscriptions",
+      "translated": "구독하기"
+    },
+    "a8ace1a76c218f36a59a58224a92cf9557122411652d96633dc1cbf8c26e65b1": {
+      "source": "episodes",
+      "translated": "인기 동영상"
+    },
+    "1303c06b0b014d0ce7b988ab173a13f31227d417058ff4bbe6f8c222b4ad913c": {
+      "source": "type",
+      "translated": "제품정보"
+    },
+    "603705cc260e946d130a1ceb6b6d9bfcd20312da055292ae3c16c7a3d693b410": {
+      "source": "cast",
+      "translated": "뚱 베어"
+    },
+    "acef2c15bcd349db900dffece73e1256e881c4416fc1f2d3a494640183490d9a": {
+      "source": "quality",
+      "translated": "품질 관리"
+    },
+    "76cd21db00b2a3eee39dff599ad245a3c5088395388942fde3d2363da968bc1a": {
+      "source": "playlist",
+      "translated": "공지사항"
+    },
+    "2c7210c5b950d31204e6a8e9383ea5b5fc5372b8bf827a647a9d05aa005bc3d7": {
+      "source": "bandwidth",
+      "translated": "대역폭"
+    },
+    "dec0f004eaa07c2a283ea326df8f00c2c3c60b002c9bb8d452b1dcff5ba795cb": {
+      "source": "width",
+      "translated": "폭 폭"
+    },
+    "39e0f5efdc39ec10992833ad019f0ddf2b42b49b098313df991b8229a37aed21": {
+      "source": "height",
+      "translated": "고도:"
+    },
+    "f7b3781c5eafc2779a96bae2e4875a83ecce46f198e9f81916521d9d218c7da7": {
+      "source": "hari",
+      "translated": "뚱 베어"
+    },
+    "a735806c0ca2d06d994830f37402c52cfbee63012298668439cfb8bd7e8a8597": {
+      "source": "bulan",
+      "translated": "bulan 소개"
+    },
+    "5ff9aa4ca343f62b132e136628f2ba7f0407384c6bad59123f5d063ff86a1c3c": {
+      "source": "tahun",
+      "translated": "뚱 베어"
+    },
+    "7244b466327ec6f5f8be71a92f31dbddd8ce41f344ce3b1754fa10cbc326f218": {
+      "source": "fullname",
+      "translated": "이름 *"
+    },
+    "82244417f956ac7c599f191593f7e441a4fafa20a4158fd52e154f1dc4c8ed92": {
+      "source": "email",
+      "translated": "이름 *"
+    },
+    "87bbe879c7a5f5784a70384bb49fa9513a6a3fbe4c2d388635e3c87611c03fae": {
+      "source": "avatar",
+      "translated": "아바타"
+    },
+    "80f61f96184524ba54db767ed49487392430ad26bf5cf2ef689905f3400325d7": {
+      "source": "thumbnail",
+      "translated": "뚱 베어"
+    },
+    "b0aa8a6c35b4deec55bc1f31b9be4c50a4426ada09b58c4e1dcaf9a81f913903": {
+      "source": "likes",
+      "translated": "이름 *"
+    },
+    "5a452459503be70d2ed2fca46dd91e05e820a957f175686a77d03fff80f664fe": {
+      "source": "position",
+      "translated": "제품정보"
+    },
+    "4ddb3e96801a1ee2b77dc5247c0db478d5f97a93b90e7cdb09f5f51d43764b08": {
+      "source": "completed",
+      "translated": "지원하다"
+    },
+    "cbe729b22ca6d1dba8a9689739ac89c02cda72dcfea48df322b2f2b45981ac4c": {
+      "source": "auth/google",
+      "translated": "auth / 구글"
+    },
+    "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27": {
+      "source": "success",
+      "translated": "지원하다"
+    },
+    "ab530a13e45914982b79f9b7e3fba994cfd1f3fb22f71cea1afbf02b460c6d1d": {
+      "source": "message",
+      "translated": "이름 *"
+    },
+    "3a6eb0790f39ac87c94f3856b2dd2c5d110e6811602261a9a923d3bb23adc8b7": {
+      "source": "data",
+      "translated": "제품정보"
+    },
+    "3c469e9d6c5875d37a43f353d4f88e61fcf812c66eee3457465a40b0da4153e0": {
+      "source": "token",
+      "translated": "계정 관리"
+    },
+    "04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb": {
+      "source": "user",
+      "translated": "제품정보"
+    },
+    "4ec9531752967ed3e4d17b00d4f20446d8cdb1ac1ea5cc21181d16de3667c8d8": {
+      "source": "auth/me",
+      "translated": "auth / 메"
+    },
+    "59f006d63bd009b7f1f1d7bd7e29e1f3b9db6505ce784ca3216ea90c6d6dcb11": {
+      "source": "seconds",
+      "translated": "지원하다"
+    },
+    "4ea140588150773ce3aace786aeef7f4049ce100fa649c94fbbddb960f1da942": {
+      "source": "home",
+      "translated": "집 »"
+    },
+    "917f1a3e38ebb8c761fe4b2fe70d85bb6c05231fea6b173989c05383601c518e": {
+      "source": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com",
+      "translated": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com - 무료 온라인 게임"
+    },
+    "bacb769b46f6d169fb227ea026550f411d46cbe66a9c2a6ba36449c8cf8e4dea": {
+      "source": "application/json",
+      "translated": "응용 프로그램/json"
+    },
+    "d0f9bc7a3b0119a356b27ea861c367722bbbe5ac27f544cbb9035926bb8fcc19": {
+      "source": "Account Settings",
+      "translated": "계정 설정"
+    },
+    "21ecba52f7c36529eaeba29b11c061ccf1e1dc48c554540d7a8781a0ba7c13c4": {
+      "source": "Manage Device",
+      "translated": "장치 관리"
+    },
+    "ca91f790667a1ea41eaebff23ddc7d4904290dc3f0ff791a2ebbdbbf69b62e01": {
+      "source": "Payment & Transaction",
+      "translated": "결제 및 거래"
+    },
+    "1c8b07d56c07434b317a92ab2c88d40684d165a3d5a2be2757ff3289a6ad32fc": {
+      "source": "Subscription Plan",
+      "translated": "구독 계획"
+    },
+    "f5f3290484410904e90e6334a452d7c0ccac80b038fb97c6a1ab737d523f9588": {
+      "source": "subscription data is still loading",
+      "translated": "구독 데이터는 여전히 로딩"
+    },
+    "669cd31f76367c2de677001106b458f40cbb1dd8952d115a222edf3e497a8e64": {
+      "source": "Transaction History",
+      "translated": "거래 내역"
+    },
+    "a78cebc44214256ba361dcee3f1cc1408e55ea6940c65067615abd4fdcc2d788": {
+      "source": "Help Center",
+      "translated": "도움말 센터"
+    },
+    "506ff394621596dd88138642eddfc1e41833b3ae92d95e5c77c94327098abd9a": {
+      "source": "Privacy Policy",
+      "translated": "회사 소개"
+    },
+    "12a0015fa32217778863154566bce500732726db6ea596518712c12955d9a225": {
+      "source": "Terms of Use",
+      "translated": "이용 약관"
+    },
+    "108ac1ea94920737dfe95398871cec04a1a019bb929edc254ab3ffd53b7d144b": {
+      "source": "Version 1.0.0",
+      "translated": "버전 1.0.0"
+    },
+    "34687b57738ab35e80fdb5dfa1c256dbc66f5b5952ad2a5473caf330e17e9b66": {
+      "source": "Belum Login",
+      "translated": "Belum 로그인"
+    },
+    "3b7564525cce872216cd28776d1e94d23048eeedf4c7340c665b1854a7e53e30": {
+      "source": "Login >",
+      "translated": "로그인 >"
+    },
+    "5fd6ad84c80e016fbdfa2927d0cf4e3061d6673d37062c41abe7257cc50dafda": {
+      "source": "\\B(?=(\\d{3})+(?!\\d))",
+      "translated": "\\B(?=(\\d{3})+(?!\\d))"
+    },
+    "826086bf58f0134f0e3675be4dfab26f667d2cd7e3d529056bc4c511e0caea44": {
+      "source": "Tidak ada paket tersedia",
+      "translated": "Tidak ada 관 tersedia"
+    },
+    "2335642d95717cc45071c76406086ca81bc66b97809178eb7d259a34b9f2581b": {
+      "source": "Pilih Paket VIP",
+      "translated": "Pilih 관 VIP"
+    },
+    "0274498181bac49a152ac1f3ebfaf4832d0511e65563c702136b38feee11fbbb": {
+      "source": "Nikmati semua konten premium dan akses tanpa batas.",
+      "translated": "Nikmati semua konten 프리미엄 dan akses tanpa batas."
+    },
+    "9ce0bef781caae1bae58816888a54def04118d0b7a9b0d6f6740cf9307b3206c": {
+      "source": "Akses semua konten VIP",
+      "translated": "Akses semua콘텐 VIP"
+    },
+    "8a84a61c846fcf582b47967d471048ed6d6a7a50ac01fadc16e4c5ef655cd620": {
+      "source": "Kualitas video premium",
+      "translated": "Kualitas 비디오 프리미엄"
+    },
+    "3de389b982fb9912fb01c2e12c450e7046da2c698975a4d45037751edfc2f20d": {
+      "source": "Tanpa batas menonton",
+      "translated": "탄파 batas menonton"
+    },
+    "594e8ba5b894d96805621daab564d0de4a0d1b2f81daf9f58c8f24122846d227": {
+      "source": "Paket Saat Ini",
+      "translated": "Paket 사트 Ini"
+    },
+    "688e03801386103240d1be1bed0fbff74b5cab6c816cda96f8b24eaae35ae443": {
+      "source": "Free Member",
+      "translated": "무료 회원"
+    },
+    "4d15dabc4fd63a376d67cde46955a40ccd10fe3c0435c4f3e2895b431d53cb1c": {
+      "source": "Upgrade untuk menikmati konten VIP",
+      "translated": "업그레이드 untuk menikmati konten VIP"
+    },
+    "29db58dcc31cbce91c3acb87be3d81c0f6186cc43d42fee5c3cd0bda6c547e9e": {
+      "source": "dibayar",
+      "translated": "인기 카테고리"
+    },
+    "1182ca0e4249bc85ef7b5e63d96da4972828d1a86efb0e0e86f2a60f0090efcf": {
+      "source": "Berlaku sampai",
+      "translated": "버라쿠 sampai"
+    },
+    "d388942ba926ada027a9cc7100f95d2f4265026dcebe94adbd1d9180a2495e8d": {
+      "source": "dd MMM yyyy",
+      "translated": "dd MMM yyyyy의"
+    },
+    "109928873dc38ec8b6e6281c6d9f1c300ff2866a7a706632246b25ee14780bb2": {
+      "source": "Harga promo terbatas",
+      "translated": "Harga 프로모션 terbatas"
+    },
+    "afca35780a80004ffa239801b17d853cc369cc85ba58cc8b9dc0a3609ee7ca13": {
+      "source": "VIP ACCOUNT",
+      "translated": "VIP 계정"
+    },
+    "d5d5e5fa6c7d8ad96f2da0f9371342379491c03dcfd0912beda1a9ccfaa5fdbd": {
+      "source": "Become a VIP Member",
+      "translated": "VIP 회원"
+    },
+    "5681aa51ee48832a1fbb367e73982b38e86ebafb560ef6934cc13aa0db8b807a": {
+      "source": "Ads Free",
+      "translated": "광고 무료"
+    },
+    "e1b65987a5a1ca15838225c12ef9b84ae95f6c59974052b22720dc9af3f62c79": {
+      "source": "Exclusive Drama",
+      "translated": "연락처"
+    },
+    "168bbbb72663565b4eb0306bd383a927041adb963e786b164556f6a6e59670de": {
+      "source": "Anything Streaming",
+      "translated": "모든 동영상"
+    },
+    "2a39bbaf6ca2efddcd559607a1eae1dcec317b0a9070298baf3effbfb3d11c12": {
+      "source": "Unlimited Viewing",
+      "translated": "무제한 보기"
+    },
+    "8182ef9296aaf9454295bc0052192df3ff5a4d5b2fa9ace189be836162b05b7c": {
+      "source": "Personal Content",
+      "translated": "회사 소개"
+    },
+    "66a1419ec8d30b70b11c06a3a1b5c2f48f0de0a2637c6d76bfe0135315fe29c9": {
+      "source": "Upgrade Now",
+      "translated": "지금 업그레이드"
+    },
+    "a79273a892acf3f845fdf1a49e80d6a2c744db275f279b9e712526e658889fba": {
+      "source": "VIP Episode",
+      "translated": "VIP 에피소드"
+    },
+    "b6eb8fe19a3dfa516d472198a3d9e4cc9c447b4a3194d892d6efcb72fc0bcc2e": {
+      "source": "Become a VIP member to unlock all exclusive episodes without limits",
+      "translated": "제한없이 모든 독점 에피소드를 잠금 해제 VIP 회원"
+    },
+    "a46e7b9e85c03fcce5896c7dd4cd360183311974becdbb0f8154c7fe5712d8b7": {
+      "source": "Unlock / Upgrade to VIP",
+      "translated": "VIP로 잠금 해제 / 업그레이드"
+    },
+    "9c595c02fe734511c4cc475493eb0416767dbea344fd9348ba17d9704640a4b1": {
+      "source": "VIP Mingguan",
+      "translated": "VIP 밍관"
+    },
+    "030f15fb4a494b809a08f8686781798e49012f905775e1f9d59fe4d3c3936999": {
+      "source": "Rp 15.000",
+      "translated": "램 15.000"
+    },
+    "86eef4d93ed6b19087fb3189083fc6d020776f54f6ebc1f7237f15b6c2578f8f": {
+      "source": "Akses penuh selama 7 hari",
+      "translated": "Akses penuh selama 7 하리"
+    },
+    "424c3b6d3dc9297e6082bf561ff2f95a3c8d4a04c32efbc26f76d84e47219dba": {
+      "source": "VIP Bulanan",
+      "translated": "VIP 불가리"
+    },
+    "8700e1380cbf2a26cf726be08e00cd17d2e1a403231e87304ab71ba7bee460cb": {
+      "source": "Rp 39.000",
+      "translated": "램 39.000"
+    },
+    "1caabd882b01b5715301667d091acf2c532bc0a27c0d79a412e91a0c34d2b67c": {
+      "source": "Paling populer",
+      "translated": "팝업레이어 알림"
+    },
+    "ad3eca61c1d1da46d08b10d1c69645475895f0bcd64384475b6deec0a5ee8754": {
+      "source": "VIP Tahunan paling populer",
+      "translated": "VIP Tahunan paling 팝업"
+    },
+    "3dcef4e2b03004b5233331099a35f61595874e4288705dfb9093f2592a4655d3": {
+      "source": "Rp 299.000",
+      "translated": "RSS 피드"
+    },
+    "70b5190f8672bb815816173ca3d4dca7a7b4aa3a4b353da23e0ec3ec2b5ec567": {
+      "source": "Hemat hingga 35%",
+      "translated": "헤마트 칭가 35%"
+    },
+    "e57fd6b3bb98d9631453e1d44e9fa6b8d2e68daf8dcd0aac3114961b835b9660": {
+      "source": "BEST VALUE",
+      "translated": "최고의 VALUE"
+    },
+    "220a072bf6f1a9f8e7b95d7b793ef87cbf75f5b45442576ce2681125f5cf8b1c": {
+      "source": "bookmarkview",
+      "translated": "책갈피"
+    },
+    "30177d27a64a8107865e0ae10a54407794bda1326caee388fdb101edc43008fb": {
+      "source": "BookmarkView is working",
+      "translated": "즐겨찾기"
+    },
+    "acd27229f790a067317d3e89a0315440e4cee05dd5ae67c6d8ed898475acafa6": {
+      "source": "episodeview",
+      "translated": "에피소드보기"
+    },
+    "92d4464e25db1f83d33e124661368da10f42b34258908e8e972a590923a68f4f": {
+      "source": "EpisodeView is working",
+      "translated": "EpisodeView 이다 일"
+    },
+    "15902f81dcfa9cf8d35146f6b1554ea4c140524c18e3f44eb1598e1c13957f63": {
+      "source": "sinopsis",
+      "translated": "뚱 베어"
+    },
+    "7e414e6ac41ac7a0658ce2807548af8fb48b145f9b74aa77c9b526c569804bbc": {
+      "source": "episode",
+      "translated": "이름 *"
+    },
+    "fe01db15cb5d31216cf91fd9f02f5ced2b155dced67c31b78bbabf48665e1f73": {
+      "source": "historyview",
+      "translated": "역사보기"
+    },
+    "edb23882f4c65072f24b4ed41726142ce9d87509eb6e1d6bf8e410f6b75308df": {
+      "source": "HistoryView is working",
+      "translated": "HistoryView는 일하고 있습니다"
+    },
+    "34d8eb01e1bffebf9479381ec4f5393d816d70e34e08b909979855632b338eaa": {
+      "source": "Continue Watching",
+      "translated": "계속 시청"
+    },
+    "44c9d36485b791c3bb9243af06a1b34c1b0f662594d698da5db17368a91a225f": {
+      "source": "See All",
+      "translated": "모두 보기"
+    },
+    "671a97c1d922d7eb5ce517e73d24c43237a21770c45e019d4d64298d263c9d65": {
+      "source": "Home Refreshed",
+      "translated": "홈 새로 고침"
+    },
+    "8a7d8cb4e86e45c24506911b60ea353b25036d4b473e239777b093a6e03ec01c": {
+      "source": "Failed to refresh",
+      "translated": "새로 고침"
+    },
+    "b3d12dcd12598450369f1e1de686b5612846b5d334446180613e08cd58f52354": {
+      "source": "DMN Play",
+      "translated": "DMN 재생"
+    },
+    "428821350e9691491f616b754cd8315fb86d797ab35d843479e732ef90665324": {
+      "source": "login",
+      "translated": "로그인"
+    },
+    "be10b2f905f868ed50d992d183bec4314b7bddc5dad30b8985c5333b42db5c24": {
+      "source": "Coming Soon",
+      "translated": "현재 위치"
+    },
+    "8378c006e5505ccf0b25b5f2d40ce7d3bf1a7194d3d6b2feb103917b6a112a31": {
+      "source": "Are you sure you want to log out?",
+      "translated": "로그인하시겠습니까?"
+    },
+    "280d44ab1e9f79b5cce2dd4f58f5fe91f0fbacdac9f7447dffc318ceb79f2d02": {
+      "source": "welcome",
+      "translated": "제품 정보"
+    },
+    "bb033b5377edb722c9d6fe5f6303ecfb4a28b3b096127fc02db35d065a4706dc": {
+      "source": "Login to enjoy all DMN Play features",
+      "translated": "모든 DMN Play 기능을 즐길 수 있는 로그인"
+    },
+    "1f96f5d016bd94a83f38c77e810b0754e3ca60ebf8470e7ebaaf8b5b8d0946d7": {
+      "source": "Signing in...",
+      "translated": "로그인 ..."
+    },
+    "cce937e891444a7417c696cdd80c0eed11deb383f3c42bdb8b591d5dfcaa398e": {
+      "source": "Continue with Google",
+      "translated": "계속 Google"
+    },
+    "f154b630d75d2f28837a6da7a1d7a61705198cd01a5907b02278ed9842a1d5fa": {
+      "source": "Continue with Facebook",
+      "translated": "Facebook으로 계속하기"
+    },
+    "340ac4c3fd1f01233e46a45276a529a4fa607074b0efe745ffc11f9cf152d27c": {
+      "source": "Continue with Apple",
+      "translated": "계속 Apple"
+    },
+    "ce0e8e74c551dcbe127effff35dcbeacc2b4728168bd9ba89a1f896efa041302": {
+      "source": "Continue with Email",
+      "translated": "자주 묻는 질문"
+    },
+    "2bcc2316d5a32baef258c5c2204c427e3ed153acf74b94eb3f09bee8837e9cbc": {
+      "source": "By continuing, you agree to the\\nTerms & Conditions and Privacy Policy",
+      "translated": "계속, 당신은에 동의 \\nTerms & Conditions and Privacy Policy"
+    },
+    "a786e238ede4a3e4cd62d767098977e13e2eacff9cbb7743f5e4927099819de6": {
+      "source": "Movie tidak ditemukan",
+      "translated": "영화 tidak ditemukan"
+    },
+    "def4205254cadd3bd57a9a7561cbdb596cd16b33feb2c8c2f82645c5dfcb500d": {
+      "source": "Page Refreshed",
+      "translated": "페이지 새로 고침"
+    },
+    "8a6ba32c9bed6ce703f999f9af6ec23686d44e144e4da572d94c8daca4a9cbab": {
+      "source": "movie",
+      "translated": "한국어"
+    },
+    "03aa472bcfd8e09831f51505a2aa332ca9340d446d933f6ca4e44aeab8467146": {
+      "source": "You May Also Like",
+      "translated": "당신은 또한 좋아할 수 있습니다"
+    },
+    "a268145ba26f17348fc2f077890ea4a012a4588644050cda5e05e70427cb46a5": {
+      "source": "OPEN DONE",
+      "translated": "공지사항"
+    },
+    "2e01a0a7955a95ab2b168e24fcd787353879e8ba3edff8c47b188f7edd2bdb75": {
+      "source": "navbar",
+      "translated": "뚱 베어"
+    },
+    "230d8358dc8e8890b4c58deeb62912ee2f20357ae92a5cc861b98e68fe31acb5": {
+      "source": "body",
+      "translated": "뚱 베어"
+    },
+    "d43a4070f872dbf440225eb96e1f95f3c008cf4eadec79a722717717982fb227": {
+      "source": "profileview",
+      "translated": "회사연혁"
+    },
+    "56df8f85a553155de41316c6f2cfb8c4381d908eef9d1a48ab88e974544125e7": {
+      "source": "ProfileView is working",
+      "translated": "ProfileView가 작동 중입니다."
+    }
+  },
+  "hi_IN": {
+    "a56145270ce6b3bebd1dd012b73948677dd618d496488bc608a3cb43ce3547dd": {
+      "source": "id",
+      "translated": "आईडी"
+    },
+    "dbd3a49d0d906b4ed9216b73330d2fb080ef2f758c12f3885068222e5e17151c": {
+      "source": "en",
+      "translated": "एन"
+    },
+    "d8056ded45ebed137c65f9cd486673d27faebe7eac49460cabeea19e62d2525b": {
+      "source": "#979B999",
+      "translated": "#979B999"
+    },
+    "f179a509d32bd92c923f236324daef85551c03a761bf0188be286a585281b4ac": {
+      "source": "center",
+      "translated": "केंद्र"
+    },
+    "cf38d95c9c6b1d9d5125c04d41a54df57727ef4cfb3f5116a602fe2b25115c13": {
+      "source": "amount",
+      "translated": "राशि"
+    },
+    "073c1634c496cdb649d1afe0a312bbb4b7e1741b271542e4a436c3b8824b1761": {
+      "source": "status",
+      "translated": "स्थिति"
+    },
+    "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89": {
+      "source": "name",
+      "translated": "नाम"
+    },
+    "c9046f7a37ad0ea7cee73355984fa5428982f8b37c8f7bcec91f7ac71a7cd104": {
+      "source": "description",
+      "translated": "विवरण"
+    },
+    "683b531f41ec88a2f345b727afe59757b73162a340a65c86bba62866f8fe556c": {
+      "source": "price",
+      "translated": "कीमत"
+    },
+    "caa79af4db67695cce51988cda2f98423bb7420fbaee8968cd4aca151f55d3a2": {
+      "source": "duration",
+      "translated": "अवधि"
+    },
+    "944c27e5b97ab7793e4b6e9ff29384890ece0c7c04d2e2bf81c5f763469cc66b": {
+      "source": "day",
+      "translated": "दिन"
+    },
+    "a5c7d1719e284f2c9485405d44f62d152cde9e6ede83e1a79a2442b65f6a8735": {
+      "source": "month",
+      "translated": "महीना"
+    },
+    "4cb4ea25583c25647247ae96fc90225d99ad7a6fabc3e2c2fd13c502e323cd9e": {
+      "source": "year",
+      "translated": "साल"
+    },
+    "a6216ea03e578f212dd604ec5d675c5274a86891bac4e87f80bea10ef511f533": {
+      "source": "categories",
+      "translated": "श्रेणियां"
+    },
+    "aaf2320646108059a87ab5017a86aee454f5378ed95003dbb2e12f4ca5266e0e": {
+      "source": "title",
+      "translated": "शीर्षक"
+    },
+    "293b9207228b7854bc3ccb2959ebea1583e066d41983124a5b381d6fdf6575f8": {
+      "source": "poster",
+      "translated": "पोस्टर"
+    },
+    "8d9f80b4fe92a9bee5010901ed802de759062f64b022552f3e7298107a0a8d36": {
+      "source": "synopsis",
+      "translated": "संश्लेषण"
+    },
+    "cd03861f0ff8922a279f1eab771f91f6336df9e7dd9412355ec6a1a79c244a5e": {
+      "source": "slug",
+      "translated": "झरना"
+    },
+    "a941e049e9b1a5f8f3e2c1d39ee03082c184e89224e519c0bef6d8694743159a": {
+      "source": "movies",
+      "translated": "फिल्में"
+    },
+    "74883614c4c79e12bebc45efa35a381bf131416e74f2500c72450a92d39f429c": {
+      "source": "views",
+      "translated": "दृष्टिकोण"
+    },
+    "b04e5ea201bb040cae53f693f6a38a3e00b62da6039ca248fecd59b7fc842894": {
+      "source": "published",
+      "translated": "प्रकाशित"
+    },
+    "b5f90a96e680140d51e2ba945461716e44cc385940aee21f66020e66193647b7": {
+      "source": "progress",
+      "translated": "प्रगति"
+    },
+    "80adc17f4177175afa07b61686a3362867ba3bdea792c2dc7cd840615787de95": {
+      "source": "watched",
+      "translated": "देखना"
+    },
+    "0e4a8753470e0c08a28b3ee4d48d7866930da01b7c3dc9fda9ad7dd2adbc7813": {
+      "source": "qualities",
+      "translated": "गुण"
+    },
+    "74fc0bb544bf4f6dcedbe0c7de813c5419da6e884e2af83331befc1d2537a909": {
+      "source": "subtitles",
+      "translated": "उपशीर्षक"
+    },
+    "8c7ed2d9be59e21cf7cfc7da75c6c0cb7dd751f4a870f0f9236f0f35cbaf584e": {
+      "source": "banner",
+      "translated": "बैनर"
+    },
+    "5e1e2bcac305958b27077ca136f35f0abae7cf38c9af678f7d220ed0cb51d4f8": {
+      "source": "latest",
+      "translated": "नवीनतम"
+    },
+    "e5b00078095d49863c6f1634a35d39e772cb8ea760e1d3af8271d4c811a2f8f7": {
+      "source": "trending",
+      "translated": "ट्रेंडिंग"
+    },
+    "dd6d876548037ec722252b45795206575e7040eba1ca076cf1732a4a903cadba": {
+      "source": "recommended",
+      "translated": "अनुशंसित"
+    },
+    "d73fcf1a50a2172430a81da0c4a130cd25267dd0d503c03a41d373578df00a4a": {
+      "source": "genres",
+      "translated": "शैली"
+    },
+    "9cac91c1f544236a75db4457d3f608dc9c4c6d02b7df74a1b7eed08ccc24437c": {
+      "source": "subscriptions",
+      "translated": "सदस्यता"
+    },
+    "a8ace1a76c218f36a59a58224a92cf9557122411652d96633dc1cbf8c26e65b1": {
+      "source": "episodes",
+      "translated": "एपिसोड"
+    },
+    "1303c06b0b014d0ce7b988ab173a13f31227d417058ff4bbe6f8c222b4ad913c": {
+      "source": "type",
+      "translated": "प्रकार"
+    },
+    "603705cc260e946d130a1ceb6b6d9bfcd20312da055292ae3c16c7a3d693b410": {
+      "source": "cast",
+      "translated": "कास्ट"
+    },
+    "acef2c15bcd349db900dffece73e1256e881c4416fc1f2d3a494640183490d9a": {
+      "source": "quality",
+      "translated": "गुणवत्ता"
+    },
+    "76cd21db00b2a3eee39dff599ad245a3c5088395388942fde3d2363da968bc1a": {
+      "source": "playlist",
+      "translated": "प्लेलिस्ट"
+    },
+    "2c7210c5b950d31204e6a8e9383ea5b5fc5372b8bf827a647a9d05aa005bc3d7": {
+      "source": "bandwidth",
+      "translated": "बैंडविड्थ"
+    },
+    "dec0f004eaa07c2a283ea326df8f00c2c3c60b002c9bb8d452b1dcff5ba795cb": {
+      "source": "width",
+      "translated": "चौड़ाई"
+    },
+    "39e0f5efdc39ec10992833ad019f0ddf2b42b49b098313df991b8229a37aed21": {
+      "source": "height",
+      "translated": "ऊंचाई"
+    },
+    "f7b3781c5eafc2779a96bae2e4875a83ecce46f198e9f81916521d9d218c7da7": {
+      "source": "hari",
+      "translated": "हैरी"
+    },
+    "a735806c0ca2d06d994830f37402c52cfbee63012298668439cfb8bd7e8a8597": {
+      "source": "bulan",
+      "translated": "bulan"
+    },
+    "5ff9aa4ca343f62b132e136628f2ba7f0407384c6bad59123f5d063ff86a1c3c": {
+      "source": "tahun",
+      "translated": "Tahun"
+    },
+    "7244b466327ec6f5f8be71a92f31dbddd8ce41f344ce3b1754fa10cbc326f218": {
+      "source": "fullname",
+      "translated": "पूर्ण नाम"
+    },
+    "82244417f956ac7c599f191593f7e441a4fafa20a4158fd52e154f1dc4c8ed92": {
+      "source": "email",
+      "translated": "ईमेल"
+    },
+    "87bbe879c7a5f5784a70384bb49fa9513a6a3fbe4c2d388635e3c87611c03fae": {
+      "source": "avatar",
+      "translated": "अवतार"
+    },
+    "80f61f96184524ba54db767ed49487392430ad26bf5cf2ef689905f3400325d7": {
+      "source": "thumbnail",
+      "translated": "थंबनेल"
+    },
+    "b0aa8a6c35b4deec55bc1f31b9be4c50a4426ada09b58c4e1dcaf9a81f913903": {
+      "source": "likes",
+      "translated": "पसंद"
+    },
+    "5a452459503be70d2ed2fca46dd91e05e820a957f175686a77d03fff80f664fe": {
+      "source": "position",
+      "translated": "स्थिति"
+    },
+    "4ddb3e96801a1ee2b77dc5247c0db478d5f97a93b90e7cdb09f5f51d43764b08": {
+      "source": "completed",
+      "translated": "पूरा"
+    },
+    "cbe729b22ca6d1dba8a9689739ac89c02cda72dcfea48df322b2f2b45981ac4c": {
+      "source": "auth/google",
+      "translated": "auth/google"
+    },
+    "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27": {
+      "source": "success",
+      "translated": "सफलता"
+    },
+    "ab530a13e45914982b79f9b7e3fba994cfd1f3fb22f71cea1afbf02b460c6d1d": {
+      "source": "message",
+      "translated": "संदेश"
+    },
+    "3a6eb0790f39ac87c94f3856b2dd2c5d110e6811602261a9a923d3bb23adc8b7": {
+      "source": "data",
+      "translated": "डेटा"
+    },
+    "3c469e9d6c5875d37a43f353d4f88e61fcf812c66eee3457465a40b0da4153e0": {
+      "source": "token",
+      "translated": "टोकन"
+    },
+    "04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb": {
+      "source": "user",
+      "translated": "उपयोगकर्ता"
+    },
+    "4ec9531752967ed3e4d17b00d4f20446d8cdb1ac1ea5cc21181d16de3667c8d8": {
+      "source": "auth/me",
+      "translated": "auth/me"
+    },
+    "59f006d63bd009b7f1f1d7bd7e29e1f3b9db6505ce784ca3216ea90c6d6dcb11": {
+      "source": "seconds",
+      "translated": "सेकंड"
+    },
+    "4ea140588150773ce3aace786aeef7f4049ce100fa649c94fbbddb960f1da942": {
+      "source": "home",
+      "translated": "घर"
+    },
+    "917f1a3e38ebb8c761fe4b2fe70d85bb6c05231fea6b173989c05383601c518e": {
+      "source": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com",
+      "translated": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com"
+    },
+    "bacb769b46f6d169fb227ea026550f411d46cbe66a9c2a6ba36449c8cf8e4dea": {
+      "source": "application/json",
+      "translated": "आवेदन / जेसन"
+    },
+    "d0f9bc7a3b0119a356b27ea861c367722bbbe5ac27f544cbb9035926bb8fcc19": {
+      "source": "Account Settings",
+      "translated": "खाता सेटिंग"
+    },
+    "21ecba52f7c36529eaeba29b11c061ccf1e1dc48c554540d7a8781a0ba7c13c4": {
+      "source": "Manage Device",
+      "translated": "डिवाइस प्रबंधित करें"
+    },
+    "ca91f790667a1ea41eaebff23ddc7d4904290dc3f0ff791a2ebbdbbf69b62e01": {
+      "source": "Payment & Transaction",
+      "translated": "भुगतान और लेनदेन"
+    },
+    "1c8b07d56c07434b317a92ab2c88d40684d165a3d5a2be2757ff3289a6ad32fc": {
+      "source": "Subscription Plan",
+      "translated": "सदस्यता योजना"
+    },
+    "f5f3290484410904e90e6334a452d7c0ccac80b038fb97c6a1ab737d523f9588": {
+      "source": "subscription data is still loading",
+      "translated": "सदस्यता डेटा अभी भी लोड हो रहा है"
+    },
+    "669cd31f76367c2de677001106b458f40cbb1dd8952d115a222edf3e497a8e64": {
+      "source": "Transaction History",
+      "translated": "लेनदेन इतिहास"
+    },
+    "a78cebc44214256ba361dcee3f1cc1408e55ea6940c65067615abd4fdcc2d788": {
+      "source": "Help Center",
+      "translated": "सहायता केंद्र"
+    },
+    "506ff394621596dd88138642eddfc1e41833b3ae92d95e5c77c94327098abd9a": {
+      "source": "Privacy Policy",
+      "translated": "गोपनीयता नीति"
+    },
+    "12a0015fa32217778863154566bce500732726db6ea596518712c12955d9a225": {
+      "source": "Terms of Use",
+      "translated": "उपयोग की शर्तें"
+    },
+    "108ac1ea94920737dfe95398871cec04a1a019bb929edc254ab3ffd53b7d144b": {
+      "source": "Version 1.0.0",
+      "translated": "संस्करण 1.0.0"
+    },
+    "34687b57738ab35e80fdb5dfa1c256dbc66f5b5952ad2a5473caf330e17e9b66": {
+      "source": "Belum Login",
+      "translated": "बेलम लॉग इन"
+    },
+    "3b7564525cce872216cd28776d1e94d23048eeedf4c7340c665b1854a7e53e30": {
+      "source": "Login >",
+      "translated": "लॉगिन"
+    },
+    "5fd6ad84c80e016fbdfa2927d0cf4e3061d6673d37062c41abe7257cc50dafda": {
+      "source": "\\B(?=(\\d{3})+(?!\\d))",
+      "translated": "\\B(?=(\\d{3})+(?!\\d))"
+    },
+    "826086bf58f0134f0e3675be4dfab26f667d2cd7e3d529056bc4c511e0caea44": {
+      "source": "Tidak ada paket tersedia",
+      "translated": "Tidak ada paket tersedia"
+    },
+    "2335642d95717cc45071c76406086ca81bc66b97809178eb7d259a34b9f2581b": {
+      "source": "Pilih Paket VIP",
+      "translated": "Pilih Paket VIP"
+    },
+    "0274498181bac49a152ac1f3ebfaf4832d0511e65563c702136b38feee11fbbb": {
+      "source": "Nikmati semua konten premium dan akses tanpa batas.",
+      "translated": "Nikmati semua konten प्रीमियम dan aks tanpa batas."
+    },
+    "9ce0bef781caae1bae58816888a54def04118d0b7a9b0d6f6740cf9307b3206c": {
+      "source": "Akses semua konten VIP",
+      "translated": "Akses semua konten VIP"
+    },
+    "8a84a61c846fcf582b47967d471048ed6d6a7a50ac01fadc16e4c5ef655cd620": {
+      "source": "Kualitas video premium",
+      "translated": "Kualitas वीडियो प्रीमियम"
+    },
+    "3de389b982fb9912fb01c2e12c450e7046da2c698975a4d45037751edfc2f20d": {
+      "source": "Tanpa batas menonton",
+      "translated": "तन्पा batas menonton"
+    },
+    "594e8ba5b894d96805621daab564d0de4a0d1b2f81daf9f58c8f24122846d227": {
+      "source": "Paket Saat Ini",
+      "translated": "Paket Saat Ini"
+    },
+    "688e03801386103240d1be1bed0fbff74b5cab6c816cda96f8b24eaae35ae443": {
+      "source": "Free Member",
+      "translated": "सदस्य"
+    },
+    "4d15dabc4fd63a376d67cde46955a40ccd10fe3c0435c4f3e2895b431d53cb1c": {
+      "source": "Upgrade untuk menikmati konten VIP",
+      "translated": "untuk menikmati konten VIP"
+    },
+    "29db58dcc31cbce91c3acb87be3d81c0f6186cc43d42fee5c3cd0bda6c547e9e": {
+      "source": "dibayar",
+      "translated": "हिन्दी"
+    },
+    "1182ca0e4249bc85ef7b5e63d96da4972828d1a86efb0e0e86f2a60f0090efcf": {
+      "source": "Berlaku sampai",
+      "translated": "Berlaku sampai"
+    },
+    "d388942ba926ada027a9cc7100f95d2f4265026dcebe94adbd1d9180a2495e8d": {
+      "source": "dd MMM yyyy",
+      "translated": "dd एमएमएम yyyyyy"
+    },
+    "109928873dc38ec8b6e6281c6d9f1c300ff2866a7a706632246b25ee14780bb2": {
+      "source": "Harga promo terbatas",
+      "translated": "Harga promo terbatas"
+    },
+    "afca35780a80004ffa239801b17d853cc369cc85ba58cc8b9dc0a3609ee7ca13": {
+      "source": "VIP ACCOUNT",
+      "translated": "वीआईपी खाता"
+    },
+    "d5d5e5fa6c7d8ad96f2da0f9371342379491c03dcfd0912beda1a9ccfaa5fdbd": {
+      "source": "Become a VIP Member",
+      "translated": "वीआईपी सदस्य बनें"
+    },
+    "5681aa51ee48832a1fbb367e73982b38e86ebafb560ef6934cc13aa0db8b807a": {
+      "source": "Ads Free",
+      "translated": "Ads Free"
+    },
+    "e1b65987a5a1ca15838225c12ef9b84ae95f6c59974052b22720dc9af3f62c79": {
+      "source": "Exclusive Drama",
+      "translated": "अनन्य नाटक"
+    },
+    "168bbbb72663565b4eb0306bd383a927041adb963e786b164556f6a6e59670de": {
+      "source": "Anything Streaming",
+      "translated": "कुछ भी स्ट्रीमिंग"
+    },
+    "2a39bbaf6ca2efddcd559607a1eae1dcec317b0a9070298baf3effbfb3d11c12": {
+      "source": "Unlimited Viewing",
+      "translated": "असीमित देखने"
+    },
+    "8182ef9296aaf9454295bc0052192df3ff5a4d5b2fa9ace189be836162b05b7c": {
+      "source": "Personal Content",
+      "translated": "व्यक्तिगत सामग्री"
+    },
+    "66a1419ec8d30b70b11c06a3a1b5c2f48f0de0a2637c6d76bfe0135315fe29c9": {
+      "source": "Upgrade Now",
+      "translated": "अब अपग्रेड करें"
+    },
+    "a79273a892acf3f845fdf1a49e80d6a2c744db275f279b9e712526e658889fba": {
+      "source": "VIP Episode",
+      "translated": "वीआईपी एपिसोड"
+    },
+    "b6eb8fe19a3dfa516d472198a3d9e4cc9c447b4a3194d892d6efcb72fc0bcc2e": {
+      "source": "Become a VIP member to unlock all exclusive episodes without limits",
+      "translated": "बिना किसी सीमा के सभी विशेष एपिसोड को अनलॉक करने के लिए वीआईपी सदस्य बनें"
+    },
+    "a46e7b9e85c03fcce5896c7dd4cd360183311974becdbb0f8154c7fe5712d8b7": {
+      "source": "Unlock / Upgrade to VIP",
+      "translated": "अनलॉक / वीआईपी में अपग्रेड"
+    },
+    "9c595c02fe734511c4cc475493eb0416767dbea344fd9348ba17d9704640a4b1": {
+      "source": "VIP Mingguan",
+      "translated": "वीआईपी Mingguan"
+    },
+    "030f15fb4a494b809a08f8686781798e49012f905775e1f9d59fe4d3c3936999": {
+      "source": "Rp 15.000",
+      "translated": "आर पी 15.000"
+    },
+    "86eef4d93ed6b19087fb3189083fc6d020776f54f6ebc1f7237f15b6c2578f8f": {
+      "source": "Akses penuh selama 7 hari",
+      "translated": "One who selama 7 hari"
+    },
+    "424c3b6d3dc9297e6082bf561ff2f95a3c8d4a04c32efbc26f76d84e47219dba": {
+      "source": "VIP Bulanan",
+      "translated": "वीआईपी बुलनान"
+    },
+    "8700e1380cbf2a26cf726be08e00cd17d2e1a403231e87304ab71ba7bee460cb": {
+      "source": "Rp 39.000",
+      "translated": "Rp 39.000"
+    },
+    "1caabd882b01b5715301667d091acf2c532bc0a27c0d79a412e91a0c34d2b67c": {
+      "source": "Paling populer",
+      "translated": "पलंग populer"
+    },
+    "ad3eca61c1d1da46d08b10d1c69645475895f0bcd64384475b6deec0a5ee8754": {
+      "source": "VIP Tahunan paling populer",
+      "translated": "वीआईपी ताहुनान paling populer"
+    },
+    "3dcef4e2b03004b5233331099a35f61595874e4288705dfb9093f2592a4655d3": {
+      "source": "Rp 299.000",
+      "translated": "आर पी 299.000"
+    },
+    "70b5190f8672bb815816173ca3d4dca7a7b4aa3a4b353da23e0ec3ec2b5ec567": {
+      "source": "Hemat hingga 35%",
+      "translated": "Hemat hingga 35%"
+    },
+    "e57fd6b3bb98d9631453e1d44e9fa6b8d2e68daf8dcd0aac3114961b835b9660": {
+      "source": "BEST VALUE",
+      "translated": "सर्वश्रेष्ठ मूल्य"
+    },
+    "220a072bf6f1a9f8e7b95d7b793ef87cbf75f5b45442576ce2681125f5cf8b1c": {
+      "source": "bookmarkview",
+      "translated": "बुकमार्क"
+    },
+    "30177d27a64a8107865e0ae10a54407794bda1326caee388fdb101edc43008fb": {
+      "source": "BookmarkView is working",
+      "translated": "BookmarkView काम कर रहा है"
+    },
+    "acd27229f790a067317d3e89a0315440e4cee05dd5ae67c6d8ed898475acafa6": {
+      "source": "episodeview",
+      "translated": "एपिसोड"
+    },
+    "92d4464e25db1f83d33e124661368da10f42b34258908e8e972a590923a68f4f": {
+      "source": "EpisodeView is working",
+      "translated": "एपिसोड व्यू काम कर रहा है"
+    },
+    "15902f81dcfa9cf8d35146f6b1554ea4c140524c18e3f44eb1598e1c13957f63": {
+      "source": "sinopsis",
+      "translated": "सिंहासन"
+    },
+    "7e414e6ac41ac7a0658ce2807548af8fb48b145f9b74aa77c9b526c569804bbc": {
+      "source": "episode",
+      "translated": "प्रकरण"
+    },
+    "fe01db15cb5d31216cf91fd9f02f5ced2b155dced67c31b78bbabf48665e1f73": {
+      "source": "historyview",
+      "translated": "इतिहास"
+    },
+    "edb23882f4c65072f24b4ed41726142ce9d87509eb6e1d6bf8e410f6b75308df": {
+      "source": "HistoryView is working",
+      "translated": "इतिहास"
+    },
+    "34d8eb01e1bffebf9479381ec4f5393d816d70e34e08b909979855632b338eaa": {
+      "source": "Continue Watching",
+      "translated": "पढ़ना"
+    },
+    "44c9d36485b791c3bb9243af06a1b34c1b0f662594d698da5db17368a91a225f": {
+      "source": "See All",
+      "translated": "सब देखें"
+    },
+    "671a97c1d922d7eb5ce517e73d24c43237a21770c45e019d4d64298d263c9d65": {
+      "source": "Home Refreshed",
+      "translated": "होम ताज़ा"
+    },
+    "8a7d8cb4e86e45c24506911b60ea353b25036d4b473e239777b093a6e03ec01c": {
+      "source": "Failed to refresh",
+      "translated": "ताज़ा करने में विफल"
+    },
+    "b3d12dcd12598450369f1e1de686b5612846b5d334446180613e08cd58f52354": {
+      "source": "DMN Play",
+      "translated": "DMN प्ले"
+    },
+    "428821350e9691491f616b754cd8315fb86d797ab35d843479e732ef90665324": {
+      "source": "login",
+      "translated": "लॉग इन"
+    },
+    "be10b2f905f868ed50d992d183bec4314b7bddc5dad30b8985c5333b42db5c24": {
+      "source": "Coming Soon",
+      "translated": "सोन"
+    },
+    "8378c006e5505ccf0b25b5f2d40ce7d3bf1a7194d3d6b2feb103917b6a112a31": {
+      "source": "Are you sure you want to log out?",
+      "translated": "क्या आप जानना चाहते हैं?"
+    },
+    "280d44ab1e9f79b5cce2dd4f58f5fe91f0fbacdac9f7447dffc318ceb79f2d02": {
+      "source": "welcome",
+      "translated": "स्वागत"
+    },
+    "bb033b5377edb722c9d6fe5f6303ecfb4a28b3b096127fc02db35d065a4706dc": {
+      "source": "Login to enjoy all DMN Play features",
+      "translated": "सभी DMN प्ले सुविधाओं का आनंद लेने के लिए लॉग इन करें"
+    },
+    "1f96f5d016bd94a83f38c77e810b0754e3ca60ebf8470e7ebaaf8b5b8d0946d7": {
+      "source": "Signing in...",
+      "translated": "साइन इन करें..."
+    },
+    "cce937e891444a7417c696cdd80c0eed11deb383f3c42bdb8b591d5dfcaa398e": {
+      "source": "Continue with Google",
+      "translated": "गूगल के साथ जारी"
+    },
+    "f154b630d75d2f28837a6da7a1d7a61705198cd01a5907b02278ed9842a1d5fa": {
+      "source": "Continue with Facebook",
+      "translated": "फेसबुक"
+    },
+    "340ac4c3fd1f01233e46a45276a529a4fa607074b0efe745ffc11f9cf152d27c": {
+      "source": "Continue with Apple",
+      "translated": "सेब के साथ जारी"
+    },
+    "ce0e8e74c551dcbe127effff35dcbeacc2b4728168bd9ba89a1f896efa041302": {
+      "source": "Continue with Email",
+      "translated": "ईमेल के साथ"
+    },
+    "2bcc2316d5a32baef258c5c2204c427e3ed153acf74b94eb3f09bee8837e9cbc": {
+      "source": "By continuing, you agree to the\\nTerms & Conditions and Privacy Policy",
+      "translated": "जारी रखने के बाद, आप 'nterms' और शर्तों और गोपनीयता नीति के लिए सहमत होते हैं।"
+    },
+    "a786e238ede4a3e4cd62d767098977e13e2eacff9cbb7743f5e4927099819de6": {
+      "source": "Movie tidak ditemukan",
+      "translated": "मूवी tidak ditemukan"
+    },
+    "def4205254cadd3bd57a9a7561cbdb596cd16b33feb2c8c2f82645c5dfcb500d": {
+      "source": "Page Refreshed",
+      "translated": "पृष्ठ ताज़ा"
+    },
+    "8a6ba32c9bed6ce703f999f9af6ec23686d44e144e4da572d94c8daca4a9cbab": {
+      "source": "movie",
+      "translated": "फिल्म"
+    },
+    "03aa472bcfd8e09831f51505a2aa332ca9340d446d933f6ca4e44aeab8467146": {
+      "source": "You May Also Like",
+      "translated": "You May Also Like"
+    },
+    "a268145ba26f17348fc2f077890ea4a012a4588644050cda5e05e70427cb46a5": {
+      "source": "OPEN DONE",
+      "translated": "ओपेन डोन"
+    },
+    "2e01a0a7955a95ab2b168e24fcd787353879e8ba3edff8c47b188f7edd2bdb75": {
+      "source": "navbar",
+      "translated": "नवाब"
+    },
+    "230d8358dc8e8890b4c58deeb62912ee2f20357ae92a5cc861b98e68fe31acb5": {
+      "source": "body",
+      "translated": "शरीर"
+    },
+    "d43a4070f872dbf440225eb96e1f95f3c008cf4eadec79a722717717982fb227": {
+      "source": "profileview",
+      "translated": "प्रोफ़ाइल विवरण"
+    },
+    "56df8f85a553155de41316c6f2cfb8c4381d908eef9d1a48ab88e974544125e7": {
+      "source": "ProfileView is working",
+      "translated": "ProfileView काम कर रहा है"
+    }
+  },
+  "ms_MY": {
+    "a56145270ce6b3bebd1dd012b73948677dd618d496488bc608a3cb43ce3547dd": {
+      "source": "id",
+      "translated": "dz"
+    },
+    "dbd3a49d0d906b4ed9216b73330d2fb080ef2f758c12f3885068222e5e17151c": {
+      "source": "en",
+      "translated": "en"
+    },
+    "d8056ded45ebed137c65f9cd486673d27faebe7eac49460cabeea19e62d2525b": {
+      "source": "#979B999",
+      "translated": "#979B999"
+    },
+    "f179a509d32bd92c923f236324daef85551c03a761bf0188be286a585281b4ac": {
+      "source": "center",
+      "translated": "Pusat"
+    },
+    "cf38d95c9c6b1d9d5125c04d41a54df57727ef4cfb3f5116a602fe2b25115c13": {
+      "source": "amount",
+      "translated": "jumlah"
+    },
+    "073c1634c496cdb649d1afe0a312bbb4b7e1741b271542e4a436c3b8824b1761": {
+      "source": "status",
+      "translated": "status"
+    },
+    "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89": {
+      "source": "name",
+      "translated": "Nama"
+    },
+    "c9046f7a37ad0ea7cee73355984fa5428982f8b37c8f7bcec91f7ac71a7cd104": {
+      "source": "description",
+      "translated": "Deskripsi"
+    },
+    "683b531f41ec88a2f345b727afe59757b73162a340a65c86bba62866f8fe556c": {
+      "source": "price",
+      "translated": "harga"
+    },
+    "caa79af4db67695cce51988cda2f98423bb7420fbaee8968cd4aca151f55d3a2": {
+      "source": "duration",
+      "translated": "durasi"
+    },
+    "944c27e5b97ab7793e4b6e9ff29384890ece0c7c04d2e2bf81c5f763469cc66b": {
+      "source": "day",
+      "translated": "hari"
+    },
+    "a5c7d1719e284f2c9485405d44f62d152cde9e6ede83e1a79a2442b65f6a8735": {
+      "source": "month",
+      "translated": "bulan"
+    },
+    "4cb4ea25583c25647247ae96fc90225d99ad7a6fabc3e2c2fd13c502e323cd9e": {
+      "source": "year",
+      "translated": "tahun"
+    },
+    "a6216ea03e578f212dd604ec5d675c5274a86891bac4e87f80bea10ef511f533": {
+      "source": "categories",
+      "translated": "Kategori"
+    },
+    "aaf2320646108059a87ab5017a86aee454f5378ed95003dbb2e12f4ca5266e0e": {
+      "source": "title",
+      "translated": "Gelar"
+    },
+    "293b9207228b7854bc3ccb2959ebea1583e066d41983124a5b381d6fdf6575f8": {
+      "source": "poster",
+      "translated": "poster"
+    },
+    "8d9f80b4fe92a9bee5010901ed802de759062f64b022552f3e7298107a0a8d36": {
+      "source": "synopsis",
+      "translated": "Sinopsis sinopsis"
+    },
+    "cd03861f0ff8922a279f1eab771f91f6336df9e7dd9412355ec6a1a79c244a5e": {
+      "source": "slug",
+      "translated": "siput"
+    },
+    "a941e049e9b1a5f8f3e2c1d39ee03082c184e89224e519c0bef6d8694743159a": {
+      "source": "movies",
+      "translated": "Film"
+    },
+    "74883614c4c79e12bebc45efa35a381bf131416e74f2500c72450a92d39f429c": {
+      "source": "views",
+      "translated": "Pemandangan"
+    },
+    "b04e5ea201bb040cae53f693f6a38a3e00b62da6039ca248fecd59b7fc842894": {
+      "source": "published",
+      "translated": "terbitan"
+    },
+    "b5f90a96e680140d51e2ba945461716e44cc385940aee21f66020e66193647b7": {
+      "source": "progress",
+      "translated": "Ada kemajuan"
+    },
+    "80adc17f4177175afa07b61686a3362867ba3bdea792c2dc7cd840615787de95": {
+      "source": "watched",
+      "translated": "Ditonton"
+    },
+    "0e4a8753470e0c08a28b3ee4d48d7866930da01b7c3dc9fda9ad7dd2adbc7813": {
+      "source": "qualities",
+      "translated": "Kualitas"
+    },
+    "74fc0bb544bf4f6dcedbe0c7de813c5419da6e884e2af83331befc1d2537a909": {
+      "source": "subtitles",
+      "translated": "Subtitle"
+    },
+    "8c7ed2d9be59e21cf7cfc7da75c6c0cb7dd751f4a870f0f9236f0f35cbaf584e": {
+      "source": "banner",
+      "translated": "{Y: i}"
+    },
+    "5e1e2bcac305958b27077ca136f35f0abae7cf38c9af678f7d220ed0cb51d4f8": {
+      "source": "latest",
+      "translated": "terkini"
+    },
+    "e5b00078095d49863c6f1634a35d39e772cb8ea760e1d3af8271d4c811a2f8f7": {
+      "source": "trending",
+      "translated": "trending"
+    },
+    "dd6d876548037ec722252b45795206575e7040eba1ca076cf1732a4a903cadba": {
+      "source": "recommended",
+      "translated": "Disarankan oleh:"
+    },
+    "d73fcf1a50a2172430a81da0c4a130cd25267dd0d503c03a41d373578df00a4a": {
+      "source": "genres",
+      "translated": "genre"
+    },
+    "9cac91c1f544236a75db4457d3f608dc9c4c6d02b7df74a1b7eed08ccc24437c": {
+      "source": "subscriptions",
+      "translated": "Langganan"
+    },
+    "a8ace1a76c218f36a59a58224a92cf9557122411652d96633dc1cbf8c26e65b1": {
+      "source": "episodes",
+      "translated": "episode"
+    },
+    "1303c06b0b014d0ce7b988ab173a13f31227d417058ff4bbe6f8c222b4ad913c": {
+      "source": "type",
+      "translated": "jenis"
+    },
+    "603705cc260e946d130a1ceb6b6d9bfcd20312da055292ae3c16c7a3d693b410": {
+      "source": "cast",
+      "translated": "[ Gambar di hlm."
+    },
+    "acef2c15bcd349db900dffece73e1256e881c4416fc1f2d3a494640183490d9a": {
+      "source": "quality",
+      "translated": "Kualitas mutu"
+    },
+    "76cd21db00b2a3eee39dff599ad245a3c5088395388942fde3d2363da968bc1a": {
+      "source": "playlist",
+      "translated": "Senarai main gundul"
+    },
+    "2c7210c5b950d31204e6a8e9383ea5b5fc5372b8bf827a647a9d05aa005bc3d7": {
+      "source": "bandwidth",
+      "translated": "Jalur lebar"
+    },
+    "dec0f004eaa07c2a283ea326df8f00c2c3c60b002c9bb8d452b1dcff5ba795cb": {
+      "source": "width",
+      "translated": "lebar"
+    },
+    "39e0f5efdc39ec10992833ad019f0ddf2b42b49b098313df991b8229a37aed21": {
+      "source": "height",
+      "translated": "tinggi"
+    },
+    "f7b3781c5eafc2779a96bae2e4875a83ecce46f198e9f81916521d9d218c7da7": {
+      "source": "hari",
+      "translated": "KAN"
+    },
+    "a735806c0ca2d06d994830f37402c52cfbee63012298668439cfb8bd7e8a8597": {
+      "source": "bulan",
+      "translated": "BAHAN"
+    },
+    "5ff9aa4ca343f62b132e136628f2ba7f0407384c6bad59123f5d063ff86a1c3c": {
+      "source": "tahun",
+      "translated": "tahun"
+    },
+    "7244b466327ec6f5f8be71a92f31dbddd8ce41f344ce3b1754fa10cbc326f218": {
+      "source": "fullname",
+      "translated": "fullname"
+    },
+    "82244417f956ac7c599f191593f7e441a4fafa20a4158fd52e154f1dc4c8ed92": {
+      "source": "email",
+      "translated": "Email"
+    },
+    "87bbe879c7a5f5784a70384bb49fa9513a6a3fbe4c2d388635e3c87611c03fae": {
+      "source": "avatar",
+      "translated": "avatar"
+    },
+    "80f61f96184524ba54db767ed49487392430ad26bf5cf2ef689905f3400325d7": {
+      "source": "thumbnail",
+      "translated": "thumbnail"
+    },
+    "b0aa8a6c35b4deec55bc1f31b9be4c50a4426ada09b58c4e1dcaf9a81f913903": {
+      "source": "likes",
+      "translated": "Suka"
+    },
+    "5a452459503be70d2ed2fca46dd91e05e820a957f175686a77d03fff80f664fe": {
+      "source": "position",
+      "translated": "posisi"
+    },
+    "4ddb3e96801a1ee2b77dc5247c0db478d5f97a93b90e7cdb09f5f51d43764b08": {
+      "source": "completed",
+      "translated": "selesai"
+    },
+    "cbe729b22ca6d1dba8a9689739ac89c02cda72dcfea48df322b2f2b45981ac4c": {
+      "source": "auth/google",
+      "translated": "ASIA/google"
+    },
+    "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27": {
+      "source": "success",
+      "translated": "Sukses"
+    },
+    "ab530a13e45914982b79f9b7e3fba994cfd1f3fb22f71cea1afbf02b460c6d1d": {
+      "source": "message",
+      "translated": "pesan org"
+    },
+    "3a6eb0790f39ac87c94f3856b2dd2c5d110e6811602261a9a923d3bb23adc8b7": {
+      "source": "data",
+      "translated": "Data"
+    },
+    "3c469e9d6c5875d37a43f353d4f88e61fcf812c66eee3457465a40b0da4153e0": {
+      "source": "token",
+      "translated": "Token"
+    },
+    "04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb": {
+      "source": "user",
+      "translated": "Pengguna"
+    },
+    "4ec9531752967ed3e4d17b00d4f20446d8cdb1ac1ea5cc21181d16de3667c8d8": {
+      "source": "auth/me",
+      "translated": "Auth/me"
+    },
+    "59f006d63bd009b7f1f1d7bd7e29e1f3b9db6505ce784ca3216ea90c6d6dcb11": {
+      "source": "seconds",
+      "translated": "detik"
+    },
+    "4ea140588150773ce3aace786aeef7f4049ce100fa649c94fbbddb960f1da942": {
+      "source": "home",
+      "translated": "Rumah"
+    },
+    "917f1a3e38ebb8c761fe4b2fe70d85bb6c05231fea6b173989c05383601c518e": {
+      "source": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com",
+      "translated": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com"
+    },
+    "bacb769b46f6d169fb227ea026550f411d46cbe66a9c2a6ba36449c8cf8e4dea": {
+      "source": "application/json",
+      "translated": "Aplikasi/json"
+    },
+    "d0f9bc7a3b0119a356b27ea861c367722bbbe5ac27f544cbb9035926bb8fcc19": {
+      "source": "Account Settings",
+      "translated": "Tetapan Akaun NFS"
+    },
+    "21ecba52f7c36529eaeba29b11c061ccf1e1dc48c554540d7a8781a0ba7c13c4": {
+      "source": "Manage Device",
+      "translated": "Pengurusan Perangkat"
+    },
+    "ca91f790667a1ea41eaebff23ddc7d4904290dc3f0ff791a2ebbdbbf69b62e01": {
+      "source": "Payment & Transaction",
+      "translated": "Transaksi Pembayaran Tunas &"
+    },
+    "1c8b07d56c07434b317a92ab2c88d40684d165a3d5a2be2757ff3289a6ad32fc": {
+      "source": "Subscription Plan",
+      "translated": "Rencana Langganan"
+    },
+    "f5f3290484410904e90e6334a452d7c0ccac80b038fb97c6a1ab737d523f9588": {
+      "source": "subscription data is still loading",
+      "translated": "Data langganan yang masih dimuat"
+    },
+    "669cd31f76367c2de677001106b458f40cbb1dd8952d115a222edf3e497a8e64": {
+      "source": "Transaction History",
+      "translated": "Sejarah Transaksi"
+    },
+    "a78cebc44214256ba361dcee3f1cc1408e55ea6940c65067615abd4fdcc2d788": {
+      "source": "Help Center",
+      "translated": "Pusat Bantuan XO"
+    },
+    "506ff394621596dd88138642eddfc1e41833b3ae92d95e5c77c94327098abd9a": {
+      "source": "Privacy Policy",
+      "translated": "Kebijakan Privasi"
+    },
+    "12a0015fa32217778863154566bce500732726db6ea596518712c12955d9a225": {
+      "source": "Terms of Use",
+      "translated": "Terminologi Penggunaan"
+    },
+    "108ac1ea94920737dfe95398871cec04a1a019bb929edc254ab3ffd53b7d144b": {
+      "source": "Version 1.0.0",
+      "translated": "Version 1.0.0"
+    },
+    "34687b57738ab35e80fdb5dfa1c256dbc66f5b5952ad2a5473caf330e17e9b66": {
+      "source": "Belum Login",
+      "translated": "Login Bernama Belum"
+    },
+    "3b7564525cce872216cd28776d1e94d23048eeedf4c7340c665b1854a7e53e30": {
+      "source": "Login >",
+      "translated": "Log masuk >"
+    },
+    "5fd6ad84c80e016fbdfa2927d0cf4e3061d6673d37062c41abe7257cc50dafda": {
+      "source": "\\B(?=(\\d{3})+(?!\\d))",
+      "translated": "\\B(?=(\\d{3})+(?!\\d))"
+    },
+    "826086bf58f0134f0e3675be4dfab26f667d2cd7e3d529056bc4c511e0caea44": {
+      "source": "Tidak ada paket tersedia",
+      "translated": "Tersedia paket"
+    },
+    "2335642d95717cc45071c76406086ca81bc66b97809178eb7d259a34b9f2581b": {
+      "source": "Pilih Paket VIP",
+      "translated": "[Polih Paket VIP]"
+    },
+    "0274498181bac49a152ac1f3ebfaf4832d0511e65563c702136b38feee11fbbb": {
+      "source": "Nikmati semua konten premium dan akses tanpa batas.",
+      "translated": "Nikarisia semua konten premium dan akses tanpa batas."
+    },
+    "9ce0bef781caae1bae58816888a54def04118d0b7a9b0d6f6740cf9307b3206c": {
+      "source": "Akses semua konten VIP",
+      "translated": "Akses semua konten VIP"
+    },
+    "8a84a61c846fcf582b47967d471048ed6d6a7a50ac01fadc16e4c5ef655cd620": {
+      "source": "Kualitas video premium",
+      "translated": "Kualitas video premium"
+    },
+    "3de389b982fb9912fb01c2e12c450e7046da2c698975a4d45037751edfc2f20d": {
+      "source": "Tanpa batas menonton",
+      "translated": "♪ Tanpa batas menonton ♪"
+    },
+    "594e8ba5b894d96805621daab564d0de4a0d1b2f81daf9f58c8f24122846d227": {
+      "source": "Paket Saat Ini",
+      "translated": "Paket Saat Ini"
+    },
+    "688e03801386103240d1be1bed0fbff74b5cab6c816cda96f8b24eaae35ae443": {
+      "source": "Free Member",
+      "translated": "Member Bebas dari Member"
+    },
+    "4d15dabc4fd63a376d67cde46955a40ccd10fe3c0435c4f3e2895b431d53cb1c": {
+      "source": "Upgrade untuk menikmati konten VIP",
+      "translated": "Upgrade untuk menikmati konten VIP"
+    },
+    "29db58dcc31cbce91c3acb87be3d81c0f6186cc43d42fee5c3cd0bda6c547e9e": {
+      "source": "dibayar",
+      "translated": "Dirobar"
+    },
+    "1182ca0e4249bc85ef7b5e63d96da4972828d1a86efb0e0e86f2a60f0090efcf": {
+      "source": "Berlaku sampai",
+      "translated": "♪ Berlaku sampai ♪"
+    },
+    "d388942ba926ada027a9cc7100f95d2f4265026dcebe94adbd1d9180a2495e8d": {
+      "source": "dd MMM yyyy",
+      "translated": "MMM dd yyyyy"
+    },
+    "109928873dc38ec8b6e6281c6d9f1c300ff2866a7a706632246b25ee14780bb2": {
+      "source": "Harga promo terbatas",
+      "translated": "♪ Harga promo terbatas ♪"
+    },
+    "afca35780a80004ffa239801b17d853cc369cc85ba58cc8b9dc0a3609ee7ca13": {
+      "source": "VIP ACCOUNT",
+      "translated": "KISAH VIP COUNT"
+    },
+    "d5d5e5fa6c7d8ad96f2da0f9371342379491c03dcfd0912beda1a9ccfaa5fdbd": {
+      "source": "Become a VIP Member",
+      "translated": "Menjadi Anggota VIP"
+    },
+    "5681aa51ee48832a1fbb367e73982b38e86ebafb560ef6934cc13aa0db8b807a": {
+      "source": "Ads Free",
+      "translated": "Adonan Bebas"
+    },
+    "e1b65987a5a1ca15838225c12ef9b84ae95f6c59974052b22720dc9af3f62c79": {
+      "source": "Exclusive Drama",
+      "translated": "Drama Eksklusif"
+    },
+    "168bbbb72663565b4eb0306bd383a927041adb963e786b164556f6a6e59670de": {
+      "source": "Anything Streaming",
+      "translated": "Anything Streaming"
+    },
+    "2a39bbaf6ca2efddcd559607a1eae1dcec317b0a9070298baf3effbfb3d11c12": {
+      "source": "Unlimited Viewing",
+      "translated": "Pandangan Tanpa Batas"
+    },
+    "8182ef9296aaf9454295bc0052192df3ff5a4d5b2fa9ace189be836162b05b7c": {
+      "source": "Personal Content",
+      "translated": "Konten Pribadi Naib"
+    },
+    "66a1419ec8d30b70b11c06a3a1b5c2f48f0de0a2637c6d76bfe0135315fe29c9": {
+      "source": "Upgrade Now",
+      "translated": "Sekarang tingkatkan"
+    },
+    "a79273a892acf3f845fdf1a49e80d6a2c744db275f279b9e712526e658889fba": {
+      "source": "VIP Episode",
+      "translated": "Episode VIP VIP"
+    },
+    "b6eb8fe19a3dfa516d472198a3d9e4cc9c447b4a3194d892d6efcb72fc0bcc2e": {
+      "source": "Become a VIP member to unlock all exclusive episodes without limits",
+      "translated": "Menjadi anggota VIP untuk membuka semua episode eksklusif tanpa batas"
+    },
+    "a46e7b9e85c03fcce5896c7dd4cd360183311974becdbb0f8154c7fe5712d8b7": {
+      "source": "Unlock / Upgrade to VIP",
+      "translated": "Buka / Tingkatkan ke VIP"
+    },
+    "9c595c02fe734511c4cc475493eb0416767dbea344fd9348ba17d9704640a4b1": {
+      "source": "VIP Mingguan",
+      "translated": "Minguan VIP VIP"
+    },
+    "030f15fb4a494b809a08f8686781798e49012f905775e1f9d59fe4d3c3936999": {
+      "source": "Rp 15.000",
+      "translated": "20,000"
+    },
+    "86eef4d93ed6b19087fb3189083fc6d020776f54f6ebc1f7237f15b6c2578f8f": {
+      "source": "Akses penuh selama 7 hari",
+      "translated": "Akses penuh selama 7 hari"
+    },
+    "424c3b6d3dc9297e6082bf561ff2f95a3c8d4a04c32efbc26f76d84e47219dba": {
+      "source": "VIP Bulanan",
+      "translated": "VIP Bulanan"
+    },
+    "8700e1380cbf2a26cf726be08e00cd17d2e1a403231e87304ab71ba7bee460cb": {
+      "source": "Rp 39.000",
+      "translated": "79.000"
+    },
+    "1caabd882b01b5715301667d091acf2c532bc0a27c0d79a412e91a0c34d2b67c": {
+      "source": "Paling populer",
+      "translated": "Populer Paling"
+    },
+    "ad3eca61c1d1da46d08b10d1c69645475895f0bcd64384475b6deec0a5ee8754": {
+      "source": "VIP Tahunan paling populer",
+      "translated": "VIP Tahunan paling populer"
+    },
+    "3dcef4e2b03004b5233331099a35f61595874e4288705dfb9093f2592a4655d3": {
+      "source": "Rp 299.000",
+      "translated": "Rp 29.000"
+    },
+    "70b5190f8672bb815816173ca3d4dca7a7b4aa3a4b353da23e0ec3ec2b5ec567": {
+      "source": "Hemat hingga 35%",
+      "translated": "Diamat hinga 35%"
+    },
+    "e57fd6b3bb98d9631453e1d44e9fa6b8d2e68daf8dcd0aac3114961b835b9660": {
+      "source": "BEST VALUE",
+      "translated": "NILAI TERBAIK"
+    },
+    "220a072bf6f1a9f8e7b95d7b793ef87cbf75f5b45442576ce2681125f5cf8b1c": {
+      "source": "bookmarkview",
+      "translated": "bookmarkview"
+    },
+    "30177d27a64a8107865e0ae10a54407794bda1326caee388fdb101edc43008fb": {
+      "source": "BookmarkView is working",
+      "translated": "[ Gambar di hlm."
+    },
+    "acd27229f790a067317d3e89a0315440e4cee05dd5ae67c6d8ed898475acafa6": {
+      "source": "episodeview",
+      "translated": "Episodeview"
+    },
+    "92d4464e25db1f83d33e124661368da10f42b34258908e8e972a590923a68f4f": {
+      "source": "EpisodeView is working",
+      "translated": "Episode View sedang bekerja"
+    },
+    "15902f81dcfa9cf8d35146f6b1554ea4c140524c18e3f44eb1598e1c13957f63": {
+      "source": "sinopsis",
+      "translated": "[ Gambar di hlm."
+    },
+    "7e414e6ac41ac7a0658ce2807548af8fb48b145f9b74aa77c9b526c569804bbc": {
+      "source": "episode",
+      "translated": "episode"
+    },
+    "fe01db15cb5d31216cf91fd9f02f5ced2b155dced67c31b78bbabf48665e1f73": {
+      "source": "historyview",
+      "translated": "Sejarah sejarah sejarah sejarah"
+    },
+    "edb23882f4c65072f24b4ed41726142ce9d87509eb6e1d6bf8e410f6b75308df": {
+      "source": "HistoryView is working",
+      "translated": "HistoryView sedang bekerja"
+    },
+    "34d8eb01e1bffebf9479381ec4f5393d816d70e34e08b909979855632b338eaa": {
+      "source": "Continue Watching",
+      "translated": "Teruskan Memperhatikan"
+    },
+    "44c9d36485b791c3bb9243af06a1b34c1b0f662594d698da5db17368a91a225f": {
+      "source": "See All",
+      "translated": "Lihat Semua"
+    },
+    "671a97c1d922d7eb5ce517e73d24c43237a21770c45e019d4d64298d263c9d65": {
+      "source": "Home Refreshed",
+      "translated": "Rumah yang Disegarkan"
+    },
+    "8a7d8cb4e86e45c24506911b60ea353b25036d4b473e239777b093a6e03ec01c": {
+      "source": "Failed to refresh",
+      "translated": "Gagal menyegarkan"
+    },
+    "b3d12dcd12598450369f1e1de686b5612846b5d334446180613e08cd58f52354": {
+      "source": "DMN Play",
+      "translated": "BUMN DMN Play"
+    },
+    "428821350e9691491f616b754cd8315fb86d797ab35d843479e732ef90665324": {
+      "source": "login",
+      "translated": "login"
+    },
+    "be10b2f905f868ed50d992d183bec4314b7bddc5dad30b8985c5333b42db5c24": {
+      "source": "Coming Soon",
+      "translated": "Segera Datang"
+    },
+    "8378c006e5505ccf0b25b5f2d40ce7d3bf1a7194d3d6b2feb103917b6a112a31": {
+      "source": "Are you sure you want to log out?",
+      "translated": "Kau yakin mau log keluar?"
+    },
+    "280d44ab1e9f79b5cce2dd4f58f5fe91f0fbacdac9f7447dffc318ceb79f2d02": {
+      "source": "welcome",
+      "translated": "Selamat datang"
+    },
+    "bb033b5377edb722c9d6fe5f6303ecfb4a28b3b096127fc02db35d065a4706dc": {
+      "source": "Login to enjoy all DMN Play features",
+      "translated": "Log masuk untuk menikmati semua fitur DMN Play"
+    },
+    "1f96f5d016bd94a83f38c77e810b0754e3ca60ebf8470e7ebaaf8b5b8d0946d7": {
+      "source": "Signing in...",
+      "translated": "Signing di..."
+    },
+    "cce937e891444a7417c696cdd80c0eed11deb383f3c42bdb8b591d5dfcaa398e": {
+      "source": "Continue with Google",
+      "translated": "Teruskan dengan Google"
+    },
+    "f154b630d75d2f28837a6da7a1d7a61705198cd01a5907b02278ed9842a1d5fa": {
+      "source": "Continue with Facebook",
+      "translated": "Teruskan dengan Facebook"
+    },
+    "340ac4c3fd1f01233e46a45276a529a4fa607074b0efe745ffc11f9cf152d27c": {
+      "source": "Continue with Apple",
+      "translated": "Teruskan dengan Apple"
+    },
+    "ce0e8e74c551dcbe127effff35dcbeacc2b4728168bd9ba89a1f896efa041302": {
+      "source": "Continue with Email",
+      "translated": "Teruskan dengan Email"
+    },
+    "2bcc2316d5a32baef258c5c2204c427e3ed153acf74b94eb3f09bee8837e9cbc": {
+      "source": "By continuing, you agree to the\\nTerms & Conditions and Privacy Policy",
+      "translated": "Dengan melanjutkan, Anda setuju dengan kondisi dan Kebijakan Privasi ØnTerms &"
+    },
+    "a786e238ede4a3e4cd62d767098977e13e2eacff9cbb7743f5e4927099819de6": {
+      "source": "Movie tidak ditemukan",
+      "translated": "Hariak ditemukan"
+    },
+    "def4205254cadd3bd57a9a7561cbdb596cd16b33feb2c8c2f82645c5dfcb500d": {
+      "source": "Page Refreshed",
+      "translated": "Halaman Disegarkan"
+    },
+    "8a6ba32c9bed6ce703f999f9af6ec23686d44e144e4da572d94c8daca4a9cbab": {
+      "source": "movie",
+      "translated": "Film"
+    },
+    "03aa472bcfd8e09831f51505a2aa332ca9340d446d933f6ca4e44aeab8467146": {
+      "source": "You May Also Like",
+      "translated": "Kamu Juga Boleh Seperti"
+    },
+    "a268145ba26f17348fc2f077890ea4a012a4588644050cda5e05e70427cb46a5": {
+      "source": "OPEN DONE",
+      "translated": "OREN DONE"
+    },
+    "2e01a0a7955a95ab2b168e24fcd787353879e8ba3edff8c47b188f7edd2bdb75": {
+      "source": "navbar",
+      "translated": "Navbar"
+    },
+    "230d8358dc8e8890b4c58deeb62912ee2f20357ae92a5cc861b98e68fe31acb5": {
+      "source": "body",
+      "translated": "badan"
+    },
+    "d43a4070f872dbf440225eb96e1f95f3c008cf4eadec79a722717717982fb227": {
+      "source": "profileview",
+      "translated": "profileview"
+    },
+    "56df8f85a553155de41316c6f2cfb8c4381d908eef9d1a48ab88e974544125e7": {
+      "source": "ProfileView is working",
+      "translated": "ProfileView sedang bekerja"
+    }
+  }
+}

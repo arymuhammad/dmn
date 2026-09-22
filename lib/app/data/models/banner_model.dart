@@ -1,29 +1,48 @@
+import 'category_model.dart';
+
 class BannerModel {
-  final String image;
+  final int id;
   final String title;
-  final String subtitle;
-  String? genre;
+  final String poster;
+  final String synopsis;
+  final String releaseYear;
+  final String categoryName;
+  // TAMBAHAN
+  final List<CategoryModel> categories;
+  final String previewUrl;
 
   BannerModel({
-    required this.image,
+    required this.id,
     required this.title,
-    required this.subtitle,
-    this.genre,
+    required this.poster,
+    required this.synopsis,
+    required this.releaseYear,
+    required this.categoryName,
+    // TAMBAHAN
+    this.categories = const [],
+    required this.previewUrl,
   });
 
-  String get safeImage {
-    if (image.isEmpty || image == 'N/A') {
-      return 'https://picsum.photos/400/600';
-    }
-    return image;
-  }
+  static const imageBase = "http://103.156.15.61/dmn/uploads/posters/";
 
-  factory BannerModel.fromOmdb(Map<String, dynamic> json) {
+  factory BannerModel.fromJson(Map<String, dynamic> json) {
+    final categories =
+        (json["categories"] as List? ?? [])
+            .map((e) => CategoryModel.fromMovieJson(e))
+            .toList();
+
     return BannerModel(
-      image: json['Poster'] ?? '',
-      title: json['Title'] ?? '',
-      subtitle: json['Year'] ?? '',
-      genre: json['Genre'] ?? '',
+      id: int.parse(json["id"].toString()),
+      title: json["title"] ?? "",
+      poster: imageBase + (json["poster"] ?? ""),
+      synopsis: json["synopsis"] ?? "",
+      releaseYear: json["release_year"] ?? "",
+      // Tetap support API lama & baru
+      categoryName:
+          json["category_name"] ?? categories.map((e) => e.name).join(", "),
+
+      categories: categories,
+      previewUrl: json["preview_url"] ?? "",
     );
   }
 }

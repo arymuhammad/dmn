@@ -10,8 +10,13 @@ abstract class Routes {
   static const ACCOUNT = _Paths.ACCOUNT;
   static const EPISODE_PLAYER = _Paths.EPISODE_PLAYER;
   static const MOVIE_BANNER = _Paths.MOVIE_BANNER;
-  static const BOOKMARK = _Paths.BOOKMARK;
+  static const MIX = _Paths.MIX;
   static const LOGIN = _Paths.LOGIN;
+  static const MOVIE_DETAIL = _Paths.MOVIE_DETAIL;
+  static const MOVIE = _Paths.MOVIE;
+  static const EPISODE = _Paths.EPISODE;
+  static const PLAYER = _Paths.PLAYER;
+  static const HISTORY = _Paths.HISTORY;
 }
 
 abstract class _Paths {
@@ -23,6 +28,11 @@ abstract class _Paths {
   static const ACCOUNT = '/account';
   static const EPISODE_PLAYER = '/episode-player';
   static const MOVIE_BANNER = '/movie-banner';
-  static const BOOKMARK = '/bookmark';
+  static const MIX = '/mix';
   static const LOGIN = '/login';
+  static const MOVIE_DETAIL = '/movie-detail';
+  static const MOVIE = '/movie';
+  static const EPISODE = '/episode';
+  static const PLAYER = '/player';
+  static const HISTORY = '/history';
 }

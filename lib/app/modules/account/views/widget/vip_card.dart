@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class VipCard extends StatelessWidget {
   const VipCard({super.key});
@@ -16,13 +17,13 @@ class VipCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Row(
+          Row(
             children: [
-              Icon(Icons.workspace_premium, color: Colors.black),
-              SizedBox(width: 8),
+              const Icon(Icons.workspace_premium, color: Colors.black),
+              const SizedBox(width: 8),
               Text(
-                'VIP ACCOUNT',
-                style: TextStyle(
+                'vip account'.tr.toUpperCase(),
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -33,9 +34,9 @@ class VipCard extends StatelessWidget {
 
           const SizedBox(height: 12),
 
-          const Text(
-            'Become a VIP Member',
-            style: TextStyle(
+          Text(
+            'become a vip member'.tr.toUpperCase(),
+            style: const TextStyle(
               color: Colors.black87,
               fontWeight: FontWeight.w600,
             ),
@@ -43,11 +44,39 @@ class VipCard extends StatelessWidget {
 
           const SizedBox(height: 16),
 
-          const Benefit('Ads Free'),
-          Benefit('Exclusive Drama'),
-          Benefit('Anything Streaming'),
-          Benefit('Unlimited Viewing'),
-          Benefit('Personal Content'),
+          // =====================================================
+          // BENEFITS
+          // =====================================================
+          Wrap(
+  spacing: 8,
+  runSpacing: 8,
+  children: [
+    _Benefit(
+      icon: Icons.movie_filter_outlined,
+      title: 'exclusive drama'.tr,
+    ),
+    _Benefit(
+      icon: Icons.play_circle_outline,
+      title: 'anytime streaming'.tr,
+    ),
+    _Benefit(
+      icon: Icons.all_inclusive,
+      title: 'unlimited viewing'.tr,
+    ),
+    _Benefit(
+      icon: Icons.person_outline,
+      title: 'personal content'.tr,
+    ),
+    _Benefit(
+      icon: Icons.devices_outlined,
+      title: 'max. 2 devices'.tr,
+    ),
+    _Benefit(
+      icon: Icons.high_quality_outlined,
+      title: 'HD video quality'.tr,
+    ),
+  ],
+),
 
           const SizedBox(height: 18),
 
@@ -59,7 +88,7 @@ class VipCard extends StatelessWidget {
                 backgroundColor: Colors.black,
                 foregroundColor: Colors.white,
               ),
-              child: const Text('Upgrade Now'),
+              child: Text('upgrade now'.tr.capitalize ?? ''),
             ),
           ),
         ],
@@ -68,20 +97,33 @@ class VipCard extends StatelessWidget {
   }
 }
 
-class Benefit extends StatelessWidget {
-  final String text;
+class _Benefit extends StatelessWidget {
+  final IconData icon;
+  final String title;
 
-  const Benefit(this.text, {super.key});
+  const _Benefit({required this.icon, required this.title});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8),
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      decoration: BoxDecoration(
+        color: Colors.black.withValues(alpha: .12),
+        borderRadius: BorderRadius.circular(10),
+      ),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(Icons.check_circle, color: Colors.black87, size: 18),
-          const SizedBox(width: 8),
-          Text(text, style: const TextStyle(color: Colors.black87)),
+          Icon(icon, size: 17, color: Colors.black),
+          const SizedBox(width: 6),
+          Text(
+            title.capitalize ?? '',
+            style: const TextStyle(
+              color: Colors.black87,
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
         ],
       ),
     );

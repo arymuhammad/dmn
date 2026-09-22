@@ -1,0 +1,2917 @@
+{
+  "sourceLocale": "en_US",
+  "targets": [
+    "en_US",
+    "id_ID",
+    "ja_JP",
+    "ko_KR",
+    "hi_IN",
+    "ms_MY"
+  ],
+  "strings": {
+    "id": {
+      "key": "id",
+      "text": "id",
+      "occurrences": [
+        {
+          "file": "lib/main.dart",
+          "offset": 855,
+          "end": 859,
+          "line": 27,
+          "endLine": 27,
+          "constRanges": "842:847"
+        },
+        {
+          "file": "lib/app/data/models/active_subscription_model.dart",
+          "offset": 929,
+          "end": 933,
+          "line": 36,
+          "endLine": 36,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/banner_model.dart",
+          "offset": 904,
+          "end": 908,
+          "line": 35,
+          "endLine": 35,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/category_model.dart",
+          "offset": 396,
+          "end": 400,
+          "line": 18,
+          "endLine": 18,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/category_model.dart",
+          "offset": 776,
+          "end": 780,
+          "line": 31,
+          "endLine": 31,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/category_model.dart",
+          "offset": 946,
+          "end": 950,
+          "line": 40,
+          "endLine": 40,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 1158,
+          "end": 1162,
+          "line": 54,
+          "endLine": 54,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2534,
+          "end": 2538,
+          "line": 91,
+          "endLine": 91,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_subtitle.dart",
+          "offset": 408,
+          "end": 412,
+          "line": 16,
+          "endLine": 16,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_subtitle.dart",
+          "offset": 680,
+          "end": 684,
+          "line": 24,
+          "endLine": 24,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 831,
+          "end": 835,
+          "line": 34,
+          "endLine": 34,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1590,
+          "end": 1594,
+          "line": 58,
+          "endLine": 58,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 439,
+          "end": 443,
+          "line": 25,
+          "endLine": 25,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 1120,
+          "end": 1124,
+          "line": 50,
+          "endLine": 50,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/user_model.dart",
+          "offset": 394,
+          "end": 398,
+          "line": 18,
+          "endLine": 18,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/video_model.dart",
+          "offset": 406,
+          "end": 410,
+          "line": 21,
+          "endLine": 21,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 1804,
+          "end": 1808,
+          "line": 74,
+          "endLine": 74,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 4092,
+          "end": 4096,
+          "line": 142,
+          "endLine": 142,
+          "constRanges": ""
+        }
+      ]
+    },
+    "en": {
+      "key": "en",
+      "text": "en",
+      "occurrences": [
+        {
+          "file": "lib/main.dart",
+          "offset": 1230,
+          "end": 1234,
+          "line": 43,
+          "endLine": 43,
+          "constRanges": "1217:1222"
+        }
+      ]
+    },
+    "text_979b999": {
+      "key": "text_979b999",
+      "text": "#979B999",
+      "occurrences": [
+        {
+          "file": "lib/app/data/helpers/toast.dart",
+          "offset": 323,
+          "end": 334,
+          "line": 11,
+          "endLine": 11,
+          "constRanges": ""
+        }
+      ]
+    },
+    "center": {
+      "key": "center",
+      "text": "center",
+      "occurrences": [
+        {
+          "file": "lib/app/data/helpers/toast.dart",
+          "offset": 382,
+          "end": 390,
+          "line": 13,
+          "endLine": 13,
+          "constRanges": ""
+        }
+      ]
+    },
+    "amount": {
+      "key": "amount",
+      "text": "amount",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/active_subscription_model.dart",
+          "offset": 1238,
+          "end": 1246,
+          "line": 43,
+          "endLine": 43,
+          "constRanges": ""
+        }
+      ]
+    },
+    "status": {
+      "key": "status",
+      "text": "status",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/active_subscription_model.dart",
+          "offset": 1379,
+          "end": 1387,
+          "line": 46,
+          "endLine": 46,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 1843,
+          "end": 1851,
+          "line": 70,
+          "endLine": 70,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2844,
+          "end": 2852,
+          "line": 101,
+          "endLine": 101,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 2913,
+          "end": 2921,
+          "line": 101,
+          "endLine": 101,
+          "constRanges": ""
+        }
+      ]
+    },
+    "name": {
+      "key": "name",
+      "text": "name",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/active_subscription_model.dart",
+          "offset": 1419,
+          "end": 1425,
+          "line": 47,
+          "endLine": 47,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/category_model.dart",
+          "offset": 438,
+          "end": 444,
+          "line": 19,
+          "endLine": 19,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/category_model.dart",
+          "offset": 818,
+          "end": 824,
+          "line": 32,
+          "endLine": 32,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/category_model.dart",
+          "offset": 963,
+          "end": 969,
+          "line": 41,
+          "endLine": 41,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1243,
+          "end": 1249,
+          "line": 44,
+          "endLine": 44,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 1157,
+          "end": 1163,
+          "line": 51,
+          "endLine": 51,
+          "constRanges": ""
+        }
+      ]
+    },
+    "description": {
+      "key": "description",
+      "text": "description",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/active_subscription_model.dart",
+          "offset": 1464,
+          "end": 1477,
+          "line": 48,
+          "endLine": 48,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 1495,
+          "end": 1508,
+          "line": 62,
+          "endLine": 62,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2672,
+          "end": 2685,
+          "line": 96,
+          "endLine": 96,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 1501,
+          "end": 1514,
+          "line": 59,
+          "endLine": 59,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 2727,
+          "end": 2740,
+          "line": 94,
+          "endLine": 94,
+          "constRanges": ""
+        }
+      ]
+    },
+    "price": {
+      "key": "price",
+      "text": "price",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/active_subscription_model.dart",
+          "offset": 1524,
+          "end": 1531,
+          "line": 49,
+          "endLine": 49,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 1204,
+          "end": 1211,
+          "line": 52,
+          "endLine": 52,
+          "constRanges": ""
+        }
+      ]
+    },
+    "duration": {
+      "key": "duration",
+      "text": "duration",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/active_subscription_model.dart",
+          "offset": 1721,
+          "end": 1731,
+          "line": 54,
+          "endLine": 54,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 1594,
+          "end": 1604,
+          "line": 64,
+          "endLine": 64,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2737,
+          "end": 2747,
+          "line": 98,
+          "endLine": 98,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 1401,
+          "end": 1411,
+          "line": 57,
+          "endLine": 57,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 2093,
+          "end": 2103,
+          "line": 79,
+          "endLine": 79,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 4195,
+          "end": 4205,
+          "line": 146,
+          "endLine": 146,
+          "constRanges": ""
+        }
+      ]
+    },
+    "day": {
+      "key": "day",
+      "text": "day",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/active_subscription_model.dart",
+          "offset": 1868,
+          "end": 1873,
+          "line": 59,
+          "endLine": 59,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 655,
+          "end": 660,
+          "line": 30,
+          "endLine": 30,
+          "constRanges": ""
+        }
+      ]
+    },
+    "month": {
+      "key": "month",
+      "text": "month",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/active_subscription_model.dart",
+          "offset": 1941,
+          "end": 1948,
+          "line": 62,
+          "endLine": 62,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 725,
+          "end": 732,
+          "line": 33,
+          "endLine": 33,
+          "constRanges": ""
+        }
+      ]
+    },
+    "year": {
+      "key": "year",
+      "text": "year",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/active_subscription_model.dart",
+          "offset": 2017,
+          "end": 2023,
+          "line": 65,
+          "endLine": 65,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 799,
+          "end": 805,
+          "line": 36,
+          "endLine": 36,
+          "constRanges": ""
+        }
+      ]
+    },
+    "categories": {
+      "key": "categories",
+      "text": "categories",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/banner_model.dart",
+          "offset": 740,
+          "end": 752,
+          "line": 30,
+          "endLine": 30,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1165,
+          "end": 1177,
+          "line": 43,
+          "endLine": 43,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1385,
+          "end": 1397,
+          "line": 50,
+          "endLine": 50,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1827,
+          "end": 1839,
+          "line": 68,
+          "endLine": 68,
+          "constRanges": ""
+        }
+      ]
+    },
+    "title": {
+      "key": "title",
+      "text": "title",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/banner_model.dart",
+          "offset": 942,
+          "end": 949,
+          "line": 36,
+          "endLine": 36,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 1454,
+          "end": 1461,
+          "line": 61,
+          "endLine": 61,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2649,
+          "end": 2656,
+          "line": 95,
+          "endLine": 95,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 874,
+          "end": 881,
+          "line": 35,
+          "endLine": 35,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1607,
+          "end": 1614,
+          "line": 59,
+          "endLine": 59,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/video_model.dart",
+          "offset": 432,
+          "end": 439,
+          "line": 22,
+          "endLine": 22,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/history/controllers/history_controller.dart",
+          "offset": 1280,
+          "end": 1287,
+          "line": 55,
+          "endLine": 55,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/movie/views/widget/episode_list.dart",
+          "offset": 3909,
+          "end": 3916,
+          "line": 107,
+          "endLine": 107,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/player/controllers/player_controller.dart",
+          "offset": 4645,
+          "end": 4652,
+          "line": 166,
+          "endLine": 166,
+          "constRanges": ""
+        }
+      ]
+    },
+    "poster": {
+      "key": "poster",
+      "text": "poster",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/banner_model.dart",
+          "offset": 991,
+          "end": 999,
+          "line": 37,
+          "endLine": 37,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1078,
+          "end": 1086,
+          "line": 40,
+          "endLine": 40,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1716,
+          "end": 1724,
+          "line": 63,
+          "endLine": 63,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 2579,
+          "end": 2587,
+          "line": 89,
+          "endLine": 89,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 4457,
+          "end": 4465,
+          "line": 153,
+          "endLine": 153,
+          "constRanges": ""
+        }
+      ]
+    },
+    "synopsis": {
+      "key": "synopsis",
+      "text": "synopsis",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/banner_model.dart",
+          "offset": 1031,
+          "end": 1041,
+          "line": 38,
+          "endLine": 38,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 993,
+          "end": 1003,
+          "line": 38,
+          "endLine": 38,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1687,
+          "end": 1697,
+          "line": 62,
+          "endLine": 62,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 3719,
+          "end": 3729,
+          "line": 127,
+          "endLine": 127,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 4482,
+          "end": 4492,
+          "line": 154,
+          "endLine": 154,
+          "constRanges": ""
+        }
+      ]
+    },
+    "slug": {
+      "key": "slug",
+      "text": "slug",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/category_model.dart",
+          "offset": 471,
+          "end": 477,
+          "line": 20,
+          "endLine": 20,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/category_model.dart",
+          "offset": 984,
+          "end": 990,
+          "line": 42,
+          "endLine": 42,
+          "constRanges": ""
+        }
+      ]
+    },
+    "movies": {
+      "key": "movies",
+      "text": "movies",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/category_model.dart",
+          "offset": 518,
+          "end": 526,
+          "line": 22,
+          "endLine": 22,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/category_model.dart",
+          "offset": 1005,
+          "end": 1013,
+          "line": 43,
+          "endLine": 43,
+          "constRanges": ""
+        }
+      ]
+    },
+    "views": {
+      "key": "views",
+      "text": "views",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 1656,
+          "end": 1663,
+          "line": 65,
+          "endLine": 65,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2766,
+          "end": 2773,
+          "line": 99,
+          "endLine": 99,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/video_model.dart",
+          "offset": 530,
+          "end": 537,
+          "line": 25,
+          "endLine": 25,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 2673,
+          "end": 2680,
+          "line": 92,
+          "endLine": 92,
+          "constRanges": ""
+        }
+      ]
+    },
+    "published": {
+      "key": "published",
+      "text": "published",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 1856,
+          "end": 1867,
+          "line": 70,
+          "endLine": 70,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 2926,
+          "end": 2937,
+          "line": 101,
+          "endLine": 101,
+          "constRanges": ""
+        }
+      ]
+    },
+    "progress": {
+      "key": "progress",
+      "text": "progress",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 1952,
+          "end": 1962,
+          "line": 72,
+          "endLine": 72,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2901,
+          "end": 2911,
+          "line": 103,
+          "endLine": 103,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 2216,
+          "end": 2226,
+          "line": 81,
+          "endLine": 81,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 4266,
+          "end": 4276,
+          "line": 148,
+          "endLine": 148,
+          "constRanges": ""
+        }
+      ]
+    },
+    "watched": {
+      "key": "watched",
+      "text": "watched",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2011,
+          "end": 2020,
+          "line": 73,
+          "endLine": 73,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2930,
+          "end": 2939,
+          "line": 104,
+          "endLine": 104,
+          "constRanges": ""
+        }
+      ]
+    },
+    "qualities": {
+      "key": "qualities",
+      "text": "qualities",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2075,
+          "end": 2086,
+          "line": 75,
+          "endLine": 75,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2160,
+          "end": 2171,
+          "line": 77,
+          "endLine": 77,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 3241,
+          "end": 3252,
+          "line": 113,
+          "endLine": 113,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 3326,
+          "end": 3337,
+          "line": 115,
+          "endLine": 115,
+          "constRanges": ""
+        }
+      ]
+    },
+    "subtitles": {
+      "key": "subtitles",
+      "text": "subtitles",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2283,
+          "end": 2294,
+          "line": 81,
+          "endLine": 81,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/episode_model.dart",
+          "offset": 2371,
+          "end": 2382,
+          "line": 83,
+          "endLine": 83,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 3025,
+          "end": 3036,
+          "line": 106,
+          "endLine": 106,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 3113,
+          "end": 3124,
+          "line": 108,
+          "endLine": 108,
+          "constRanges": ""
+        }
+      ]
+    },
+    "banner": {
+      "key": "banner",
+      "text": "banner",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/home_model.dart",
+          "offset": 951,
+          "end": 959,
+          "line": 30,
+          "endLine": 30,
+          "constRanges": ""
+        }
+      ]
+    },
+    "latest": {
+      "key": "latest",
+      "text": "latest",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/home_model.dart",
+          "offset": 1089,
+          "end": 1097,
+          "line": 35,
+          "endLine": 35,
+          "constRanges": ""
+        }
+      ]
+    },
+    "trending": {
+      "key": "trending",
+      "text": "trending",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/home_model.dart",
+          "offset": 1228,
+          "end": 1238,
+          "line": 40,
+          "endLine": 40,
+          "constRanges": ""
+        }
+      ]
+    },
+    "recommended": {
+      "key": "recommended",
+      "text": "recommended",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/home_model.dart",
+          "offset": 1372,
+          "end": 1385,
+          "line": 45,
+          "endLine": 45,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_detail_model.dart",
+          "offset": 624,
+          "end": 637,
+          "line": 23,
+          "endLine": 23,
+          "constRanges": ""
+        }
+      ]
+    },
+    "genres": {
+      "key": "genres",
+      "text": "genres",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/home_model.dart",
+          "offset": 1514,
+          "end": 1522,
+          "line": 50,
+          "endLine": 50,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1187,
+          "end": 1195,
+          "line": 43,
+          "endLine": 43,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1407,
+          "end": 1415,
+          "line": 50,
+          "endLine": 50,
+          "constRanges": ""
+        }
+      ]
+    },
+    "subscriptions": {
+      "key": "subscriptions",
+      "text": "subscriptions",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/home_model.dart",
+          "offset": 1659,
+          "end": 1674,
+          "line": 54,
+          "endLine": 54,
+          "constRanges": ""
+        }
+      ]
+    },
+    "episodes": {
+      "key": "episodes",
+      "text": "episodes",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/movie_detail_model.dart",
+          "offset": 480,
+          "end": 490,
+          "line": 19,
+          "endLine": 19,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 3849,
+          "end": 3859,
+          "line": 132,
+          "endLine": 132,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 3933,
+          "end": 3943,
+          "line": 134,
+          "endLine": 134,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 4532,
+          "end": 4542,
+          "line": 156,
+          "endLine": 156,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/episode_player/controllers/episode_player_controller.dart",
+          "offset": 2139,
+          "end": 2149,
+          "line": 78,
+          "endLine": 78,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/movie/views/widget/episode_list.dart",
+          "offset": 3956,
+          "end": 3966,
+          "line": 108,
+          "endLine": 108,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/player/controllers/player_controller.dart",
+          "offset": 7705,
+          "end": 7715,
+          "line": 270,
+          "endLine": 270,
+          "constRanges": ""
+        }
+      ]
+    },
+    "type": {
+      "key": "type",
+      "text": "type",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 956,
+          "end": 962,
+          "line": 37,
+          "endLine": 37,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1666,
+          "end": 1672,
+          "line": 61,
+          "endLine": 61,
+          "constRanges": ""
+        }
+      ]
+    },
+    "cast": {
+      "key": "cast",
+      "text": "cast",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/movie_model.dart",
+          "offset": 1030,
+          "end": 1036,
+          "line": 39,
+          "endLine": 39,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 3758,
+          "end": 3764,
+          "line": 129,
+          "endLine": 129,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 3799,
+          "end": 3805,
+          "line": 129,
+          "endLine": 129,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 4511,
+          "end": 4517,
+          "line": 155,
+          "endLine": 155,
+          "constRanges": ""
+        }
+      ]
+    },
+    "quality": {
+      "key": "quality",
+      "text": "quality",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 473,
+          "end": 482,
+          "line": 26,
+          "endLine": 26,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 1047,
+          "end": 1056,
+          "line": 57,
+          "endLine": 57,
+          "constRanges": ""
+        }
+      ]
+    },
+    "playlist": {
+      "key": "playlist",
+      "text": "playlist",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 515,
+          "end": 525,
+          "line": 28,
+          "endLine": 28,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 1076,
+          "end": 1086,
+          "line": 59,
+          "endLine": 59,
+          "constRanges": ""
+        }
+      ]
+    },
+    "bandwidth": {
+      "key": "bandwidth",
+      "text": "bandwidth",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 559,
+          "end": 570,
+          "line": 30,
+          "endLine": 30,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 627,
+          "end": 638,
+          "line": 32,
+          "endLine": 32,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 1107,
+          "end": 1118,
+          "line": 61,
+          "endLine": 61,
+          "constRanges": ""
+        }
+      ]
+    },
+    "width": {
+      "key": "width",
+      "text": "width",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 706,
+          "end": 713,
+          "line": 36,
+          "endLine": 36,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 770,
+          "end": 777,
+          "line": 38,
+          "endLine": 38,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 1140,
+          "end": 1147,
+          "line": 63,
+          "endLine": 63,
+          "constRanges": ""
+        }
+      ]
+    },
+    "height": {
+      "key": "height",
+      "text": "height",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 846,
+          "end": 854,
+          "line": 42,
+          "endLine": 42,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 911,
+          "end": 919,
+          "line": 44,
+          "endLine": 44,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/quality_model.dart",
+          "offset": 1165,
+          "end": 1173,
+          "line": 65,
+          "endLine": 65,
+          "constRanges": ""
+        }
+      ]
+    },
+    "hari": {
+      "key": "hari",
+      "text": "hari",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 694,
+          "end": 700,
+          "line": 31,
+          "endLine": 31,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 703,
+          "end": 709,
+          "line": 31,
+          "endLine": 31,
+          "constRanges": ""
+        }
+      ]
+    },
+    "bulan": {
+      "key": "bulan",
+      "text": "bulan",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 766,
+          "end": 773,
+          "line": 34,
+          "endLine": 34,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 776,
+          "end": 783,
+          "line": 34,
+          "endLine": 34,
+          "constRanges": ""
+        }
+      ]
+    },
+    "tahun": {
+      "key": "tahun",
+      "text": "tahun",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 839,
+          "end": 846,
+          "line": 37,
+          "endLine": 37,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/subscription_model.dart",
+          "offset": 849,
+          "end": 856,
+          "line": 37,
+          "endLine": 37,
+          "constRanges": ""
+        }
+      ]
+    },
+    "fullname": {
+      "key": "fullname",
+      "text": "fullname",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/user_model.dart",
+          "offset": 435,
+          "end": 445,
+          "line": 19,
+          "endLine": 19,
+          "constRanges": ""
+        }
+      ]
+    },
+    "email": {
+      "key": "email",
+      "text": "email",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/user_model.dart",
+          "offset": 473,
+          "end": 480,
+          "line": 20,
+          "endLine": 20,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/services/facebook_auth_service.dart",
+          "offset": 254,
+          "end": 261,
+          "line": 8,
+          "endLine": 8,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/services/google_auth_service.dart",
+          "offset": 150,
+          "end": 157,
+          "line": 6,
+          "endLine": 6,
+          "constRanges": ""
+        }
+      ]
+    },
+    "avatar": {
+      "key": "avatar",
+      "text": "avatar",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/user_model.dart",
+          "offset": 509,
+          "end": 517,
+          "line": 21,
+          "endLine": 21,
+          "constRanges": ""
+        }
+      ]
+    },
+    "thumbnail": {
+      "key": "thumbnail",
+      "text": "thumbnail",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/video_model.dart",
+          "offset": 497,
+          "end": 508,
+          "line": 24,
+          "endLine": 24,
+          "constRanges": ""
+        }
+      ]
+    },
+    "likes": {
+      "key": "likes",
+      "text": "likes",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/video_model.dart",
+          "offset": 559,
+          "end": 566,
+          "line": 26,
+          "endLine": 26,
+          "constRanges": ""
+        }
+      ]
+    },
+    "position": {
+      "key": "position",
+      "text": "position",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 2156,
+          "end": 2166,
+          "line": 80,
+          "endLine": 80,
+          "constRanges": ""
+        }
+      ]
+    },
+    "completed": {
+      "key": "completed",
+      "text": "completed",
+      "occurrences": [
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 2264,
+          "end": 2275,
+          "line": 82,
+          "endLine": 82,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/models/watch_history_model.dart",
+          "offset": 4295,
+          "end": 4306,
+          "line": 149,
+          "endLine": 149,
+          "constRanges": ""
+        }
+      ]
+    },
+    "auth_google": {
+      "key": "auth_google",
+      "text": "auth/google",
+      "occurrences": [
+        {
+          "file": "lib/app/data/repositories/auth_repository.dart",
+          "offset": 744,
+          "end": 757,
+          "line": 30,
+          "endLine": 30,
+          "constRanges": ""
+        }
+      ]
+    },
+    "success": {
+      "key": "success",
+      "text": "success",
+      "occurrences": [
+        {
+          "file": "lib/app/data/repositories/auth_repository.dart",
+          "offset": 840,
+          "end": 849,
+          "line": 34,
+          "endLine": 34,
+          "constRanges": ""
+        }
+      ]
+    },
+    "message": {
+      "key": "message",
+      "text": "message",
+      "occurrences": [
+        {
+          "file": "lib/app/data/repositories/auth_repository.dart",
+          "offset": 890,
+          "end": 899,
+          "line": 35,
+          "endLine": 35,
+          "constRanges": ""
+        }
+      ]
+    },
+    "data": {
+      "key": "data",
+      "text": "data",
+      "occurrences": [
+        {
+          "file": "lib/app/data/repositories/auth_repository.dart",
+          "offset": 953,
+          "end": 959,
+          "line": 38,
+          "endLine": 38,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/repositories/auth_repository.dart",
+          "offset": 1182,
+          "end": 1188,
+          "line": 45,
+          "endLine": 45,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/repositories/auth_repository.dart",
+          "offset": 2042,
+          "end": 2048,
+          "line": 78,
+          "endLine": 78,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/repositories/history_repository.dart",
+          "offset": 892,
+          "end": 898,
+          "line": 39,
+          "endLine": 39,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/repositories/history_repository.dart",
+          "offset": 1071,
+          "end": 1077,
+          "line": 45,
+          "endLine": 45,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/repositories/home_repository.dart",
+          "offset": 490,
+          "end": 496,
+          "line": 20,
+          "endLine": 20,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/repositories/movie_repository.dart",
+          "offset": 491,
+          "end": 497,
+          "line": 18,
+          "endLine": 18,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/repositories/movie_repository.dart",
+          "offset": 707,
+          "end": 713,
+          "line": 25,
+          "endLine": 25,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/repositories/movie_repository.dart",
+          "offset": 1006,
+          "end": 1012,
+          "line": 36,
+          "endLine": 36,
+          "constRanges": ""
+        }
+      ]
+    },
+    "token": {
+      "key": "token",
+      "text": "token",
+      "occurrences": [
+        {
+          "file": "lib/app/data/repositories/auth_repository.dart",
+          "offset": 961,
+          "end": 968,
+          "line": 38,
+          "endLine": 38,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/services/storage_service.dart",
+          "offset": 228,
+          "end": 235,
+          "line": 8,
+          "endLine": 8,
+          "constRanges": ""
+        }
+      ]
+    },
+    "user": {
+      "key": "user",
+      "text": "user",
+      "occurrences": [
+        {
+          "file": "lib/app/data/repositories/auth_repository.dart",
+          "offset": 1190,
+          "end": 1196,
+          "line": 45,
+          "endLine": 45,
+          "constRanges": ""
+        }
+      ]
+    },
+    "auth_me": {
+      "key": "auth_me",
+      "text": "auth/me",
+      "occurrences": [
+        {
+          "file": "lib/app/data/repositories/auth_repository.dart",
+          "offset": 1985,
+          "end": 1994,
+          "line": 77,
+          "endLine": 77,
+          "constRanges": ""
+        }
+      ]
+    },
+    "seconds": {
+      "key": "seconds",
+      "text": "seconds",
+      "occurrences": [
+        {
+          "file": "lib/app/data/repositories/history_repository.dart",
+          "offset": 505,
+          "end": 514,
+          "line": 23,
+          "endLine": 23,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/data/repositories/history_repository.dart",
+          "offset": 900,
+          "end": 909,
+          "line": 39,
+          "endLine": 39,
+          "constRanges": ""
+        }
+      ]
+    },
+    "home": {
+      "key": "home",
+      "text": "home",
+      "occurrences": [
+        {
+          "file": "lib/app/data/repositories/home_repository.dart",
+          "offset": 272,
+          "end": 278,
+          "line": 13,
+          "endLine": 13,
+          "constRanges": ""
+        }
+      ]
+    },
+    "text_695589472766_f64eq3b3k0ldjq6ns3ebtnsfeos77c2h_apps_goog": {
+      "key": "text_695589472766_f64eq3b3k0ldjq6ns3ebtnsfeos77c2h_apps_goog",
+      "text": "695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com",
+      "occurrences": [
+        {
+          "file": "lib/app/data/services/google_auth_service.dart",
+          "offset": 190,
+          "end": 264,
+          "line": 8,
+          "endLine": 8,
+          "constRanges": ""
+        }
+      ]
+    },
+    "application_json": {
+      "key": "application_json",
+      "text": "application/json",
+      "occurrences": [
+        {
+          "file": "lib/app/data/services/service_api.dart",
+          "offset": 387,
+          "end": 405,
+          "line": 14,
+          "endLine": 14,
+          "constRanges": ""
+        }
+      ]
+    },
+    "account_settings": {
+      "key": "account_settings",
+      "text": "Account Settings",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/account_view.dart",
+          "offset": 1381,
+          "end": 1399,
+          "line": 37,
+          "endLine": 37,
+          "constRanges": ""
+        }
+      ]
+    },
+    "manage_device": {
+      "key": "manage_device",
+      "text": "Manage Device",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/account_view.dart",
+          "offset": 1538,
+          "end": 1553,
+          "line": 39,
+          "endLine": 39,
+          "constRanges": ""
+        }
+      ]
+    },
+    "payment_transaction": {
+      "key": "payment_transaction",
+      "text": "Payment & Transaction",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/account_view.dart",
+          "offset": 2012,
+          "end": 2035,
+          "line": 54,
+          "endLine": 54,
+          "constRanges": ""
+        }
+      ]
+    },
+    "subscription_plan": {
+      "key": "subscription_plan",
+      "text": "Subscription Plan",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/account_view.dart",
+          "offset": 2142,
+          "end": 2161,
+          "line": 57,
+          "endLine": 57,
+          "constRanges": ""
+        }
+      ]
+    },
+    "subscription_data_is_still_loading": {
+      "key": "subscription_data_is_still_loading",
+      "text": "subscription data is still loading",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/account_view.dart",
+          "offset": 2400,
+          "end": 2436,
+          "line": 63,
+          "endLine": 63,
+          "constRanges": ""
+        }
+      ]
+    },
+    "transaction_history": {
+      "key": "transaction_history",
+      "text": "Transaction History",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/account_view.dart",
+          "offset": 2974,
+          "end": 2995,
+          "line": 79,
+          "endLine": 79,
+          "constRanges": ""
+        }
+      ]
+    },
+    "help_center": {
+      "key": "help_center",
+      "text": "Help Center",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/account_view.dart",
+          "offset": 3111,
+          "end": 3124,
+          "line": 84,
+          "endLine": 84,
+          "constRanges": ""
+        }
+      ]
+    },
+    "privacy_policy": {
+      "key": "privacy_policy",
+      "text": "Privacy Policy",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/account_view.dart",
+          "offset": 3225,
+          "end": 3241,
+          "line": 87,
+          "endLine": 87,
+          "constRanges": ""
+        }
+      ]
+    },
+    "terms_of_use": {
+      "key": "terms_of_use",
+      "text": "Terms of Use",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/account_view.dart",
+          "offset": 3357,
+          "end": 3371,
+          "line": 91,
+          "endLine": 91,
+          "constRanges": ""
+        }
+      ]
+    },
+    "version_1_0_0": {
+      "key": "version_1_0_0",
+      "text": "Version 1.0.0",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/account_view.dart",
+          "offset": 3494,
+          "end": 3509,
+          "line": 98,
+          "endLine": 98,
+          "constRanges": ""
+        }
+      ]
+    },
+    "belum_login": {
+      "key": "belum_login",
+      "text": "Belum Login",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/header.dart",
+          "offset": 1454,
+          "end": 1467,
+          "line": 46,
+          "endLine": 46,
+          "constRanges": ""
+        }
+      ]
+    },
+    "login": {
+      "key": "login",
+      "text": "Login >",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/header.dart",
+          "offset": 1932,
+          "end": 1941,
+          "line": 61,
+          "endLine": 61,
+          "constRanges": ""
+        }
+      ]
+    },
+    "b_d_3_d": {
+      "key": "b_d_3_d",
+      "text": "\\B(?=(\\d{3})+(?!\\d))",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 677,
+          "end": 700,
+          "line": 19,
+          "endLine": 19,
+          "constRanges": ""
+        }
+      ]
+    },
+    "tidak_ada_paket_tersedia": {
+      "key": "tidak_ada_paket_tersedia",
+      "text": "Tidak ada paket tersedia",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 2274,
+          "end": 2300,
+          "line": 76,
+          "endLine": 76,
+          "constRanges": ""
+        }
+      ]
+    },
+    "pilih_paket_vip": {
+      "key": "pilih_paket_vip",
+      "text": "Pilih Paket VIP",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 3231,
+          "end": 3248,
+          "line": 95,
+          "endLine": 95,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 3512,
+          "end": 3529,
+          "line": 111,
+          "endLine": 111,
+          "constRanges": "3483:3488"
+        }
+      ]
+    },
+    "nikmati_semua_konten_premium_dan_akses_tanpa_batas": {
+      "key": "nikmati_semua_konten_premium_dan_akses_tanpa_batas",
+      "text": "Nikmati semua konten premium dan akses tanpa batas.",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 3670,
+          "end": 3723,
+          "line": 108,
+          "endLine": 108,
+          "constRanges": ""
+        }
+      ]
+    },
+    "akses_semua_konten_vip": {
+      "key": "akses_semua_konten_vip",
+      "text": "Akses semua konten VIP",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 9235,
+          "end": 9259,
+          "line": 263,
+          "endLine": 263,
+          "constRanges": ""
+        }
+      ]
+    },
+    "kualitas_video_premium": {
+      "key": "kualitas_video_premium",
+      "text": "Kualitas video premium",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 9408,
+          "end": 9432,
+          "line": 270,
+          "endLine": 270,
+          "constRanges": ""
+        }
+      ]
+    },
+    "tanpa_batas_menonton": {
+      "key": "tanpa_batas_menonton",
+      "text": "Tanpa batas menonton",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 9584,
+          "end": 9606,
+          "line": 277,
+          "endLine": 277,
+          "constRanges": ""
+        }
+      ]
+    },
+    "paket_saat_ini": {
+      "key": "paket_saat_ini",
+      "text": "Paket Saat Ini",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 12493,
+          "end": 12509,
+          "line": 366,
+          "endLine": 366,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 15655,
+          "end": 15671,
+          "line": 462,
+          "endLine": 462,
+          "constRanges": ""
+        }
+      ]
+    },
+    "free_member": {
+      "key": "free_member",
+      "text": "Free Member",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 12824,
+          "end": 12837,
+          "line": 377,
+          "endLine": 377,
+          "constRanges": ""
+        }
+      ]
+    },
+    "upgrade_untuk_menikmati_konten_vip": {
+      "key": "upgrade_untuk_menikmati_konten_vip",
+      "text": "Upgrade untuk menikmati konten VIP",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 13150,
+          "end": 13186,
+          "line": 388,
+          "endLine": 388,
+          "constRanges": ""
+        }
+      ]
+    },
+    "dibayar": {
+      "key": "dibayar",
+      "text": "dibayar",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 17878,
+          "end": 17887,
+          "line": 529,
+          "endLine": 529,
+          "constRanges": ""
+        }
+      ]
+    },
+    "berlaku_sampai": {
+      "key": "berlaku_sampai",
+      "text": "Berlaku sampai",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 19201,
+          "end": 19217,
+          "line": 568,
+          "endLine": 568,
+          "constRanges": ""
+        }
+      ]
+    },
+    "dd_mmm_yyyy": {
+      "key": "dd_mmm_yyyy",
+      "text": "dd MMM yyyy",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 19549,
+          "end": 19562,
+          "line": 586,
+          "endLine": 586,
+          "constRanges": ""
+        }
+      ]
+    },
+    "harga_promo_terbatas": {
+      "key": "harga_promo_terbatas",
+      "text": "Harga promo terbatas",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/subscriptions.dart",
+          "offset": 22622,
+          "end": 22644,
+          "line": 692,
+          "endLine": 692,
+          "constRanges": ""
+        }
+      ]
+    },
+    "vip_account": {
+      "key": "vip_account",
+      "text": "VIP ACCOUNT",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_card.dart",
+          "offset": 725,
+          "end": 738,
+          "line": 24,
+          "endLine": 24,
+          "constRanges": "549:554"
+        }
+      ]
+    },
+    "become_a_vip_member": {
+      "key": "become_a_vip_member",
+      "text": "Become a VIP Member",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_card.dart",
+          "offset": 1043,
+          "end": 1064,
+          "line": 37,
+          "endLine": 37,
+          "constRanges": "1018:1023"
+        }
+      ]
+    },
+    "ads_free": {
+      "key": "ads_free",
+      "text": "Ads Free",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_card.dart",
+          "offset": 1277,
+          "end": 1287,
+          "line": 46,
+          "endLine": 46,
+          "constRanges": "1263:1268"
+        }
+      ]
+    },
+    "exclusive_drama": {
+      "key": "exclusive_drama",
+      "text": "Exclusive Drama",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_card.dart",
+          "offset": 1309,
+          "end": 1326,
+          "line": 47,
+          "endLine": 47,
+          "constRanges": ""
+        }
+      ]
+    },
+    "anything_streaming": {
+      "key": "anything_streaming",
+      "text": "Anything Streaming",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_card.dart",
+          "offset": 1348,
+          "end": 1368,
+          "line": 48,
+          "endLine": 48,
+          "constRanges": ""
+        }
+      ]
+    },
+    "unlimited_viewing": {
+      "key": "unlimited_viewing",
+      "text": "Unlimited Viewing",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_card.dart",
+          "offset": 1390,
+          "end": 1409,
+          "line": 49,
+          "endLine": 49,
+          "constRanges": ""
+        }
+      ]
+    },
+    "personal_content": {
+      "key": "personal_content",
+      "text": "Personal Content",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_card.dart",
+          "offset": 1431,
+          "end": 1449,
+          "line": 50,
+          "endLine": 50,
+          "constRanges": ""
+        }
+      ]
+    },
+    "upgrade_now": {
+      "key": "upgrade_now",
+      "text": "Upgrade Now",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_card.dart",
+          "offset": 1817,
+          "end": 1830,
+          "line": 62,
+          "endLine": 62,
+          "constRanges": "1806:1811"
+        }
+      ]
+    },
+    "vip_episode": {
+      "key": "vip_episode",
+      "text": "VIP Episode",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 919,
+          "end": 932,
+          "line": 27,
+          "endLine": 27,
+          "constRanges": "890:895"
+        }
+      ]
+    },
+    "become_a_vip_member_to_unlock_all_exclusive_episodes_without": {
+      "key": "become_a_vip_member_to_unlock_all_exclusive_episodes_without",
+      "text": "Become a VIP member to unlock all exclusive episodes without limits",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 1213,
+          "end": 1282,
+          "line": 38,
+          "endLine": 38,
+          "constRanges": ""
+        }
+      ]
+    },
+    "unlock_upgrade_to_vip": {
+      "key": "unlock_upgrade_to_vip",
+      "text": "Unlock / Upgrade to VIP",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 2134,
+          "end": 2159,
+          "line": 62,
+          "endLine": 62,
+          "constRanges": "2101:2106"
+        }
+      ]
+    },
+    "vip_mingguan": {
+      "key": "vip_mingguan",
+      "text": "VIP Mingguan",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 3822,
+          "end": 3836,
+          "line": 122,
+          "endLine": 122,
+          "constRanges": ""
+        }
+      ]
+    },
+    "rp_15_000": {
+      "key": "rp_15_000",
+      "text": "Rp 15.000",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 3862,
+          "end": 3873,
+          "line": 123,
+          "endLine": 123,
+          "constRanges": ""
+        }
+      ]
+    },
+    "akses_penuh_selama_7_hari": {
+      "key": "akses_penuh_selama_7_hari",
+      "text": "Akses penuh selama 7 hari",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 3902,
+          "end": 3929,
+          "line": 124,
+          "endLine": 124,
+          "constRanges": ""
+        }
+      ]
+    },
+    "vip_bulanan": {
+      "key": "vip_bulanan",
+      "text": "VIP Bulanan",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 4001,
+          "end": 4014,
+          "line": 128,
+          "endLine": 128,
+          "constRanges": ""
+        }
+      ]
+    },
+    "rp_39_000": {
+      "key": "rp_39_000",
+      "text": "Rp 39.000",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 4040,
+          "end": 4051,
+          "line": 129,
+          "endLine": 129,
+          "constRanges": ""
+        }
+      ]
+    },
+    "paling_populer": {
+      "key": "paling_populer",
+      "text": "Paling populer",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 4080,
+          "end": 4096,
+          "line": 130,
+          "endLine": 130,
+          "constRanges": ""
+        }
+      ]
+    },
+    "vip_tahunan_paling_populer": {
+      "key": "vip_tahunan_paling_populer",
+      "text": "VIP Tahunan paling populer",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 4201,
+          "end": 4229,
+          "line": 135,
+          "endLine": 135,
+          "constRanges": ""
+        }
+      ]
+    },
+    "rp_299_000": {
+      "key": "rp_299_000",
+      "text": "Rp 299.000",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 4243,
+          "end": 4255,
+          "line": 135,
+          "endLine": 135,
+          "constRanges": ""
+        }
+      ]
+    },
+    "hemat_hingga_35": {
+      "key": "hemat_hingga_35",
+      "text": "Hemat hingga 35%",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 4284,
+          "end": 4302,
+          "line": 136,
+          "endLine": 136,
+          "constRanges": ""
+        }
+      ]
+    },
+    "best_value": {
+      "key": "best_value",
+      "text": "BEST VALUE",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/account/views/widget/vip_upgrade_view.dart",
+          "offset": 4328,
+          "end": 4340,
+          "line": 137,
+          "endLine": 137,
+          "constRanges": ""
+        }
+      ]
+    },
+    "bookmarkview": {
+      "key": "bookmarkview",
+      "text": "bookmarkview",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/bookmark/views/bookmark_view.dart",
+          "offset": 343,
+          "end": 357,
+          "line": 13,
+          "endLine": 13,
+          "constRanges": ""
+        }
+      ]
+    },
+    "bookmarkview_is_working": {
+      "key": "bookmarkview_is_working",
+      "text": "BookmarkView is working",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/bookmark/views/bookmark_view.dart",
+          "offset": 461,
+          "end": 486,
+          "line": 18,
+          "endLine": 18,
+          "constRanges": "414:419"
+        }
+      ]
+    },
+    "episodeview": {
+      "key": "episodeview",
+      "text": "episodeview",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/episode/views/episode_view.dart",
+          "offset": 339,
+          "end": 352,
+          "line": 13,
+          "endLine": 13,
+          "constRanges": ""
+        }
+      ]
+    },
+    "episodeview_is_working": {
+      "key": "episodeview_is_working",
+      "text": "EpisodeView is working",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/episode/views/episode_view.dart",
+          "offset": 456,
+          "end": 480,
+          "line": 18,
+          "endLine": 18,
+          "constRanges": "409:414"
+        }
+      ]
+    },
+    "sinopsis": {
+      "key": "sinopsis",
+      "text": "sinopsis",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/episode_player/controllers/episode_player_controller.dart",
+          "offset": 2094,
+          "end": 2104,
+          "line": 77,
+          "endLine": 77,
+          "constRanges": ""
+        }
+      ]
+    },
+    "episode": {
+      "key": "episode",
+      "text": "episode",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/history/controllers/history_controller.dart",
+          "offset": 1255,
+          "end": 1264,
+          "line": 54,
+          "endLine": 54,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/movie/views/widget/episode_list.dart",
+          "offset": 3866,
+          "end": 3875,
+          "line": 106,
+          "endLine": 106,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/player/controllers/player_controller.dart",
+          "offset": 4739,
+          "end": 4748,
+          "line": 170,
+          "endLine": 170,
+          "constRanges": ""
+        }
+      ]
+    },
+    "historyview": {
+      "key": "historyview",
+      "text": "historyview",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/history/views/history_view.dart",
+          "offset": 339,
+          "end": 352,
+          "line": 13,
+          "endLine": 13,
+          "constRanges": ""
+        }
+      ]
+    },
+    "historyview_is_working": {
+      "key": "historyview_is_working",
+      "text": "HistoryView is working",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/history/views/history_view.dart",
+          "offset": 456,
+          "end": 480,
+          "line": 18,
+          "endLine": 18,
+          "constRanges": "409:414"
+        }
+      ]
+    },
+    "continue_watching": {
+      "key": "continue_watching",
+      "text": "Continue Watching",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/history/views/widget/continue_watching.dart",
+          "offset": 1123,
+          "end": 1142,
+          "line": 38,
+          "endLine": 38,
+          "constRanges": "1054:1059"
+        }
+      ]
+    },
+    "see_all": {
+      "key": "see_all",
+      "text": "See All",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/history/views/widget/continue_watching.dart",
+          "offset": 1500,
+          "end": 1509,
+          "line": 49,
+          "endLine": 49,
+          "constRanges": "1467:1472"
+        },
+        {
+          "file": "lib/app/modules/home/views/widget/section_movie_horizontal.dart",
+          "offset": 1310,
+          "end": 1319,
+          "line": 47,
+          "endLine": 47,
+          "constRanges": "1279:1284"
+        }
+      ]
+    },
+    "home_refreshed": {
+      "key": "home_refreshed",
+      "text": "Home Refreshed",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/home/views/home_view.dart",
+          "offset": 2623,
+          "end": 2639,
+          "line": 70,
+          "endLine": 70,
+          "constRanges": ""
+        }
+      ]
+    },
+    "failed_to_refresh": {
+      "key": "failed_to_refresh",
+      "text": "Failed to refresh",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/home/views/home_view.dart",
+          "offset": 2723,
+          "end": 2742,
+          "line": 72,
+          "endLine": 72,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/movie/views/movie_view.dart",
+          "offset": 1412,
+          "end": 1431,
+          "line": 45,
+          "endLine": 45,
+          "constRanges": ""
+        }
+      ]
+    },
+    "dmn_play": {
+      "key": "dmn_play",
+      "text": "DMN Play",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/home/views/widget/appbar.dart",
+          "offset": 566,
+          "end": 576,
+          "line": 18,
+          "endLine": 18,
+          "constRanges": "541:546"
+        }
+      ]
+    },
+    "login_2736fab2": {
+      "key": "login_2736fab2",
+      "text": "login",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/login/controllers/login_controller.dart",
+          "offset": 823,
+          "end": 830,
+          "line": 27,
+          "endLine": 27,
+          "constRanges": ""
+        }
+      ]
+    },
+    "coming_soon": {
+      "key": "coming_soon",
+      "text": "Coming Soon",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/login/controllers/login_controller.dart",
+          "offset": 1835,
+          "end": 1848,
+          "line": 68,
+          "endLine": 68,
+          "constRanges": ""
+        }
+      ]
+    },
+    "are_you_sure_you_want_to_log_out": {
+      "key": "are_you_sure_you_want_to_log_out",
+      "text": "Are you sure you want to log out?",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/login/controllers/login_controller.dart",
+          "offset": 4170,
+          "end": 4205,
+          "line": 142,
+          "endLine": 142,
+          "constRanges": ""
+        }
+      ]
+    },
+    "welcome": {
+      "key": "welcome",
+      "text": "welcome",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/login/views/login_view.dart",
+          "offset": 1142,
+          "end": 1151,
+          "line": 37,
+          "endLine": 37,
+          "constRanges": ""
+        }
+      ]
+    },
+    "login_to_enjoy_all_dmn_play_features": {
+      "key": "login_to_enjoy_all_dmn_play_features",
+      "text": "Login to enjoy all DMN Play features",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/login/views/login_view.dart",
+          "offset": 1434,
+          "end": 1472,
+          "line": 48,
+          "endLine": 48,
+          "constRanges": ""
+        }
+      ]
+    },
+    "signing_in": {
+      "key": "signing_in",
+      "text": "Signing in...",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/login/views/login_view.dart",
+          "offset": 2074,
+          "end": 2089,
+          "line": 66,
+          "endLine": 66,
+          "constRanges": ""
+        }
+      ]
+    },
+    "continue_with_google": {
+      "key": "continue_with_google",
+      "text": "Continue with Google",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/login/views/login_view.dart",
+          "offset": 2119,
+          "end": 2141,
+          "line": 67,
+          "endLine": 67,
+          "constRanges": ""
+        }
+      ]
+    },
+    "continue_with_facebook": {
+      "key": "continue_with_facebook",
+      "text": "Continue with Facebook",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/login/views/login_view.dart",
+          "offset": 2547,
+          "end": 2571,
+          "line": 79,
+          "endLine": 79,
+          "constRanges": ""
+        }
+      ]
+    },
+    "continue_with_apple": {
+      "key": "continue_with_apple",
+      "text": "Continue with Apple",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/login/views/login_view.dart",
+          "offset": 2885,
+          "end": 2906,
+          "line": 89,
+          "endLine": 89,
+          "constRanges": ""
+        }
+      ]
+    },
+    "continue_with_email": {
+      "key": "continue_with_email",
+      "text": "Continue with Email",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/login/views/login_view.dart",
+          "offset": 3206,
+          "end": 3227,
+          "line": 99,
+          "endLine": 99,
+          "constRanges": ""
+        }
+      ]
+    },
+    "by_continuing_you_agree_to_the_nterms_conditions_and_privacy": {
+      "key": "by_continuing_you_agree_to_the_nterms_conditions_and_privacy",
+      "text": "By continuing, you agree to the\\nTerms & Conditions and Privacy Policy",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/login/views/login_view.dart",
+          "offset": 3373,
+          "end": 3445,
+          "line": 106,
+          "endLine": 106,
+          "constRanges": "3344:3349"
+        }
+      ]
+    },
+    "movie_tidak_ditemukan": {
+      "key": "movie_tidak_ditemukan",
+      "text": "Movie tidak ditemukan",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/movie/views/movie_view.dart",
+          "offset": 959,
+          "end": 982,
+          "line": 30,
+          "endLine": 30,
+          "constRanges": "906:911"
+        }
+      ]
+    },
+    "page_refreshed": {
+      "key": "page_refreshed",
+      "text": "Page Refreshed",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/movie/views/movie_view.dart",
+          "offset": 1343,
+          "end": 1359,
+          "line": 43,
+          "endLine": 43,
+          "constRanges": ""
+        }
+      ]
+    },
+    "movie": {
+      "key": "movie",
+      "text": "movie",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/movie/views/widget/episode_list.dart",
+          "offset": 4012,
+          "end": 4019,
+          "line": 109,
+          "endLine": 109,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/player/controllers/player_controller.dart",
+          "offset": 8172,
+          "end": 8179,
+          "line": 286,
+          "endLine": 286,
+          "constRanges": ""
+        }
+      ]
+    },
+    "you_may_also_like": {
+      "key": "you_may_also_like",
+      "text": "You May Also Like",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/movie/views/widget/recomended_section.dart",
+          "offset": 403,
+          "end": 422,
+          "line": 13,
+          "endLine": 13,
+          "constRanges": ""
+        }
+      ]
+    },
+    "open_done": {
+      "key": "open_done",
+      "text": "OPEN DONE",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/movie_banner/controllers/movie_banner_controller.dart",
+          "offset": 5203,
+          "end": 5214,
+          "line": 204,
+          "endLine": 204,
+          "constRanges": ""
+        }
+      ]
+    },
+    "navbar": {
+      "key": "navbar",
+      "text": "navbar",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/navbar/controllers/navbar_controller_controller.dart",
+          "offset": 364,
+          "end": 372,
+          "line": 16,
+          "endLine": 16,
+          "constRanges": ""
+        },
+        {
+          "file": "lib/app/modules/navbar/views/widget/modern_bottombar.dart",
+          "offset": 991,
+          "end": 999,
+          "line": 30,
+          "endLine": 30,
+          "constRanges": ""
+        }
+      ]
+    },
+    "body": {
+      "key": "body",
+      "text": "body",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/navbar/controllers/navbar_controller_controller.dart",
+          "offset": 374,
+          "end": 380,
+          "line": 16,
+          "endLine": 16,
+          "constRanges": ""
+        }
+      ]
+    },
+    "profileview": {
+      "key": "profileview",
+      "text": "profileview",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/profile/views/profile_view.dart",
+          "offset": 339,
+          "end": 352,
+          "line": 13,
+          "endLine": 13,
+          "constRanges": ""
+        }
+      ]
+    },
+    "profileview_is_working": {
+      "key": "profileview_is_working",
+      "text": "ProfileView is working",
+      "occurrences": [
+        {
+          "file": "lib/app/modules/profile/views/profile_view.dart",
+          "offset": 456,
+          "end": 480,
+          "line": 18,
+          "endLine": 18,
+          "constRanges": "409:414"
+        }
+      ]
+    }
+  }
+}

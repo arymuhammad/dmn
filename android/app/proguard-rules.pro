@@ -64,3 +64,9 @@
 
 -dontwarn javax.annotation.**
 -dontwarn org.conscrypt.**
+
+# Flutter deferred components are not used by this app.
+# Flutter embedding still contains references to the legacy Play Core API.
+-dontwarn com.google.android.play.core.splitcompat.**
+-dontwarn com.google.android.play.core.splitinstall.**
+-dontwarn com.google.android.play.core.tasks.**

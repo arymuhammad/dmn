@@ -1,0 +1,422 @@
+#979B999
+$duration $durationLabel
+$duration $durationUnit
+$duration Bulan
+$duration Hari
+$duration Tahun
+$h:${two(m)}:${two(s)}
+$minutes:${seconds.toString().padLeft(2, '0')}
+$seconds seconds
+${(controller.brightness.value * 100).round()}%
+${baseUrl}api/v1/
+${baseUrl}uploads/backdrops/
+${baseUrl}uploads/hls/
+${baseUrl}uploads/posters/
+${baseUrl}uploads/subtitles/
+${controller.format(controller.position.value)} → ${controller.format(controller.scrubPosition.value)}
+${controller.playbackSpeed.value}x
+${controller.seekDelta.value > 0 ?
+${ep.episodeNumber}
+${formatDuration(episode.duration)} min
+${item.progress.toStringAsFixed(0)}%
+${locale.languageCode}_${locale.countryCode}
+${q.height}p
+${speed}x
+${two(m)}:${two(s)}
+), (match) =>
+/account
+/bookmark
+/episode
+/episode-player
+/episode/view/$episodeId
+/history
+/history/continueWatching
+/history/resume/$episodeId
+/history/update
+/home
+/login
+/login-email
+/movie
+/movie-banner
+/movie-detail
+/navbar
+/player
+/profile
+/short
+695589472766-f64eq3b3k0ldjq6ns3ebtnsfeos77c2h.apps.googleusercontent.com
+Accept
+Account
+Account Settings
+Active until
+Ads Free
+After: ${player?.state.track.video}
+Akses penuh selama 7 hari
+Akses semua konten VIP
+Aktif sampai
+Akun
+Anything Streaming
+Apakah kamu yakin ingin keluar?
+Apple Login belum tersedia
+Are you sure you want to log out?
+Audio
+Authorization
+Auto
+BEST VALUE
+BODY   : ${e.response?.data}
+Bahasa
+Batal
+Bearer $token
+Become a VIP Member
+Become a VIP member to unlock all exclusive episodes without limits
+Before: ${player.state.track.video}
+Belum Login
+Belum ada riwayat tontonan
+Beranda
+Berlaku sampai
+Berlangganan
+Bookmark
+BookmarkView
+BookmarkView is working
+By continuing, you agree to the\nTerms & Conditions and Privacy Policy
+CC
+COMPLETED
+CURRENT VIDEO: $index
+Cancel
+Cast
+Choose VIP Package
+Close
+Coba Lagi
+Coming Soon
+Confirm
+Continue Watching
+Continue with Apple
+Continue with Email
+Continue with Facebook
+Continue with Google
+DATA   : ${e.requestOptions.data}
+DIO ERROR
+DMN Play
+Detail error: $e
+Discover
+Durasi
+EP ${index + 1}
+EP ${item.episodeNumber}
+EPISODE ${controller.episodeIndex.value}
+ERROR = $e
+English
+Enjoy all premium content and unlimited access.
+Episode
+Episode Player
+EpisodeView
+EpisodeView is working
+Episodes
+Eps ${episode.episodeNumber} | ${episode.title.capitalize ??
+Exclusive Drama
+FREE
+Facebook Login
+Facebook Login belum tersedia
+Failed to refresh
+Failed to refresh Home
+Free Member
+Gagal memperbarui Home
+Guest
+HD
+HEMAT
+HEMAT $discount%
+Harga promo terbatas
+Help Center
+Hemat hingga 35%
+History
+HistoryView
+HistoryView is working
+Home
+Home Refreshed
+Home berhasil diperbarui
+Home refreshed successfully
+ID
+Indonesia
+Invalid response: ${res.data}
+Kecepatan
+Keluar
+Konfirmasi
+Kualitas
+Kualitas video premium
+LOAD BANNER ERROR: $e
+Language
+Language changed: $languageCode
+Lanjut Menonton
+Later
+Less
+Light
+Loading...
+Log Out
+Log in to enjoy all DMN Play features
+Login
+Login >
+Logout
+Manage Device
+Memuat...
+More
+Movie tidak ditemukan
+Mulai
+Nikmati semua konten premium dan akses tanpa batas.
+No
+No packages available
+No watch history yet
+OPEN = $url
+OPEN DONE
+Off
+Otomatis
+PLAY PREVIEW ERROR = $e
+PLAYING = $e
+Page Refreshed
+Paket Saat Ini
+Paling populer
+Payment & Transaction
+Pengaturan
+Personal Content
+Pilih Paket VIP
+Play
+Playing
+Please wait
+Privacy Policy
+Profil
+Profile
+ProfileView
+ProfileView is working
+Quality
+Retry
+Riwayat
+Rp ${value.toStringAsFixed(0).replaceAllMapped(RegExp(r
+Rp 15.000
+Rp 299.000
+Rp 39.000
+STATUS : ${e.response?.statusCode}
+STATUS : ${response.statusCode}
+Save
+See All
+Settings
+Short
+Signing in...
+Simpan
+Sinopsis
+Sinopsis film. Film ini bercerita tentang ...
+Speed
+Subscribe
+Subscription
+Subscription Plan
+Subscription data is still loading
+Subtitle
+Synopsis
+TOKEN = $token
+TOKEN TERSIMPAN = $token
+Tanpa batas menonton
+Terms of Use
+Tidak
+Tidak ada paket tersedia
+Tonton
+Transaction History
+Trending
+Tutup
+URL    : ${e.requestOptions.path}
+URL kosong
+US
+Unlimited Viewing
+Unlock / Upgrade to VIP
+Upgrade Now
+Upgrade VIP
+Upgrade untuk menikmati konten VIP
+VIP
+VIP ACCOUNT
+VIP Active
+VIP Aktif
+VIP Bulanan
+VIP Episode
+VIP Expired
+VIP Kedaluwarsa
+VIP Membership
+VIP Mingguan
+VIP Tahunan
+Version 1.0.0
+Video
+WELCOME
+Watch
+Ya
+Yes
+You May Also Like
+access_token
+account
+account_language
+account_logout
+account_profile
+account_settings
+account_subscription
+account_vip
+active_subscription
+active_subscription_model.dart
+amount
+api_client.dart
+app_language
+app_pages.dart
+app_routes.dart
+application/json
+auth/facebook
+auth/google
+auth/me
+avatar
+bandwidth
+banner
+body
+bulan
+cast
+cast_list
+categories
+category_model.dart
+category_name
+center
+common_cancel
+common_close
+common_confirm
+common_loading
+common_no
+common_retry
+common_save
+common_yes
+completed
+dart:async
+dart:io
+dart:math
+dart:ui
+data
+day
+dd MMM yyyy
+description
+dibayar
+duration
+duration_unit
+email
+en
+en_US
+episode
+episode_id
+episode_model.dart
+episode_number
+episode_subtitle.dart
+episode_title
+episodes
+expires_at
+fullname
+genres
+hari
+height
+history
+history_continue
+history_empty
+hls_url
+home
+home_continue_watching
+home_discover
+home_refresh_failed
+home_refresh_success
+home_trending
+home_watch
+id
+id_ID
+id_token
+is_vip
+ja_JP
+ko_KR
+language_code
+language_name
+last_watch
+last_watched_at
+latest
+likes
+logout_message
+logout_title
+message
+month
+movie
+movie/category/$categoryId
+movie/detail/$id
+movie_${banner.id}
+movie_${movie.id}
+movie_id
+movie_model.dart
+movie_title
+movies
+name
+nav_account
+nav_history
+nav_home
+nav_short
+navbar
+pip
+plan_id
+player_audio
+player_auto
+player_episode
+player_progress.dart
+player_quality
+player_speed
+player_subtitle
+player_watch
+playing
+playlist
+position
+poster
+preview_url
+price
+progress
+promo_price
+public_profile
+published
+qualities
+quality
+quality_model.dart
+recommended
+release_date
+release_year
+resumeSeconds
+season_id
+seconds
+set_playing
+slug
+started_at
+status
+storage_service.dart
+stream_id
+subscription
+subscription_choose
+subscription_description
+subscription_empty
+subscriptions
+subtitle_id
+subtitle_path
+subtitles
+success
+synopsis
+tahun
+thumbnail
+title
+token
+total_views
+transaction_id
+trending
+type
+user
+user_id
+user_model.dart
+video_url
+views
+vip
+vip_active
+vip_active_until
+vip_expired
+vip_subscribe
+vip_upgrade
+watched
+watched_seconds
+width
+year
+}${controller.seekDelta.value}s

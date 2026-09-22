@@ -1,4 +1,4 @@
-import 'package:dmn_play/app/data/helpers/app_colors.dart';
+﻿import 'package:dmn_play/app/data/helpers/app_colors.dart';
 import 'package:dmn_play/app/modules/navbar/controllers/navbar_controller_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -38,25 +38,25 @@ class ModernBottomBar extends GetView<NavbarController> {
               _item(
                 controller: c,
                 icon: Icons.home_rounded,
-                label: "Home",
+                label: "home".tr,
                 index: 0,
               ),
               _item(
                 controller: c,
-                icon: Icons.explore_rounded,
-                label: "Discover",
+                icon: Icons.movie_filter,
+                label: "mix".tr,
                 index: 1,
               ),
               _item(
                 controller: c,
                 icon: Icons.bookmark_rounded,
-                label: "Bookmark",
+                label: "history".tr,
                 index: 2,
               ),
               _item(
                 controller: c,
                 icon: Icons.person_rounded,
-                label: "Account",
+                label: "account".tr,
                 index: 3,
               ),
             ],
@@ -84,7 +84,7 @@ class ModernBottomBar extends GetView<NavbarController> {
         decoration: BoxDecoration(
           color:
               selected
-                  ? AppColors.contentColorYellow.withOpacity(0.15)
+                  ? AppColors.contentColorYellow.withValues(alpha: 0.15)
                   : Colors.transparent,
           borderRadius: BorderRadius.circular(18),
         ),
@@ -103,7 +103,7 @@ class ModernBottomBar extends GetView<NavbarController> {
                         key: ValueKey(label),
                         padding: const EdgeInsets.only(left: 8),
                         child: Text(
-                          label,
+                          label.tr.capitalizeFirst ?? '',
                           style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
