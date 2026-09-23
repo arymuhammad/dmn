@@ -122,7 +122,7 @@ class BannerTabHeaderDelegate extends SliverPersistentHeaderDelegate {
                 unselectedLabelColor: Colors.white54,
                 indicatorColor: AppColors.contentColorYellow,
                 labelStyle: const TextStyle(
-                  fontSize: 13,
+                  fontSize: 16,
                   fontWeight: FontWeight.w700,
                 ),
                 tabs:

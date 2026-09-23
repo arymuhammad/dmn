@@ -33,7 +33,7 @@ class SectionMovieHorizontal extends StatelessWidget {
                   title.capitalize ?? '',
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

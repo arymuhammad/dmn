@@ -80,13 +80,13 @@ class VipCard extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          SizedBox(
-            width: double.infinity,
+          Align(
+            alignment: Alignment.centerRight,
             child: ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.black,
-                foregroundColor: Colors.white,
+                foregroundColor: Colors.white, minimumSize: const Size(100, 40),
               ),
               child: Text('upgrade now'.tr.capitalize ?? ''),
             ),

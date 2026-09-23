@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../data/helpers/app_colors.dart';
 import '../../../../data/models/movie_model.dart';
 
 class DetailBanner extends StatelessWidget {
@@ -65,17 +66,17 @@ class DetailBanner extends StatelessWidget {
           ),
 
           Positioned(
-            bottom: 30,
-            left: 20,
-            right: 20,
+            bottom: 0,
+            // left: 30,
+            right: 30,
             child: ElevatedButton.icon(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
+              style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                backgroundColor: AppColors.contentColorYellow,
                 foregroundColor: Colors.black,
-                minimumSize: const Size(double.infinity, 50),
+                minimumSize: const Size(100, 40),
               ),
               onPressed: () {},
-              icon: const Icon(Icons.play_arrow),
+              icon: const Icon(Icons.play_circle),
               label: const Text("Play"),
             ),
           )
