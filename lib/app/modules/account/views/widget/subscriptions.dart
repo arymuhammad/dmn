@@ -419,7 +419,7 @@ class SubscriptionPrice extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'paket saat ini'.tr.capitalize ?? '',
+                    'current package'.tr.capitalize ?? '',
                     style: TextStyle(
                       color: Colors.white54,
                       fontSize: 11,
@@ -430,7 +430,7 @@ class SubscriptionPrice extends StatelessWidget {
                   SizedBox(height: 4),
 
                   Text(
-                    'Free Member'.tr.capitalize ?? '',
+                    'free member'.tr.capitalize ?? '',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 17,
@@ -441,7 +441,7 @@ class SubscriptionPrice extends StatelessWidget {
                   SizedBox(height: 3),
 
                   Text(
-                    'Upgrade untuk menikmati konten VIP'.tr,
+                    'Upgrade to enjoy VIP content'.tr,
                     style: TextStyle(
                       color: Colors.white38,
                       fontSize: 11,

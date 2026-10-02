@@ -30,6 +30,7 @@ const Map<String, String> enUS = {
   'personal content': 'personal content',
   'upgrade now': 'upgrade now',
   'max. 2 devices': 'Max. 2 devices',
+  'HD video quality':'HD video quality',
 
   // Account
   'login': 'login',

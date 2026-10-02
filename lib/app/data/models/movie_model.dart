@@ -1,3 +1,5 @@
+import 'package:dmn_play/app/data/services/api_config.dart';
+
 import 'category_model.dart';
 
 class MovieModel {
@@ -27,7 +29,7 @@ class MovieModel {
     this.categories = const [],
   });
 
-  static const imageBase = "http://103.156.15.61/dmn/uploads/posters/";
+  static const imageBase = ApiConfig.posterUrl;
 
   factory MovieModel.fromJson(Map<String, dynamic> json) {
     return MovieModel(

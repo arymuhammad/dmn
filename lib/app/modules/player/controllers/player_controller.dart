@@ -33,6 +33,11 @@ enum DragType { none, horizontal, brightness, volume }
 class PlayerController extends GetxController {
   VideoController? videoController;
   Player? player;
+
+  final List<StreamSubscription<dynamic>> _playerSubscriptions = [];
+  bool _fromMix = false;
+  bool _ownsPlayer = true;
+
   // final String hlsPath = Get.arguments as String;
   String url = "";
   late final HistoryRepository historyRepository;
@@ -138,7 +143,15 @@ class PlayerController extends GetxController {
   void onClose() {
     _historyTimer?.cancel();
 
-    unawaited(saveHistory());
+    // Hentikan semua listener Player milik controller ini.
+    // Penting terutama untuk MIX karena Player-nya tidak di-dispose.
+    for (final subscription in _playerSubscriptions) {
+      unawaited(subscription.cancel());
+    }
+    _playerSubscriptions.clear();
+
+    // Simpan history terakhir
+    unawaited(saveHistoryIfLoggedIn());
 
     _overlayTimer?.cancel();
 
@@ -146,7 +159,13 @@ class PlayerController extends GetxController {
     _brightnessTimer?.cancel();
 
     pageController.dispose();
-    player?.dispose();
+
+    // Player normal tetap di-dispose.
+    // Player MIX tidak disentuh karena masih dipakai oleh Mix.
+    if (_ownsPlayer) {
+      player?.dispose();
+    }
+
     super.onClose();
   }
 
@@ -162,6 +181,149 @@ class PlayerController extends GetxController {
     final args = Get.arguments as Map;
 
     historyRepository = Get.find<HistoryRepository>();
+
+    // ==========================================================
+    // MODE DARI MIX
+    // ==========================================================
+
+    // ==========================================================
+    // MODE DARI MIX
+    // ==========================================================
+
+    if (args['fromMix'] == true &&
+        args['player'] is Player &&
+        args['videoController'] is VideoController) {
+      _fromMix = true;
+      _ownsPlayer = false;
+
+      // ========================================================
+      // REUSE PLAYER
+      // ========================================================
+
+      player = args['player'] as Player;
+
+      videoController = args['videoController'] as VideoController;
+
+      // ========================================================
+      // DATA
+      // ========================================================
+
+      currentEpisodeId.value =
+          int.tryParse(args['episodeId']?.toString() ?? '') ?? 0;
+
+      title.value = args['title']?.toString() ?? '';
+      poster.value = args['poster']?.toString() ?? '';
+      synopsis.value = args['synopsis']?.toString() ?? '';
+      cast.assignAll(args['cast']);
+      // ========================================================
+      // SUBTITLE
+      // ========================================================
+
+      final mixSubtitles = args['subtitles'];
+
+      if (mixSubtitles is List<EpisodeSubtitle>) {
+        subtitles.assignAll(mixSubtitles);
+      } else {
+        subtitles.clear();
+      }
+
+      // ========================================================
+      // QUALITY
+      // ========================================================
+
+      final mixQualities = args['qualities'];
+
+      if (mixQualities is List<QualityModel>) {
+        qualities.assignAll(mixQualities);
+      } else {
+        qualities.clear();
+      }
+
+      // ========================================================
+      // BENTUK EPISODE UNTUK HISTORY
+      // ========================================================
+
+      episode = EpisodeModel(
+        id: currentEpisodeId.value,
+        movieId: args['movieId'] ?? 0,
+        title: args['title'] ?? '',
+        videoUrl: args['videoUrl'] ?? '',
+        episodeNumber: args['episodeNumber'] ?? 0,
+        duration: args['duration'] ?? 0,
+        views: args['views'] ?? 0,
+        description: args['description'] ?? '',
+        releaseDate:
+            args['releaseDate'] is DateTime
+                ? args['releaseDate'] as DateTime?
+                : DateTime.tryParse(args['releaseDate']?.toString() ?? ''),
+        status: 'published',
+        isVip:
+            args['isVip'] == true ||
+            args['isVip'] == 1 ||
+            args['isVip']?.toString() == '1',
+        subtitles: subtitles.toList(),
+        qualities: qualities.toList(),
+      );
+
+      // ========================================================
+      // LISTENER PLAYER
+      // ========================================================
+
+      _listenPlayer();
+
+      // ========================================================
+      // SYNC STATE SECEPATNYA
+      // ========================================================
+
+      _syncExistingPlayerState();
+
+      // ========================================================
+      // HISTORY
+      // ========================================================
+
+      startHistorySync();
+
+      // ========================================================
+      // PASTIKAN PLAYER PLAY
+      // ========================================================
+
+      if (!player!.state.playing) {
+        await player!.play();
+      }
+
+      // ========================================================
+      // SYNC LAGI SETELAH PLAY
+      // ========================================================
+
+      _syncExistingPlayerState();
+
+      // ========================================================
+      // SUBTITLE
+      // ========================================================
+      //
+      // Jalankan setelah player sudah aktif.
+      // Jangan blok playback.
+      //
+
+      if (subtitles.isNotEmpty) {
+        unawaited(_prepareMixSubtitles());
+      }
+
+      // ========================================================
+      // OVERLAY
+      // ========================================================
+
+      showOverlay();
+
+      return;
+    }
+
+    // ==========================================================
+    // MODE NORMAL
+    // ==========================================================
+    //
+    // SEMUA LOGIC PLAYER LAMA TETAP DI SINI
+    //
 
     title.value = args["title"] ?? "";
 
@@ -201,9 +363,6 @@ class PlayerController extends GetxController {
       subtitles.assignAll(history.subtitles);
       qualities.assignAll(history.qualities);
 
-      // ==========================
-      // Restore subtitle
-      // ==========================
       currentSubtitle.value = history.subtitles.firstWhereOrNull(
         (e) => e.id == history.subtitleId,
       );
@@ -211,9 +370,6 @@ class PlayerController extends GetxController {
       currentSubtitle.value ??=
           history.subtitles.isNotEmpty ? history.subtitles.first : null;
 
-      // ==========================
-      // Restore quality
-      // ==========================
       final stream = history.qualities.firstWhereOrNull(
         (e) => e.id == history.streamId?.toString(),
       );
@@ -223,9 +379,10 @@ class PlayerController extends GetxController {
         url = ApiConfig.baseUrl + stream.playlist;
       } else if (history.qualities.isNotEmpty) {
         selectedQuality.value = history.qualities.first.quality;
-        url = ApiConfig.baseUrl + history.qualities.first.playlist;
+
+        url =  history.qualities.first.playlist;
       } else {
-        url = ApiConfig.baseUrl + history.videoUrl;
+        url =  history.videoUrl;
       }
 
       episodes.assignAll(episodeArg.episodes);
@@ -243,11 +400,8 @@ class PlayerController extends GetxController {
       }
 
       synopsis.value = episodeArg.synopsis;
+
       cast.assignAll(episodeArg.cast);
-
-      // synopsis.value = movie.synopsis ?? "";
-
-      // cast.assignAll(movie.cast);
     } else if (episodeArg is EpisodeModel) {
       // ===========================
       // Normal Movie Detail
@@ -262,14 +416,12 @@ class PlayerController extends GetxController {
       qualities.assignAll(episode.qualities ?? []);
 
       if (qualities.isNotEmpty) {
-        url = ApiConfig.baseUrl + qualities.first.playlist;
+        url = qualities.first.playlist;
       } else {
-        url = ApiConfig.baseUrl + episode.videoUrl;
+        url =  episode.videoUrl;
       }
 
       episodes.assignAll((args["episodes"] as List<EpisodeModel>?) ?? []);
-
-      // episodes.assignAll((args["episodes"] as List<EpisodeModel>?) ?? []);
 
       final index = episodes.indexWhere((e) => e.id == episode.id);
 
@@ -284,18 +436,20 @@ class PlayerController extends GetxController {
       }
 
       final movie = args["movie"] as MovieModel?;
-
       if (movie != null) {
         synopsis.value = movie.synopsis;
         cast.value = movie.cast.split(',').toList();
       }
+       poster.value = movie!.poster;
     }
+
+    // ==========================================================
+    // PLAYER NORMAL
+    // ==========================================================
 
     player = Player();
 
     videoController = VideoController(player!);
-
-    // await _initSystemValues();
 
     _listenPlayer();
 
@@ -327,86 +481,130 @@ class PlayerController extends GetxController {
   }
 
   void _listenPlayer() {
-    player?.stream.playing.listen((playing) {
-      isPlaying.value = playing;
+    // Bersihkan listener lama milik controller ini.
+    for (final subscription in _playerSubscriptions) {
+      unawaited(subscription.cancel());
+    }
+    _playerSubscriptions.clear();
 
-      // _updateNativePlayingState(playing);
-    });
+    final p = player;
 
-    player?.stream.buffering.listen((value) {
-      isBuffering.value = value;
-    });
+    if (p == null) {
+      return;
+    }
 
-    player?.stream.position.listen((value) {
-      position.value = value;
+    _playerSubscriptions.add(
+      p.stream.playing.listen((value) {
+        isPlaying.value = value;
+      }),
+    );
 
-      if (cues.isEmpty) {
-        currentSubtitleText.value = "";
-        return;
-      }
+    _playerSubscriptions.add(
+      p.stream.buffering.listen((value) {
+        isBuffering.value = value;
+      }),
+    );
 
-      while (currentIndex < cues.length && value > cues[currentIndex].end) {
-        currentIndex++;
-      }
+    _playerSubscriptions.add(
+      p.stream.position.listen((value) {
+        // debugPrint('[PLAYER POSITION EVENT] $value');
 
-      if (currentIndex >= cues.length) {
-        currentSubtitleText.value = "";
-        return;
-      }
+        position.value = value;
 
-      final cue = cues[currentIndex];
+        if (cues.isEmpty) {
+          currentSubtitleText.value = "";
+          return;
+        }
 
-      if (value >= cue.start && value <= cue.end) {
-        currentSubtitleText.value = cue.text;
-      } else {
-        currentSubtitleText.value = "";
-      }
-    });
+        while (currentIndex < cues.length && value > cues[currentIndex].end) {
+          currentIndex++;
+        }
 
-    player?.stream.duration.listen((value) {
-      duration.value = value;
-    });
+        if (currentIndex >= cues.length) {
+          currentSubtitleText.value = "";
+          return;
+        }
 
-    player?.stream.completed.listen((value) async {
-      isCompleted.value = value;
+        final cue = cues[currentIndex];
 
-      if (!value) return;
+        if (value >= cue.start && value <= cue.end) {
+          currentSubtitleText.value = cue.text;
+        } else {
+          currentSubtitleText.value = "";
+        }
+      }),
+    );
 
-      await saveHistory();
+    _playerSubscriptions.add(
+      p.stream.duration.listen((value) {
+        duration.value = value;
+      }),
+    );
 
-      if (Get.isRegistered<HistoryController>()) {
-        Get.find<HistoryController>().refreshHistory();
-      }
-    });
+    _playerSubscriptions.add(
+      p.stream.completed.listen((value) async {
+        isCompleted.value = value;
 
-    player?.stream.buffer.listen((value) {
-      buffer.value = value;
-    });
+        if (!value) {
+          return;
+        }
 
-    player?.stream.tracks.listen((tracks) {
-      videoTracks.assignAll(tracks.video);
-    });
+        await saveHistoryIfLoggedIn();
+
+        if (Get.isRegistered<HistoryController>()) {
+          Get.find<HistoryController>().refreshHistory();
+        }
+      }),
+    );
+
+    _playerSubscriptions.add(
+      p.stream.buffer.listen((value) {
+        buffer.value = value;
+      }),
+    );
+
+    _playerSubscriptions.add(
+      p.stream.tracks.listen((tracks) {
+        videoTracks.assignAll(tracks.video);
+      }),
+    );
   }
 
   Future<void> playEpisode() async {
+    // ========================================================
+    // NON VIP → BATAS MAKSIMAL 480p
+    // ========================================================
+
+    if (!isVipUser && qualities.isNotEmpty) {
+      final allowed = highestAllowedQuality;
+
+      if (allowed != null) {
+        selectedQuality.value = allowed.quality;
+
+        url = ApiConfig.baseUrl + allowed.playlist;
+      }
+    }
+
     await player?.open(Media(url), play: false);
 
     await cacheSubtitles();
 
-    // jika belum ada subtitle yg direstore
+    // Jika belum ada subtitle yang direstore
     currentSubtitle.value ??= subtitles.isNotEmpty ? subtitles.first : null;
 
     if (currentSubtitle.value != null) {
       await changeSubtitle(currentSubtitle.value);
     }
 
-    final duration = await player?.stream.duration.firstWhere(
+    final videoDuration = await player?.stream.duration.firstWhere(
       (d) => d > Duration.zero,
     );
 
     final position = Duration(seconds: resumeSeconds);
 
-    if (resumeSeconds > 5 && position < duration!) {
+    if (resumeSeconds > 5 &&
+        videoDuration != null &&
+        position < videoDuration) {
       await Future.delayed(const Duration(milliseconds: 300));
 
       await player?.seek(position);
@@ -514,13 +712,34 @@ class PlayerController extends GetxController {
       qualities.assignAll(newEpisode.qualities ?? []);
 
       if (qualities.isNotEmpty) {
-        selectedQuality.value = qualities.first.quality;
+        if (!isVipUser) {
+          // ======================================================
+          // NON VIP → MAKSIMAL 480p
+          // ======================================================
+          final allowed = highestAllowedQuality;
 
-        url = ApiConfig.baseUrl + qualities.first.playlist;
+          if (allowed != null) {
+            selectedQuality.value = allowed.quality;
+
+            url = allowed.playlist;
+          } else {
+            selectedQuality.value = "Auto";
+
+            url =  newEpisode.videoUrl;
+          }
+        } else {
+          // ======================================================
+          // VIP → QUALITY NORMAL
+          // ======================================================
+
+          selectedQuality.value = qualities.first.quality;
+
+          url = ApiConfig.baseUrl + qualities.first.playlist;
+        }
       } else {
         selectedQuality.value = "Auto";
 
-        url = ApiConfig.baseUrl + newEpisode.videoUrl;
+        url =  newEpisode.videoUrl;
       }
 
       // =========================================
@@ -557,10 +776,23 @@ class PlayerController extends GetxController {
 
   Future<void> playPause() async {
     showOverlay();
-    if (isPlaying.value) {
-      await player?.pause();
-    } else {
-      await player?.play();
+
+    final p = player;
+
+    if (p == null) {
+      return;
+    }
+
+    try {
+      if (p.state.playing) {
+        await p.pause();
+      } else {
+        await p.play();
+      }
+
+      _syncExistingPlayerState();
+    } catch (e) {
+      debugPrint('[PLAYER] PLAY PAUSE ERROR: $e');
     }
   }
 
@@ -739,31 +971,83 @@ class PlayerController extends GetxController {
   }
 
   Future<void> changeQuality(QualityModel quality) async {
-    selectedQuality.value = quality.quality;
+    // ========================================================
+    // VIP LOCK
+    // ========================================================
 
-    if (quality.quality == "Auto") {
-      await player?.setVideoTrack(VideoTrack.auto());
+    if (isQualityLocked(quality)) {
+      Get.generalDialog(
+        barrierDismissible: true,
+        barrierLabel: "VIP",
+        barrierColor: Colors.black54,
+        pageBuilder: (_, __, ___) => const VipUpgradeView(),
+      );
+
       return;
     }
+
+    // ========================================================
+    // AUTO
+    // ========================================================
+
+    if (quality.quality == "Auto") {
+      // VIP → Auto benar-benar Auto
+      if (isVipUser) {
+        selectedQuality.value = "Auto";
+
+        await player?.setVideoTrack(VideoTrack.auto());
+
+        return;
+      }
+
+      // ======================================================
+      // NON VIP → AUTO TETAP MAKSIMAL 480p
+      // ======================================================
+
+      final allowed = highestAllowedQuality;
+
+      if (allowed == null) {
+        return;
+      }
+
+      selectedQuality.value = allowed.quality;
+
+      final track = player?.state.tracks.video.firstWhere(
+        (t) => t.h == allowed.height,
+        orElse: () => VideoTrack.auto(),
+      );
+
+      if (track != null) {
+        await player?.setVideoTrack(track);
+      }
+
+      return;
+    }
+
+    // ========================================================
+    // QUALITY NORMAL
+    // ========================================================
+
+    selectedQuality.value = quality.quality;
 
     final track = player?.state.tracks.video.firstWhere(
       (t) => t.h == quality.height,
       orElse: () => VideoTrack.auto(),
     );
 
-    // print("Before: ${player.state.track.video}");
-
-    await player?.setVideoTrack(track!);
-
-    await Future.delayed(const Duration(milliseconds: 500));
-
-    // print("After: ${player?.state.track.video}");
+    if (track != null) {
+      await player?.setVideoTrack(track);
+    }
   }
 
   void startHistorySync() {
     _historyTimer?.cancel();
 
     _historyTimer = Timer.periodic(const Duration(seconds: 5), (_) async {
+      if (!isUserLoggedIn) {
+        return;
+      }
+
       if (!player!.state.playing) return;
 
       final current = player?.state.position.inSeconds;
@@ -774,7 +1058,6 @@ class PlayerController extends GetxController {
         await historyRepository.addEpisodeView(episodeId: episode.id);
       }
 
-      // Sync hanya jika maju >=10 detik
       if ((current! - _lastSyncedSecond).abs() < 10) return;
 
       _lastSyncedSecond = current;
@@ -872,6 +1155,136 @@ class PlayerController extends GetxController {
     start = null;
   }
 
+  void _syncExistingPlayerState() {
+    final p = player;
+
+    if (p == null) {
+      return;
+    }
+
+    final state = p.state;
+
+    // ==========================================================
+    // SYNC STATE PLAYER YANG SUDAH BERJALAN
+    // ==========================================================
+
+    isPlaying.value = state.playing;
+    isBuffering.value = state.buffering;
+    isCompleted.value = state.completed;
+
+    position.value = state.position;
+    duration.value = state.duration;
+    buffer.value = state.buffer;
+
+    videoTracks.assignAll(state.tracks.video);
+
+    debugPrint(
+      '[PLAYER] SYNC EXISTING PLAYER '
+      'playing=${state.playing} '
+      'position=${state.position} '
+      'duration=${state.duration} '
+      'buffer=${state.buffer}',
+    );
+  }
+
+  Future<void> _prepareMixSubtitles() async {
+    try {
+      await cacheSubtitles();
+
+      if (subtitles.isEmpty) {
+        return;
+      }
+
+      currentSubtitle.value ??= subtitles.first;
+
+      if (currentSubtitle.value != null) {
+        await changeSubtitle(currentSubtitle.value);
+      }
+    } catch (e) {
+      debugPrint('[PLAYER MIX] SUBTITLE ERROR: $e');
+    }
+  }
+
+  // ==========================================================
+  // QUALITY ACCESS
+  // ==========================================================
+
+  bool get isVipUser {
+    final auth = Get.find<AccountController>();
+    return auth.isVip.value;
+  }
+
+  bool isQualityLocked(QualityModel quality) {
+    if (isVipUser) {
+      return false;
+    }
+
+    // Auto selalu boleh.
+    if (quality.quality.toLowerCase() == 'auto') {
+      return false;
+    }
+
+    // Hitung hanya kualitas asli, tanpa Auto.
+    final realQualities =
+        qualities.where((q) => q.quality.toLowerCase() != 'auto').toList();
+
+    // Kalau cuma ada 1 kualitas asli,
+    // kualitas tersebut sama dengan Auto → jangan di-lock.
+    if (realQualities.length <= 1) {
+      return false;
+    }
+
+    // Kalau ada beberapa kualitas asli,
+    // non-VIP maksimal 480p.
+    return (quality.height ?? 0) > 480;
+  }
+
+  QualityModel? get highestAllowedQuality {
+    final realQualities =
+        qualities.where((q) => q.quality.toLowerCase() != 'auto').toList();
+
+    if (realQualities.isEmpty) {
+      return null;
+    }
+
+    // Cuma 1 real quality → boleh walaupun >480p.
+    if (realQualities.length == 1) {
+      return realQualities.first;
+    }
+
+    // Ada lebih dari 1 real quality → non-VIP maksimal 480p.
+    final allowed = realQualities.where((q) => (q.height ?? 0) <= 480).toList();
+
+    if (allowed.isEmpty) {
+      return null;
+    }
+
+    allowed.sort((a, b) => (b.height ?? 0).compareTo(a.height ?? 0));
+
+    return allowed.first;
+  }
+
+  bool get isUserLoggedIn {
+    final auth = Get.find<AccountController>();
+    return auth.isLogin;
+  }
+
+  Future<void> saveHistoryIfLoggedIn() async {
+    if (!isUserLoggedIn) {
+      return;
+    }
+
+    if (player == null || episode.id <= 0) {
+      return;
+    }
+
+    try {
+      await saveHistory();
+    } catch (e) {
+      debugPrint('[PLAYER] SAVE HISTORY ERROR: $e');
+    }
+  }
+
   // Future<void> updateBrightness(double delta) async {
   //   brightness.value = (brightness.value + delta / 300).clamp(0.0, 1.0);
 
@@ -911,15 +1324,24 @@ class PlayerController extends GetxController {
   Future<void> cacheSubtitles() async {
     final dir = await getTemporaryDirectory();
 
-    final folder = Directory("${dir.path}/subtitles/${episode.id}");
+    final folder = Directory('${dir.path}/subtitles/${currentEpisodeId.value}');
 
     await folder.create(recursive: true);
 
     for (final subtitle in subtitles) {
-      final file = File("${folder.path}/${subtitle.languageCode}.vtt");
+      final file = File('${folder.path}/${subtitle.languageCode}.vtt');
 
       if (!await file.exists()) {
-        await Dio().download(subtitle.subtitlePath, file.path);
+        final path = subtitle.subtitlePath.trim();
+
+        final downloadUrl =
+            path.startsWith('http://') || path.startsWith('https://')
+                ? path
+                : '${ApiConfig.baseUrl}${path.replaceFirst(RegExp(r'^/'), '')}';
+
+        debugPrint('[SUBTITLE] DOWNLOAD $downloadUrl');
+
+        await Dio().download(downloadUrl, file.path);
       }
 
       subtitleCache[subtitle.languageCode] = file.path;
@@ -952,23 +1374,67 @@ class PlayerController extends GetxController {
   Future<void> changeSubtitle(EpisodeSubtitle? subtitle) async {
     currentSubtitle.value = subtitle;
 
-    currentSubtitleText.value = "";
+    currentSubtitleText.value = '';
     currentIndex = 0;
 
+    cues.clear();
+
     if (subtitle == null) {
-      cues.clear();
-      // await player.setSubtitleTrack(SubtitleTrack.no());
       return;
     }
 
-    final path = subtitleCache[subtitle.languageCode];
+    try {
+      final dir = await getTemporaryDirectory();
 
-    if (path != null) {
-      cues.value = await parseVtt(path);
-      // await player.setSubtitleTrack(SubtitleTrack.uri(path));
-    } else {
-      cues.value = await parseVtt(subtitle.subtitlePath);
-      // await player.setSubtitleTrack(SubtitleTrack.uri(subtitle.subtitlePath));
+      final folder = Directory(
+        '${dir.path}/subtitles/${currentEpisodeId.value}',
+      );
+
+      await folder.create(recursive: true);
+
+      final file = File('${folder.path}/${subtitle.languageCode}.vtt');
+
+      // ========================================================
+      // PASTIKAN FILE LOKAL ADA
+      // ========================================================
+
+      if (!await file.exists()) {
+        final path = subtitle.subtitlePath.trim();
+
+        final downloadUrl =
+            path.startsWith('http://') || path.startsWith('https://')
+                ? path
+                : '${ApiConfig.baseUrl}${path.replaceFirst(RegExp(r'^/'), '')}';
+
+        debugPrint(
+          '[SUBTITLE] DOWNLOAD ON SELECT '
+          '$downloadUrl',
+        );
+
+        await Dio().download(downloadUrl, file.path);
+      }
+
+      // ========================================================
+      // PARSE FILE LOKAL
+      // ========================================================
+
+      cues.value = await parseVtt(file.path);
+
+      subtitleCache[subtitle.languageCode] = file.path;
+
+      debugPrint(
+        '[SUBTITLE] LOADED '
+        '${subtitle.languageCode} '
+        'cues=${cues.length}',
+      );
+    } catch (e) {
+      debugPrint(
+        '[SUBTITLE] LOAD ERROR '
+        '${subtitle.languageCode}: $e',
+      );
+
+      cues.clear();
+      currentSubtitleText.value = '';
     }
   }
 

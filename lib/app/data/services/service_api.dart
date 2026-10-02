@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:dmn_play/app/data/services/api_config.dart';
 import 'api_client.dart';
 
 class ServiceApi {
@@ -6,7 +7,8 @@ class ServiceApi {
 
   static final Dio dio = Dio(
     BaseOptions(
-      baseUrl: "http://103.156.15.61/dmn/api/v1/",
+      baseUrl: ApiConfig.apiUrl,
+      // baseUrl: "https://dmnplay.co.id/api/v1/",
       connectTimeout: const Duration(seconds: 20),
       receiveTimeout: const Duration(seconds: 20),
       // responseType: ResponseType.plain,

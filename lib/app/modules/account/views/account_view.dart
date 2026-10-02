@@ -61,7 +61,10 @@ class AccountView extends GetView<AccountController> {
                       onTap: () async {
                         await controller.getDevices();
 
-                        Get.to(() => const ManageDevicesView());
+                        Get.to(
+                          () => const ManageDevicesView(),
+                          transition: Transition.cupertino,
+                        );
                       },
                     );
                   }),
@@ -104,6 +107,7 @@ class AccountView extends GetView<AccountController> {
                         () => SubscriptionPrice(
                           activeSubscription: controller.activeSubscription,
                         ),
+                        transition: Transition.cupertino,
                       );
                     },
                   ),

@@ -30,8 +30,10 @@ const Map<String, String> idID = {
   'personal content': 'konten pribadi',
   'upgrade now': 'tingkatkan sekarang',
   'max. 2 devices': 'Maks. 2 perangkat',
+  'HD video quality': 'Kualitas video HD',
 
   // Account
+  'guest': 'guest',
   'login': 'masuk',
   'logout': 'keluar',
   'account settings': 'pengaturan akun',
@@ -51,6 +53,9 @@ const Map<String, String> idID = {
 
   // Subscription
   'subscription': 'berlangganan',
+  'current package': 'paket saat ini',
+  'free member': 'keanggotaan gratis',
+  'Upgrade to enjoy VIP content': 'Tingkatkan untuk menikmati konten VIP',
   'no packages available': 'tidak ada paket tersedia',
   'select a package': 'pilih paket',
   'enjoy all premium content and unlimited access':

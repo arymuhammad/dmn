@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class VipCard extends StatelessWidget {
+import '../../controllers/account_controller.dart';
+import 'subscriptions.dart';
+
+class VipCard extends GetView<AccountController> {
   const VipCard({super.key});
 
   @override
@@ -48,45 +51,67 @@ class VipCard extends StatelessWidget {
           // BENEFITS
           // =====================================================
           Wrap(
-  spacing: 8,
-  runSpacing: 8,
-  children: [
-    _Benefit(
-      icon: Icons.movie_filter_outlined,
-      title: 'exclusive drama'.tr,
-    ),
-    _Benefit(
-      icon: Icons.play_circle_outline,
-      title: 'anytime streaming'.tr,
-    ),
-    _Benefit(
-      icon: Icons.all_inclusive,
-      title: 'unlimited viewing'.tr,
-    ),
-    _Benefit(
-      icon: Icons.person_outline,
-      title: 'personal content'.tr,
-    ),
-    _Benefit(
-      icon: Icons.devices_outlined,
-      title: 'max. 2 devices'.tr,
-    ),
-    _Benefit(
-      icon: Icons.high_quality_outlined,
-      title: 'HD video quality'.tr,
-    ),
-  ],
-),
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              _Benefit(
+                icon: Icons.movie_filter_outlined,
+                title: 'exclusive drama'.tr,
+              ),
+              _Benefit(
+                icon: Icons.play_circle_outline,
+                title: 'anytime streaming'.tr,
+              ),
+              _Benefit(
+                icon: Icons.all_inclusive,
+                title: 'unlimited viewing'.tr,
+              ),
+              _Benefit(
+                icon: Icons.person_outline,
+                title: 'personal content'.tr,
+              ),
+              _Benefit(
+                icon: Icons.devices_outlined,
+                title: 'max. 2 devices'.tr,
+              ),
+              _Benefit(
+                icon: Icons.high_quality_outlined,
+                title: 'HD video quality'.tr,
+              ),
+            ],
+          ),
 
           const SizedBox(height: 18),
 
           Align(
             alignment: Alignment.centerRight,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                final subscriptions = controller.home?.subscriptions;
+
+                if (subscriptions == null) {
+                  Get.snackbar(
+                    'please_wait'.tr,
+                    'subscription data is still loading'.tr,
+                    backgroundColor: Colors.white,
+                    colorText: Colors.black,
+                  );
+                  return;
+                }
+                // Reset tab ke posisi 0
+                controller.resetPackage();
+
+                Get.to(
+                  () => SubscriptionPrice(
+                    activeSubscription: controller.activeSubscription,
+                  ),
+                  transition: Transition.cupertino
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.black,
-                foregroundColor: Colors.white, minimumSize: const Size(100, 40),
+                foregroundColor: Colors.white,
+                minimumSize: const Size(100, 40),
               ),
               child: Text('upgrade now'.tr.capitalize ?? ''),
             ),

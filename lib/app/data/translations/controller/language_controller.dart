@@ -1,3 +1,4 @@
+import 'package:dmn_play/app/data/helpers/loading_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -52,6 +53,8 @@ class LanguageController extends GetxController {
   // ============================================================
 
   Future<void> changeLanguage(String languageCode) async {
+    Get.back();
+    loadingDialog("Loading", "");
     final parts = languageCode.split('_');
 
     if (parts.length != 2) return;
@@ -79,6 +82,10 @@ class LanguageController extends GetxController {
     await currencyC.setCurrency(currency);
 
     debugPrint('[Language] $languageCode → $currency');
+
+    // Future.delayed(const Duration(seconds: 1), () {
+      closeLoading();
+    // });
   }
 
   // ============================================================

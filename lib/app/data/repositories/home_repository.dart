@@ -19,6 +19,7 @@ class HomeRepository {
         throw Exception("Invalid response: ${res.data}");
       }
 
+      debugPrint('[HOME] URL      : ${res.realUri}');
       return HomeModel.fromJson(res.data["data"]);
     } on DioException catch (e) {
       debugPrint('========== HOME ERROR ==========');

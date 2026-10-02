@@ -4,7 +4,7 @@ import '../../../data/repositories/mix_repository.dart';
 import '../../mix/controllers/mix_controller.dart';
 
 class NavbarController extends GetxController {
-  var currentIndex = 0.obs;
+  var currentIndex = 1.obs;
 
   var showEpisode = false.obs;
   var episodeIndex = 0.obs;
