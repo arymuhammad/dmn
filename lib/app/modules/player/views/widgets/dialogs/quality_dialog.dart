@@ -2,6 +2,7 @@ import 'package:dmn_play/app/data/helpers/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../account/views/widget/vip_upgrade_view.dart';
 import '../../../controllers/player_controller.dart';
 
 class QualityDialog {
@@ -18,31 +19,118 @@ class QualityDialog {
               shrinkWrap: true,
               children: [
                 for (final q in controller.qualities)
-                  ListTile(
-                    title: Text(
-                      q.quality,
-                      style: const TextStyle(color: Colors.white),
-                    ),
+                  Builder(
+                    builder: (_) {
+                      final locked = controller.isQualityLocked(q);
 
-                    subtitle:
-                        q.height != null
-                            ? Text(
-                              '${q.height}p',
-                              style: const TextStyle(color: Colors.grey),
-                            )
-                            : null,
+                      final selected =
+                          controller.selectedQuality.value == q.quality;
 
-                    trailing:
-                        controller.selectedQuality.value == q.quality
-                            ? Icon(Icons.check, color: AppColors.contentColorYellow)
-                            : null,
+                      return ListTile(
+                        // ==================================================
+                        // QUALITY
+                        // ==================================================
+                        title: Row(
+                          children: [
+                            Text(
+                              q.quality,
+                              style: TextStyle(
+                                color: locked ? Colors.white54 : Colors.white,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
 
-                    onTap: () {
-                      controller.selectedQuality.value = q.quality;
+                            // ==============================================
+                            // VIP LABEL
+                            // ==============================================
+                            if (locked) ...[
+                              const SizedBox(width: 8),
 
-                      controller.changeQuality(q);
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 6,
+                                  vertical: 2,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.amber,
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: const Text(
+                                  'VIP',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w800,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ],
+                        ),
 
-                      Get.back();
+                        // ==================================================
+                        // RESOLUTION
+                        // ==================================================
+                        subtitle:
+                            q.height != null
+                                ? Text(
+                                  '${q.height}p',
+                                  style: TextStyle(
+                                    color:
+                                        locked
+                                            ? Colors.grey.shade700
+                                            : Colors.grey,
+                                  ),
+                                )
+                                : null,
+
+                        // ==================================================
+                        // ICON
+                        // ==================================================
+                        trailing:
+                            locked
+                                ? const Icon(
+                                  Icons.lock_rounded,
+                                  color: Colors.amber,
+                                  size: 18,
+                                )
+                                : selected
+                                ? Icon(
+                                  Icons.check,
+                                  color: AppColors.contentColorYellow,
+                                )
+                                : null,
+
+                        // ==================================================
+                        // TAP
+                        // ==================================================
+                        onTap: () async {
+                          // ================================================
+                          // QUALITY LOCK
+                          // ================================================
+                          final locked = controller.isQualityLocked(q);
+
+                          if (locked) {
+                            Get.generalDialog(
+                              barrierDismissible: true,
+                              barrierLabel: "VIP",
+                              barrierColor: Colors.black54,
+                              pageBuilder:
+                                  (_, __, ___) => const VipUpgradeView(),
+                            );
+
+                            return;
+                          }
+
+                          // ================================================
+                          // QUALITY NORMAL
+                          // ================================================
+
+                          await controller.changeQuality(q);
+
+                          Get.back();
+                        },
+                      );
                     },
                   ),
               ],

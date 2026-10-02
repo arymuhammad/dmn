@@ -263,7 +263,7 @@ class MovieBannerController extends GetxController {
     }
 
     try {
-      await player.open(Media(ApiConfig.baseUrl + url), play: false);
+      await player.open(Media( url), play: false);
 
       if (_disposed) return;
 

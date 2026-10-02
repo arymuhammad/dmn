@@ -1,3 +1,4 @@
+import 'package:dmn_play/app/data/helpers/app_colors.dart';
 import 'package:dmn_play/app/modules/account/controllers/account_controller.dart';
 import 'package:dmn_play/app/modules/login/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,11 @@ class ProfileHeader extends GetView<AccountController> {
                   user != null && user.avatar.isNotEmpty
                       ? NetworkImage(user.avatar)
                       : null,
-              child: user == null ? const Icon(Icons.person) : null,
+              backgroundColor: AppColors.contentColorYellow,
+              child:
+                  user == null
+                      ? const Icon(Icons.person, color: Colors.black)
+                      : null,
             ),
 
             const SizedBox(width: 12),
@@ -42,7 +47,7 @@ class ProfileHeader extends GetView<AccountController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      user?.fullname ?? "Guest",
+                      user?.fullname ?? "guest".tr.capitalize ?? '',
                       style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -51,13 +56,18 @@ class ProfileHeader extends GetView<AccountController> {
                     ),
 
                     const SizedBox(height: 4),
-
-                    Text(
-                      user != null ? user.email : "Belum Login",
-                      style: const TextStyle(color: Colors.white54),
+                    Visibility(
+                      visible: user != null,
+                      child: Column(
+                        children: [
+                          Text(
+                            user != null ? user.email : "",
+                            style: const TextStyle(color: Colors.white54),
+                          ),
+                          const SizedBox(height: 4),
+                        ],
+                      ),
                     ),
-
-                    const SizedBox(height: 4),
 
                     Text(
                       user == null

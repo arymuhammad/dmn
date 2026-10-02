@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../data/models/mix_episode_model.dart';
+import '../../../../data/services/api_config.dart';
+import '../../../account/controllers/account_controller.dart';
+import '../../../account/views/widget/vip_upgrade_view.dart';
+import '../../../player/bindings/player_binding.dart';
+import '../../../player/views/player_view.dart';
 import '../../controllers/mix_controller.dart';
 import 'mix_video_player.dart';
 
@@ -17,19 +22,116 @@ class MixVideoItem extends StatelessWidget {
     required this.index,
   });
 
+  // ============
+  // OPEN PLAYER
+  // ============
+
+  Future<void> _openPlayer() async {
+    final player = controller.getPlayer(index);
+    final videoController = controller.getVideoController(index);
+
+    if (player == null || videoController == null) {
+      return;
+    }
+
+    // ========================================================
+    // SIMPAN POSISI TERAKHIR
+    // ========================================================
+
+    final resumePosition = player.state.position;
+
+    // ========================================================
+    // PASTIKAN PLAY
+    // ========================================================
+
+    if (!player.state.playing) {
+      await player.play();
+    }
+
+    // ========================================================
+    // OPEN PLAYER VIEW
+    // ========================================================
+
+    await Get.to(
+      () => const PlayerView(),
+      binding: PlayerBinding(),
+      arguments: {
+        // ======================================================
+        // MODE MIX
+        // ======================================================
+        'fromMix': true,
+
+        // ======================================================
+        // REUSE PLAYER
+        // ======================================================
+        'player': player,
+        'videoController': videoController,
+
+        // ======================================================
+        // EPISODE
+        // ======================================================
+        'episodeId': episode.id,
+        'movieId': episode.movieId,
+        'title': episode.title,
+        'seriesTitle': episode.seriesTitle,
+        'episodeNumber': episode.episodeNumber,
+
+        'videoUrl': episode.videoUrl,
+        'synopsis': episode.synopsis,
+        'cast': episode.cast,
+        'poster': episode.thumbnail,
+        'description': episode.description,
+
+        'duration': episode.duration,
+        'views': episode.views,
+        'isVip': episode.isVip,
+        'releaseDate': episode.releaseDate,
+
+        // ======================================================
+        // SUBTITLE
+        // ======================================================
+        'subtitles': episode.subtitles,
+
+        // ======================================================
+        // QUALITY
+        // ======================================================
+        'qualities': episode.qualities,
+
+        // ======================================================
+        // POSISI
+        // ======================================================
+        'resumePosition': resumePosition,
+
+        // ======================================================
+        // VIP FULL
+        // ======================================================
+        'playFull': episode.isVip == 1,
+
+        'fullUrl':
+            episode.isVip == 1 && episode.videoUrl.isNotEmpty
+                ? ApiConfig.baseUrl + episode.videoUrl
+                : '',
+
+        'mixIndex': index,
+      },
+      transition: Transition.noTransition,
+      duration: Duration.zero,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
       fit: StackFit.expand,
       children: [
-        // ========================================================
+        // ==========
         // VIDEO
-        // ========================================================
+        // ==========
         MixVideoPlayer(controller: controller, index: index),
 
-        // ========================================================
+        // ==========
         // GRADIENT
-        // ========================================================
+        // ==========
         Positioned.fill(
           child: IgnorePointer(
             child: DecoratedBox(
@@ -45,9 +147,9 @@ class MixVideoItem extends StatelessWidget {
           ),
         ),
 
-        // ========================================================
+        // ==========
         // INFORMATION
-        // ========================================================
+        // ==========
         Positioned(left: 16, right: 16, bottom: 24, child: _buildInformation()),
       ],
     );
@@ -58,9 +160,9 @@ class MixVideoItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        // ========================================================
+        // ==========
         // SERIES TITLE
-        // ========================================================
+        // ==========
         Text(
           episode.seriesTitle,
           maxLines: 1,
@@ -74,9 +176,9 @@ class MixVideoItem extends StatelessWidget {
 
         const SizedBox(height: 8),
 
-        // ========================================================
+        // ==========
         // SYNOPSIS
-        // ========================================================
+        // ==========
         Obx(() {
           final expanded = controller.isSynopsisExpanded(episode.id);
 
@@ -91,9 +193,9 @@ class MixVideoItem extends StatelessWidget {
 
         const SizedBox(height: 12),
 
-        // ========================================================
-        // EPISODE
-        // ========================================================
+        // ==========
+        // EPISODE + TONTON SEKARANG
+        // ==========
         Row(
           children: [
             const Icon(
@@ -101,13 +203,76 @@ class MixVideoItem extends StatelessWidget {
               color: Colors.white70,
               size: 17,
             ),
+
             const SizedBox(width: 6),
+
             Text(
               'Episode ${episode.episodeNumber} / ${episode.totalEpisodes}',
               style: const TextStyle(
                 color: Colors.white70,
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
+              ),
+            ),
+
+            // ========================================================
+            // VIP
+            // ========================================================
+            if (episode.isVip == 1) ...[
+              const SizedBox(width: 10),
+
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: const Text(
+                  'VIP',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+            ],
+
+            const SizedBox(width: 14),
+
+            GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTap: () async {
+                final auth = Get.find<AccountController>();
+
+                // ========================================================
+                // VIP CHECK
+                // ========================================================
+
+                if (episode.isVip == 1 && !auth.isVip.value) {
+                  Get.generalDialog(
+                    barrierDismissible: true,
+                    barrierLabel: "VIP",
+                    barrierColor: Colors.black54,
+                    pageBuilder: (_, __, ___) => const VipUpgradeView(),
+                  );
+
+                  return;
+                }
+
+                // ========================================================
+                // OPEN PLAYER
+                // ========================================================
+
+                await _openPlayer();
+              },
+              child: const Text(
+                'Tonton Sekarang',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
           ],

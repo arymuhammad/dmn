@@ -1,3 +1,4 @@
+import '../services/api_config.dart';
 import 'category_model.dart';
 
 class BannerModel {
@@ -23,7 +24,7 @@ class BannerModel {
     required this.previewUrl,
   });
 
-  static const imageBase = "http://103.156.15.61/dmn/uploads/posters/";
+  static const imageBase = ApiConfig.posterUrl;
 
   factory BannerModel.fromJson(Map<String, dynamic> json) {
     final categories =
