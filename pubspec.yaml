@@ -15,7 +15,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   get: ^4.7.3
   # better_player: ^0.0.84
-  firebase_messaging: ^16.4.0
+  firebase_messaging: 16.4.3
   flutter_local_notifications: ^19.5.0
   flutter_cache_manager: ^3.4.1
   video_player: ^2.10.1
@@ -27,8 +27,8 @@ dependencies:
   shared_preferences: ^2.5.3
   google_sign_in: ^6.3.0
   flutter_secure_storage: ^10.3.1
-  firebase_core: ^4.12.1
-  firebase_auth: ^6.5.6
+  firebase_core: 4.12.1
+  firebase_auth: 6.5.6
   flutter_svg: ^2.2.2
   media_kit: ^1.2.6
   media_kit_video: ^2.0.1
