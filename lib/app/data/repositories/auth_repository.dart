@@ -276,6 +276,34 @@ class AuthRepository {
   //   await StorageService.clear();
   // }
 
+  Future<Map<String, dynamic>> verifyApplePurchase({
+    required String transactionId,
+    required String environment,
+  }) async {
+    final response = await api.post(
+      "subscription/verifyApple",
+      body: {"transaction_id": transactionId, "environment": environment},
+    );
+
+    final json = response.data;
+
+    if (json is! Map || json["success"] != true) {
+      throw Exception(
+        json is Map
+            ? json["message"]?.toString() ?? 'Verifikasi Apple gagal.'
+            : 'Response verifikasi Apple tidak valid.',
+      );
+    }
+
+    final data = json["data"];
+
+    if (data is! Map) {
+      throw Exception('Data verifikasi Apple tidak valid.');
+    }
+
+    return Map<String, dynamic>.from(data);
+  }
+
   Future<void> logout() async {
     try {
       // ============================================================
