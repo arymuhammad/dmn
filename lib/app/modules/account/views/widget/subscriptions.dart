@@ -343,7 +343,11 @@ class SubscriptionPrice extends StatelessWidget {
               height: 52,
               child: ElevatedButton(
                 onPressed: () {
-                  // TODO: proses subscribe
+                  if (subC.isIapLoading.value) {
+                    return;
+                  }
+
+                  subC.subscribe(subscription);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.contentColorYellow,

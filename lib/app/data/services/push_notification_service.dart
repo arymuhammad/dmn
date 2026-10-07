@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:dmn_play/app/data/repositories/user_repository.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -37,6 +38,30 @@ class PushNotificationService {
     // ============================================================
     // REGISTER TOKEN
     // ============================================================
+
+    if (Platform.isIOS) {
+      String? apnsToken;
+
+      for (int i = 0; i < 10; i++) {
+        apnsToken = await messaging.getAPNSToken();
+
+        if (apnsToken != null && apnsToken.isNotEmpty) {
+          debugPrint('🍎 APNS TOKEN READY');
+          break;
+        }
+
+        debugPrint('🍎 APNS TOKEN belum tersedia, menunggu...');
+
+        await Future.delayed(const Duration(seconds: 1));
+      }
+
+      if (apnsToken == null || apnsToken.isEmpty) {
+        debugPrint('❌ APNS TOKEN tidak tersedia');
+
+        // Jangan panggil getToken() kalau APNs token belum tersedia.
+        return;
+      }
+    }
 
     final token = await messaging.getToken();
 
