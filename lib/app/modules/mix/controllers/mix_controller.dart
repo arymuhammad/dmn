@@ -197,7 +197,7 @@ class MixController extends GetxController {
         return;
       }
 
-      final String url =  videoPath;
+      final String url = videoPath;
 
       debugPrint(
         '[MIX] OPEN PLAYER '
