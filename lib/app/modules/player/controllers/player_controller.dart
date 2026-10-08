@@ -380,9 +380,9 @@ class PlayerController extends GetxController {
       } else if (history.qualities.isNotEmpty) {
         selectedQuality.value = history.qualities.first.quality;
 
-        url =  history.qualities.first.playlist;
+        url = history.qualities.first.playlist;
       } else {
-        url =  history.videoUrl;
+        url = history.videoUrl;
       }
 
       episodes.assignAll(episodeArg.episodes);
@@ -418,7 +418,7 @@ class PlayerController extends GetxController {
       if (qualities.isNotEmpty) {
         url = qualities.first.playlist;
       } else {
-        url =  episode.videoUrl;
+        url = episode.videoUrl;
       }
 
       episodes.assignAll((args["episodes"] as List<EpisodeModel>?) ?? []);
@@ -440,7 +440,7 @@ class PlayerController extends GetxController {
         synopsis.value = movie.synopsis;
         cast.value = movie.cast.split(',').toList();
       }
-       poster.value = movie!.poster;
+      poster.value = movie!.poster;
     }
 
     // ==========================================================
@@ -725,7 +725,7 @@ class PlayerController extends GetxController {
           } else {
             selectedQuality.value = "Auto";
 
-            url =  newEpisode.videoUrl;
+            url = newEpisode.videoUrl;
           }
         } else {
           // ======================================================
@@ -739,7 +739,7 @@ class PlayerController extends GetxController {
       } else {
         selectedQuality.value = "Auto";
 
-        url =  newEpisode.videoUrl;
+        url = newEpisode.videoUrl;
       }
 
       // =========================================
@@ -1236,7 +1236,7 @@ class PlayerController extends GetxController {
 
     // Kalau ada beberapa kualitas asli,
     // non-VIP maksimal 480p.
-    return (quality.height ?? 0) > 480;
+    return (quality.height ?? 0) > 640;
   }
 
   QualityModel? get highestAllowedQuality {
@@ -1253,7 +1253,7 @@ class PlayerController extends GetxController {
     }
 
     // Ada lebih dari 1 real quality → non-VIP maksimal 480p.
-    final allowed = realQualities.where((q) => (q.height ?? 0) <= 480).toList();
+    final allowed = realQualities.where((q) => (q.height ?? 0) < 720).toList();
 
     if (allowed.isEmpty) {
       return null;

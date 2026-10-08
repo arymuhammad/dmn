@@ -100,7 +100,7 @@ class AccountController extends GetxController {
       final available = await _inAppPurchase.isAvailable();
 
       if (!available) {
-        debugPrint('[IAP] App Store tidak tersedia');
+        debugPrint('[IAP] In-App Purchase tidak tersedia di platform ini');
         return;
       }
 

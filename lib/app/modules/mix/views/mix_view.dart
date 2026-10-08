@@ -18,17 +18,13 @@ class MixView extends GetView<MixController> {
 
         if (controller.episodes.isEmpty) {
           if (controller.loading.value) {
-            return const ColoredBox(
-              color: Colors.black,
-            );
+            return const ColoredBox(color: Colors.black);
           }
 
           return const Center(
             child: Text(
               'Belum ada video tersedia',
-              style: TextStyle(
-                color: Colors.white70,
-              ),
+              style: TextStyle(color: Colors.white70),
             ),
           );
         }

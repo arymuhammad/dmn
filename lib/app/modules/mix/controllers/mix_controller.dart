@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:http/http.dart' as http;
 import 'package:media_kit/media_kit.dart';
 import 'package:media_kit_video/media_kit_video.dart';
 
@@ -53,7 +54,37 @@ class MixController extends GetxController {
   }
 
   Future<void> _prepareInitialPlayers() async {
+    // ========================================================
+    // PLAYER PERTAMA
+    // ========================================================
+
     await preparePlayer(0, autoplay: true);
+
+    // ========================================================
+    // PRELOAD PLAYER BERIKUTNYA
+    // Tunggu first frame video pertama terlebih dahulu supaya
+    // preload tidak mengganggu startup video utama.
+    // ========================================================
+
+    final firstVideoController = videoControllers[0];
+
+    if (firstVideoController != null && episodes.length > 1) {
+      try {
+        await firstVideoController.waitUntilFirstFrameRendered;
+
+        debugPrint('[MIX] FIRST VIDEO READY - PRELOAD NEXT');
+
+        // User mungkin sudah pindah halaman.
+        // Tetap preload index 1 karena ini memang next video.
+        preparePlayer(1, autoplay: false);
+      } catch (e) {
+        debugPrint(
+          '[MIX] PRELOAD NEXT ERROR '
+          'index=1 '
+          'error=$e',
+        );
+      }
+    }
   }
 
   // ================= // PREPARE PLAYER // =================
@@ -144,6 +175,7 @@ class MixController extends GetxController {
   }
 
   // ================= // CREATE PLAYER // =================
+
   Future<void> _createPlayer(int index, {bool autoplay = false}) async {
     if (index < 0 || index >= episodes.length) {
       return;
@@ -164,16 +196,87 @@ class MixController extends GetxController {
 
     try {
       // ========================================================
-      // PLAYER NORMAL
+      // PLAYER
       // ========================================================
 
+      final stopwatch = Stopwatch()..start();
+
       final player = Player();
+
+      // ========================================================
+      // POSITION DIAGNOSTIC
+      // ========================================================
+
+      bool bufferLogged = false;
+
+      player.stream.buffer.listen((buffer) {
+        if (!bufferLogged && buffer > Duration.zero) {
+          bufferLogged = true;
+
+          debugPrint(
+            '[MIX] FIRST BUFFER '
+            'index=$index '
+            'buffer=${buffer.inMilliseconds} ms '
+            'elapsed=${stopwatch.elapsedMilliseconds} ms',
+          );
+        }
+      });
 
       // ========================================================
       // VIDEO CONTROLLER
       // ========================================================
 
       final videoController = VideoController(player);
+
+      // ========================================================
+      // PLAYING DIAGNOSTIC
+      // ========================================================
+
+      player.stream.playing.listen((playing) {
+        debugPrint(
+          '[MIX] PLAYING '
+          'index=$index '
+          'value=$playing '
+          'elapsed=${stopwatch.elapsedMilliseconds} ms',
+        );
+      });
+
+      // ========================================================
+      // BUFFERING DIAGNOSTIC
+      // ========================================================
+
+      player.stream.buffering.listen((buffering) {
+        debugPrint(
+          '[MIX] BUFFERING '
+          'index=$index '
+          'value=$buffering '
+          'elapsed=${stopwatch.elapsedMilliseconds} ms',
+        );
+      });
+
+      // ========================================================
+      // FIRST FRAME DIAGNOSTIC
+      // ========================================================
+
+      videoController.waitUntilFirstFrameRendered
+          .then((_) {
+            debugPrint(
+              '[MIX] FIRST FRAME '
+              'index=$index '
+              'elapsed=${stopwatch.elapsedMilliseconds} ms',
+            );
+          })
+          .catchError((error) {
+            debugPrint(
+              '[MIX] FIRST FRAME ERROR '
+              'index=$index '
+              'error=$error',
+            );
+          });
+
+      // ========================================================
+      // SAVE PLAYER
+      // ========================================================
 
       players[index] = player;
       videoControllers[index] = videoController;
@@ -197,7 +300,11 @@ class MixController extends GetxController {
         return;
       }
 
-      final String url = videoPath;
+      // final String url = videoPath;
+      final String url =
+          videoPath.contains('master.m3u8')
+              ? videoPath.replaceFirst('master.m3u8', 'stream_1/index.m3u8')
+              : videoPath;
 
       debugPrint(
         '[MIX] OPEN PLAYER '
@@ -209,13 +316,33 @@ class MixController extends GetxController {
       // OPEN MEDIA
       // ========================================================
 
+      debugPrint(
+        '[MIX] OPEN START '
+        'index=$index '
+        'time=${DateTime.now()}',
+      );
+
       await player.open(Media(url), play: false);
 
-      // ========================================================
-      // LOOP
-      // ========================================================
+      debugPrint(
+        '[MIX] OPEN DONE '
+        'index=$index '
+        'elapsed=${stopwatch.elapsedMilliseconds} ms '
+        'autoplay=$autoplay',
+      );
 
-      await player.setPlaylistMode(PlaylistMode.single);
+      // ========================================================
+      // AUTOPLAY
+      // ========================================================
+      if (autoplay) {
+        await player.play();
+
+        debugPrint(
+          '[MIX] AUTOPLAY REQUESTED '
+          'index=$index '
+          'elapsed=${stopwatch.elapsedMilliseconds} ms',
+        );
+      }
 
       // ========================================================
       // READY
@@ -228,21 +355,21 @@ class MixController extends GetxController {
       debugPrint(
         '[MIX] PLAYER READY '
         'index=$index '
-        'episode=${episode.id}',
+        'episode=${episode.id} '
+        'elapsed=${stopwatch.elapsedMilliseconds} ms',
       );
 
       // ========================================================
-      // FIRST FRAME
+      // LOOP
       // ========================================================
 
-      videoController.waitUntilFirstFrameRendered
-          .then((_) {
-            debugPrint(
-              '[MIX] FIRST FRAME '
-              'index=$index',
-            );
-          })
-          .catchError((_) {});
+      player.setPlaylistMode(PlaylistMode.single).catchError((e) {
+        debugPrint(
+          '[MIX] PLAYLIST MODE ERROR '
+          'index=$index '
+          'error=$e',
+        );
+      });
     } catch (e) {
       debugPrint(
         '[MIX] PLAYER ERROR '
@@ -263,6 +390,7 @@ class MixController extends GetxController {
       update(['video_$index']);
     } finally {
       initializingPlayers.remove(index);
+
       update(['video_$index']);
     }
   }
