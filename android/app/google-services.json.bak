@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "334660427780",
+    "project_id": "dmn-play",
+    "storage_bucket": "dmn-play.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334660427780:android:820c1a0eaa8de58abd9551",
+        "android_client_info": {
+          "package_name": "com.dmn_play"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334660427780-mnhr57203k7pfdppj3d3k8b5b0utrvsc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dmn_play",
+            "certificate_hash": "d603a48225862b1fd438daf8f0f344c46110415c"
+          }
+        },
+        {
+          "client_id": "334660427780-sov50r00q3lp3iutoo13qgoif21o0fr5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dmn_play",
+            "certificate_hash": "255e36d64ac36cb8c1621c8b65a8c12b3b23e613"
+          }
+        },
+        {
+          "client_id": "334660427780-thi5m2sf2fhgnkdvo1m4kq62lg6l5jnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfqyYIlRlzfdCLmKyGD1YDH_TQW-Mh2gI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334660427780-thi5m2sf2fhgnkdvo1m4kq62lg6l5jnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

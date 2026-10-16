@@ -45,6 +45,65 @@
             {
               "client_id": "334660427780-thi5m2sf2fhgnkdvo1m4kq62lg6l5jnf.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "334660427780-3knvdi1dej42tjdrt8270uc9p7f129ji.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dmnplay"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334660427780:android:d2ac0eeeeb7102edbd9551",
+        "android_client_info": {
+          "package_name": "com.dmnplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334660427780-5t96atfvrq13sde0v4od691loadvkqr2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dmnplay",
+            "certificate_hash": "d603a48225862b1fd438daf8f0f344c46110415c"
+          }
+        },
+        {
+          "client_id": "334660427780-rk5k50m84213rj91j8va038vn3leca1m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dmnplay",
+            "certificate_hash": "255e36d64ac36cb8c1621c8b65a8c12b3b23e613"
+          }
+        },
+        {
+          "client_id": "334660427780-thi5m2sf2fhgnkdvo1m4kq62lg6l5jnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfqyYIlRlzfdCLmKyGD1YDH_TQW-Mh2gI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334660427780-thi5m2sf2fhgnkdvo1m4kq62lg6l5jnf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "334660427780-3knvdi1dej42tjdrt8270uc9p7f129ji.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dmnplay"
+              }
             }
           ]
         }

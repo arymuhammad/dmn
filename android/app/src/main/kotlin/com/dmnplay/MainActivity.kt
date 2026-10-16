@@ -1,4 +1,4 @@
-package com.dmn_play
+package com.dmnplay
 
 import io.flutter.embedding.android.FlutterActivity
 
