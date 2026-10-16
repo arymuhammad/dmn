@@ -116,6 +116,9 @@ class AccountController extends GetxController {
         _subscriptionProductIds.values.toSet(),
       );
 
+      debugPrint('[IAP DEBUG] Error: ${response.error}');
+      debugPrint('[IAP DEBUG] Not found IDs: ${response.notFoundIDs}');
+
       if (response.error != null) {
         debugPrint('[IAP] query error: ${response.error}');
         return;
@@ -284,10 +287,10 @@ class AccountController extends GetxController {
       return;
     }
 
-    // Jangan request auth/me kalau memang belum login
-    if (user.value == null) {
-      return;
-    }
+    // // Jangan request auth/me kalau memang belum login
+    // if (user.value == null) {
+    //   return;
+    // }
 
     _checkingSession = true;
 
