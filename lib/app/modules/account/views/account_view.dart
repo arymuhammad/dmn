@@ -37,7 +37,11 @@ class AccountView extends GetView<AccountController> {
                   // VIP CARD
                   // =================================================
                   Obx(() {
-                    if (controller.activeSubscription != null) {
+                    final activeSubscription =
+                        controller.home?.activeSubscription;
+                    final isVip = controller.isVip.value;
+
+                    if (isVip || activeSubscription != null) {
                       return const SizedBox.shrink();
                     }
 

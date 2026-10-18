@@ -304,6 +304,38 @@ class AuthRepository {
     return Map<String, dynamic>.from(data);
   }
 
+  Future<Map<String, dynamic>> verifyGooglePurchase({
+    required String productId,
+    required String purchaseToken,
+  }) async {
+    if (purchaseToken.isEmpty) {
+      throw Exception('Google Play purchase token kosong.');
+    }
+
+    final response = await api.post(
+      'subscription/verifyGoogle',
+      body: {'product_id': productId, 'purchase_token': purchaseToken},
+    );
+
+    final json = response.data;
+
+    if (json is! Map || json['success'] != true) {
+      throw Exception(
+        json is Map
+            ? json['message']?.toString() ?? 'Verifikasi Google Play gagal.'
+            : 'Response verifikasi Google Play tidak valid.',
+      );
+    }
+
+    final data = json['data'];
+
+    if (data is! Map) {
+      throw Exception('Data verifikasi Google Play tidak valid.');
+    }
+
+    return Map<String, dynamic>.from(data);
+  }
+
   Future<void> logout() async {
     try {
       // ============================================================

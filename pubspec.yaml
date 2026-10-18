@@ -1,7 +1,7 @@
 name: dmn_play
 description: "Play short video"
 publish_to: 'playstore' # Remove this line if you wish to publish to pub.dev
-version: 1.0.1+2
+version: 1.0.2+5
 
 environment:
   sdk: ^3.7.2

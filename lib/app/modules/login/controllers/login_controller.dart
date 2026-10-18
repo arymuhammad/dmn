@@ -125,6 +125,9 @@ class LoginController extends GetxController {
     // ==========================================================
 
     Get.offAllNamed('/navbar');
+    
+    // Jika user memilih paket sebelum login, lanjutkan pembelian.
+    await account.processPendingSubscription();
   }
 
   void logout() {

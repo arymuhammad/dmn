@@ -60,9 +60,9 @@ const Map<String, String> idID = {
   'select a package': 'pilih paket',
   'enjoy all premium content and unlimited access':
       'nikmati semua konten premium dan akses tanpa batas',
-  'weekly': 'mingguan',
-  'monthly': 'bulanan',
-  'yearly': 'tahunan',
+  'Weekly': 'mingguan',
+  'Monthly': 'bulanan',
+  'Yearly': 'tahunan',
   'day': 'hari',
   'year': 'tahun',
   'save': 'hemat',

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:dmn_play/app/data/models/home_model.dart';
 import 'package:flutter/material.dart';
@@ -65,11 +66,17 @@ class AccountController extends GetxController {
 
   final Map<String, ProductDetails> _iapProducts = {};
 
-  static const Map<int, String> _subscriptionProductIds = {
-    1: 'com.dmnplay.vip.weekly',
-    2: 'com.dmnplay.vip.monthly',
-    3: 'com.dmnplay.vip.yearly',
-  };
+  final storeProducts = <ProductDetails>[].obs;
+
+  // Produk yang dipilih sebelum user login.
+  // Simpan ID agar bisa dicari kembali setelah login.
+  String? _pendingSubscriptionProductId;
+
+  static const List<String> subscriptionProductIds = [
+    'com.dmnplay.vip.weekly',
+    'com.dmnplay.vip.monthly',
+    'com.dmnplay.vip.yearly',
+  ];
 
   bool _checkingSession = false;
   bool _suspendDialogShowing = false;
@@ -96,15 +103,22 @@ class AccountController extends GetxController {
   }
 
   Future<void> _initIap() async {
+    debugPrint('[IAP DEBUG] _initIap() dipanggil');
+
     try {
+      isIapLoading.value = true;
+
       final available = await _inAppPurchase.isAvailable();
 
+      debugPrint('[IAP DEBUG] Store available: $available');
+      debugPrint('[IAP DEBUG] Expected IDs: $subscriptionProductIds');
+
       if (!available) {
-        debugPrint('[IAP] In-App Purchase tidak tersedia di platform ini');
+        debugPrint('[IAP] Store tidak tersedia');
         return;
       }
 
-      _purchaseSubscription = _inAppPurchase.purchaseStream.listen(
+      _purchaseSubscription ??= _inAppPurchase.purchaseStream.listen(
         _handlePurchaseUpdates,
         onError: (error) {
           debugPrint('[IAP] purchaseStream error: $error');
@@ -113,14 +127,14 @@ class AccountController extends GetxController {
       );
 
       final response = await _inAppPurchase.queryProductDetails(
-        _subscriptionProductIds.values.toSet(),
+        subscriptionProductIds.toSet(),
       );
 
       debugPrint('[IAP DEBUG] Error: ${response.error}');
       debugPrint('[IAP DEBUG] Not found IDs: ${response.notFoundIDs}');
 
       if (response.error != null) {
-        debugPrint('[IAP] query error: ${response.error}');
+        debugPrint('[IAP] Query error: ${response.error}');
         return;
       }
 
@@ -130,14 +144,20 @@ class AccountController extends GetxController {
         _iapProducts[product.id] = product;
 
         debugPrint(
-          '[IAP] Product: '
-          '${product.id} | '
-          '${product.price} | '
-          '${product.currencyCode}',
+          '[IAP] Product: ${product.id} | '
+          '${product.price} | ${product.currencyCode}',
         );
       }
 
-      for (final id in _subscriptionProductIds.values) {
+      // Urutan paket tetap weekly, monthly, yearly.
+      storeProducts.assignAll(
+        subscriptionProductIds
+            .where((id) => _iapProducts.containsKey(id))
+            .map((id) => _iapProducts[id]!)
+            .toList(),
+      );
+
+      for (final id in subscriptionProductIds) {
         if (!_iapProducts.containsKey(id)) {
           debugPrint('[IAP] Product tidak ditemukan: $id');
         }
@@ -145,6 +165,8 @@ class AccountController extends GetxController {
     } catch (e, stackTrace) {
       debugPrint('[IAP] Init error: $e');
       debugPrint('$stackTrace');
+    } finally {
+      isIapLoading.value = false;
     }
   }
 
@@ -169,39 +191,47 @@ class AccountController extends GetxController {
           try {
             final transactionId = purchase.purchaseID;
 
-            if (transactionId == null || transactionId.isEmpty) {
-              throw Exception('Transaction ID Apple tidak ditemukan.');
+            debugPrint(
+              '[IAP] Memverifikasi ${purchase.productID} '
+              'di platform ${Platform.operatingSystem}',
+            );
+
+            Map<String, dynamic> response;
+
+            if (Platform.isAndroid) {
+              // Di Android, serverVerificationData berisi
+              // purchase token yang perlu diverifikasi ke Google Play.
+              final purchaseToken =
+                  purchase.verificationData.serverVerificationData;
+
+              if (purchaseToken.isEmpty) {
+                throw Exception('Google Play purchase token tidak ditemukan.');
+              }
+
+              response = await repository.verifyGooglePurchase(
+                productId: purchase.productID,
+                purchaseToken: purchaseToken,
+              );
+            } else if (Platform.isIOS) {
+              if (transactionId == null || transactionId.isEmpty) {
+                throw Exception('Transaction ID Apple tidak ditemukan.');
+              }
+
+              response = await repository.verifyApplePurchase(
+                transactionId: transactionId,
+                environment: 'sandbox',
+              );
+            } else {
+              throw Exception('Platform pembelian tidak didukung.');
             }
 
-            debugPrint(
-              '[IAP] Verifikasi transaksi ke backend: '
-              '$transactionId',
-            );
+            debugPrint('[IAP] Backend verification berhasil: $response');
 
-            final response = await repository.verifyApplePurchase(
-              transactionId: transactionId,
-              environment: 'sandbox',
-            );
-
-            debugPrint(
-              '[IAP] Backend verification berhasil: '
-              '$response',
-            );
-
-            /*
-           * Purchase baru boleh diselesaikan setelah
-           * backend berhasil memverifikasi transaksi Apple.
-           */
+            // Selesaikan purchase hanya setelah backend menyatakan valid.
             if (purchase.pendingCompletePurchase) {
               await _inAppPurchase.completePurchase(purchase);
-
-              debugPrint('[IAP] Purchase berhasil di-complete.');
             }
 
-            /*
-           * Reload data Home supaya active_subscription
-           * dari backend langsung masuk ke Flutter.
-           */
             await refreshSubscription();
 
             Get.snackbar('Berhasil', 'VIP berhasil diaktifkan.');
@@ -307,6 +337,15 @@ class AccountController extends GetxController {
       user.value = me;
       isVip.value = me.isVip;
 
+      // Pastikan status subscription terbaru dimuat dari backend.
+      await homeController.loadHome();
+
+      debugPrint(
+        '[VIP STATUS] '
+        'isVip=${isVip.value} | '
+        'activeSubscription=${homeController.home.value?.activeSubscription != null}',
+      );
+
       debugPrint('[SESSION] ${me.email ?? ''} masih aktif');
     } on AccountSuspendedException catch (e) {
       debugPrint('======================================');
@@ -364,19 +403,42 @@ class AccountController extends GetxController {
     );
   }
 
-  Future<void> subscribe(SubscriptionModel subscription) async {
-    final productId = _subscriptionProductIds[subscription.id];
+  // Future<void> subscribe(ProductDetails product) async {
+  //   if (!_iapProducts.containsKey(product.id)) {
+  //     Get.snackbar('Error', 'Produk tidak tersedia di store.');
+  //     await _initIap();
+  //     return;
+  //   }
 
-    if (productId == null) {
-      Get.snackbar('Error', 'Product subscription tidak ditemukan.');
+  //   try {
+  //     isIapLoading.value = true;
+
+  //     final purchaseParam = PurchaseParam(productDetails: product);
+
+  //     await _inAppPurchase.buyNonConsumable(purchaseParam: purchaseParam);
+  //   } catch (e, stackTrace) {
+  //     debugPrint('[IAP] Buy error: $e');
+  //     debugPrint('$stackTrace');
+
+  //     isIapLoading.value = false;
+
+  //     Get.snackbar('Purchase Error', e.toString());
+  //   }
+  // }
+
+  Future<void> subscribe(ProductDetails product) async {
+    // Belum login: simpan pilihan paket dan arahkan ke login.
+    if (!isLogin) {
+      _pendingSubscriptionProductId = product.id;
+
+      Get.toNamed('/login');
       return;
     }
 
-    final product = _iapProducts[productId];
+    if (isIapLoading.value) return;
 
-    if (product == null) {
-      Get.snackbar('Error', 'Product belum tersedia di App Store.');
-
+    if (!_iapProducts.containsKey(product.id)) {
+      Get.snackbar('Error', 'Produk tidak tersedia di store.');
       await _initIap();
       return;
     }
@@ -384,7 +446,9 @@ class AccountController extends GetxController {
     try {
       isIapLoading.value = true;
 
-      final purchaseParam = PurchaseParam(productDetails: product);
+      final purchaseParam = PurchaseParam(
+        productDetails: _iapProducts[product.id]!,
+      );
 
       await _inAppPurchase.buyNonConsumable(purchaseParam: purchaseParam);
     } catch (e, stackTrace) {
@@ -392,6 +456,44 @@ class AccountController extends GetxController {
       debugPrint('$stackTrace');
 
       isIapLoading.value = false;
+
+      Get.snackbar('Purchase Error', e.toString());
+    }
+  }
+
+  Future<void> processPendingSubscription() async {
+    final productId = _pendingSubscriptionProductId;
+
+    if (productId == null || productId.isEmpty) return;
+
+    // Pastikan sesi login sudah tersedia.
+    if (!isLogin) return;
+
+    // Hapus pilihan yang tertahan sebelum memulai billing,
+    // agar login berikutnya tidak mengulang pembelian.
+    _pendingSubscriptionProductId = null;
+
+    try {
+      // Produk mungkin belum selesai dimuat ketika login selesai.
+      if (!_iapProducts.containsKey(productId)) {
+        await _initIap();
+      }
+
+      final product = _iapProducts[productId];
+
+      if (product == null) {
+        Get.snackbar(
+          'Produk tidak tersedia',
+          'Paket yang dipilih tidak ditemukan di Google Play. '
+              'Silakan pilih paket kembali.',
+        );
+        return;
+      }
+
+      await subscribe(product);
+    } catch (e, stackTrace) {
+      debugPrint('[IAP] Pending subscription error: $e');
+      debugPrint('$stackTrace');
 
       Get.snackbar('Purchase Error', e.toString());
     }
