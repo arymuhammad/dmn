@@ -25,7 +25,7 @@ class SectionMovieHorizontal extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(16, 18, 16, 5),
+          padding: const EdgeInsets.fromLTRB(16, 18, 16, 10),
           child: Row(
             children: [
               Expanded(

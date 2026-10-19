@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,6 +29,7 @@ class MixController extends GetxController {
   final Map<int, Future<void>> preparingPlayers = {};
   // ================= // SYNOPSIS // =================
   final expandedSynopsis = Rxn<int>();
+  bool _isClosing = false;
 
   @override
   void onInit() {
@@ -181,6 +184,8 @@ class MixController extends GetxController {
       return;
     }
 
+    if (_isClosing) return;
+
     if (initializingPlayers.contains(index)) {
       return;
     }
@@ -194,6 +199,8 @@ class MixController extends GetxController {
     initializingPlayers.add(index);
     update(['video_$index']);
 
+    Player? createdPlayer;
+
     try {
       // ========================================================
       // PLAYER
@@ -202,6 +209,7 @@ class MixController extends GetxController {
       final stopwatch = Stopwatch()..start();
 
       final player = Player();
+      createdPlayer = player;
 
       // ========================================================
       // POSITION DIAGNOSTIC
@@ -324,6 +332,10 @@ class MixController extends GetxController {
 
       await player.open(Media(url), play: false);
 
+      if (_isClosing || !identical(players[index], player)) {
+        return;
+      }
+
       debugPrint(
         '[MIX] OPEN DONE '
         'index=$index '
@@ -389,8 +401,19 @@ class MixController extends GetxController {
 
       update(['video_$index']);
     } finally {
-      initializingPlayers.remove(index);
+      if (_isClosing && createdPlayer != null) {
+        if (identical(players[index], createdPlayer)) {
+          players.remove(index);
+          videoControllers.remove(index);
+          readyPlayers.remove(index);
 
+          try {
+            await createdPlayer.dispose();
+          } catch (_) {}
+        }
+      }
+
+      initializingPlayers.remove(index);
       update(['video_$index']);
     }
   }
@@ -579,23 +602,37 @@ class MixController extends GetxController {
         'error=$e',
       );
     }
-  } // ================= // CLEANUP PLAYER // =================
+  }
+
+  // ================= // CLEANUP PLAYER // =================
 
   Future<void> cleanupPlayers(int current) async {
     final indexes = players.keys.toList();
+
     for (final index in indexes) {
-      if ((index - current).abs() > 1) {
-        final player = players.remove(index);
-        videoControllers.remove(index);
-        readyPlayers.remove(index);
-        preparingPlayers.remove(index);
-        try {
-          await player?.dispose();
-        } catch (_) {}
-        debugPrint('[MIX] DISPOSE PLAYER index=$index');
+      if ((index - current).abs() <= 1) continue;
+
+      // Jangan dispose player yang masih proses open/init.
+      if (initializingPlayers.contains(index) ||
+          preparingPlayers.containsKey(index)) {
+        continue;
       }
+
+      final player = players.remove(index);
+      videoControllers.remove(index);
+      readyPlayers.remove(index);
+
+      try {
+        await player?.dispose();
+      } catch (e) {
+        debugPrint('[MIX] DISPOSE ERROR index=$index error=$e');
+      }
+
+      debugPrint('[MIX] DISPOSE PLAYER index=$index');
     }
-  } // ================= // SYNOPSIS // =================
+  }
+
+  // ================= // SYNOPSIS // =================
 
   void toggleSynopsis(int episodeId) {
     if (expandedSynopsis.value == episodeId) {
@@ -611,15 +648,34 @@ class MixController extends GetxController {
 
   @override
   void onClose() {
+    _isClosing = true;
     pageController.dispose();
-    for (final player in players.values) {
-      player.dispose();
+
+    for (final entry in players.entries.toList()) {
+      // Player yang masih diinisialisasi akan dibersihkan
+      // setelah proses open selesai.
+      if (initializingPlayers.contains(entry.key)) continue;
+
+      unawaited(
+        entry.value.dispose().catchError((Object e) {
+          debugPrint(
+            '[MIX] CLOSE DISPOSE ERROR '
+            'index=${entry.key} error=$e',
+          );
+        }),
+      );
     }
-    players.clear();
-    videoControllers.clear();
-    preparingPlayers.clear();
-    readyPlayers.clear();
-    initializingPlayers.clear();
+
+    // Pertahankan referensi player yang masih diinisialisasi,
+    // agar proses tersebut bisa membersihkannya setelah selesai.
+    players.removeWhere((index, _) => !initializingPlayers.contains(index));
+
+    videoControllers.removeWhere(
+      (index, _) => !initializingPlayers.contains(index),
+    );
+
+    readyPlayers.removeWhere((index) => !initializingPlayers.contains(index));
+
     super.onClose();
   }
 }

@@ -34,21 +34,40 @@ class VideoGrid extends StatelessWidget {
     );
   }
 
-  static Widget sliver(List<MovieModel> items) {
+  static Widget sliver(List<MovieModel> items, {bool isLoading = false}) {
+    if (isLoading) {
+      return SliverPadding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        sliver: SliverGrid(
+          delegate: SliverChildBuilderDelegate(
+            (context, index) => const VideoCardSkeleton(),
+            childCount: 12,
+          ),
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 150,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8,
+            childAspectRatio: .65,
+          ),
+        ),
+      );
+    }
+
     if (items.isEmpty) {
       return SliverPadding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         sliver: const SliverToBoxAdapter(child: _EmptyMovieState()),
       );
     }
 
     return SliverPadding(
-      padding: EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       sliver: SliverGrid(
-        delegate: SliverChildBuilderDelegate((context, index) {
-          return VideoCard(movie: items[index]);
-        }, childCount: items.length),
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        delegate: SliverChildBuilderDelegate(
+          (context, index) => VideoCard(movie: items[index]),
+          childCount: items.length,
+        ),
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 150,
           crossAxisSpacing: 8,
           mainAxisSpacing: 8,
@@ -162,6 +181,99 @@ class _EmptyMovieState extends StatelessWidget {
             style: TextStyle(color: Colors.white38, fontSize: 13),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class VideoCardSkeleton extends StatefulWidget {
+  const VideoCardSkeleton({super.key});
+
+  @override
+  State<VideoCardSkeleton> createState() => _VideoCardSkeletonState();
+}
+
+class _VideoCardSkeletonState extends State<VideoCardSkeleton>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _shimmerController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _shimmerController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
+    )..repeat();
+  }
+
+  @override
+  void dispose() {
+    _shimmerController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _shimmerController,
+      builder: (context, child) {
+        return Container(
+          decoration: BoxDecoration(
+            color: const Color(0xFF202020),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          clipBehavior: Clip.antiAlias,
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              const ColoredBox(color: Color(0xFF202020)),
+              Positioned.fill(
+                child: FractionallySizedBox(
+                  alignment: Alignment(
+                    -1.5 + (_shimmerController.value * 3),
+                    0,
+                  ),
+                  widthFactor: 0.6,
+                  child: const DecoratedBox(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0x002FFFFFF),
+                          Color(0x18FFFFFF),
+                          Color(0x002FFFFFF),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 8,
+                right: 20,
+                bottom: 24,
+                child: _shimmerBar(width: double.infinity, height: 10),
+              ),
+              Positioned(
+                left: 8,
+                right: 45,
+                bottom: 9,
+                child: _shimmerBar(width: double.infinity, height: 8),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _shimmerBar({required double width, required double height}) {
+    return Container(
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        color: const Color(0xFF383838),
+        borderRadius: BorderRadius.circular(4),
       ),
     );
   }

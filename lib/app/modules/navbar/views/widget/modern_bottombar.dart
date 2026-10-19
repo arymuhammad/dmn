@@ -9,59 +9,56 @@ class ModernBottomBar extends GetView<NavbarController> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
-      // margin: const EdgeInsets.all(16),
-      // padding: const EdgeInsets.symmetric(horizontal: 8),
-      decoration: BoxDecoration(
-        color: Colors.black,
-        // borderRadius: const BorderRadius.only(
-        //   topLeft: Radius.circular(24),
-        //   topRight: Radius.circular(24),
-        // ),
-        boxShadow: const [
-          BoxShadow(
-            blurRadius: 20,
-            offset: Offset(0, 8),
-            color: Colors.black26,
-          ),
-        ],
-      ),
-      child: GetBuilder<NavbarController>(
-        id: 'navbar',
-        builder: (c) {
-          // if (c.showEpisodePlayer) {
-          //   return const SizedBox(height: 0);
-          // }
-          return Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              _item(
-                controller: c,
-                icon: Icons.home_rounded,
-                label: "home".tr,
-                index: 0,
-              ),
-              _item(
-                controller: c,
-                icon: Icons.movie_filter,
-                label: "mix".tr,
-                index: 1,
-              ),
-              _item(
-                controller: c,
-                icon: Icons.bookmark_rounded,
-                label: "history".tr,
-                index: 2,
-              ),
-              _item(
-                controller: c,
-                icon: Icons.person_rounded,
-                label: "account".tr,
-                index: 3,
+      color: Colors.black,
+      child: SafeArea(
+        top: false,
+        child: Container(
+          height: 80,
+          decoration: const BoxDecoration(
+            color: Colors.black,
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 20,
+                offset: Offset(0, 8),
+                color: Colors.black26,
               ),
             ],
-          );
-        },
+          ),
+          child: GetBuilder<NavbarController>(
+            id: 'navbar',
+            builder: (c) {
+              return Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _item(
+                    controller: c,
+                    icon: Icons.home_rounded,
+                    label: "home".tr,
+                    index: 0,
+                  ),
+                  _item(
+                    controller: c,
+                    icon: Icons.movie_filter,
+                    label: "mix".tr,
+                    index: 1,
+                  ),
+                  _item(
+                    controller: c,
+                    icon: Icons.bookmark_rounded,
+                    label: "history".tr,
+                    index: 2,
+                  ),
+                  _item(
+                    controller: c,
+                    icon: Icons.person_rounded,
+                    label: "account".tr,
+                    index: 3,
+                  ),
+                ],
+              );
+            },
+          ),
+        ),
       ),
     );
   }
@@ -75,9 +72,7 @@ class ModernBottomBar extends GetView<NavbarController> {
     final selected = controller.currentIndex.value == index;
 
     return GestureDetector(
-      onTap: () {
-        controller.changeTab(index);
-      },
+      onTap: () => controller.changeTab(index),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 10),
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
@@ -89,6 +84,7 @@ class ModernBottomBar extends GetView<NavbarController> {
           borderRadius: BorderRadius.circular(18),
         ),
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Icon(
               icon,

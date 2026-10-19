@@ -82,19 +82,17 @@ class HomeController extends GetxController
 
       if (tabController == null ||
           tabController!.length != data.genres.length) {
-        _setupTabController(
-          data.genres.length,
-          initialIndex: currentIndex,
-        );
+        _setupTabController(data.genres.length, initialIndex: currentIndex);
       }
 
       // ========================================================
       // VALIDATE INDEX
       // ========================================================
 
-      final safeIndex = data.genres.isEmpty
-          ? 0
-          : currentIndex.clamp(0, data.genres.length - 1);
+      final safeIndex =
+          data.genres.isEmpty
+              ? 0
+              : currentIndex.clamp(0, data.genres.length - 1);
 
       selectedCategory.value = safeIndex;
       _lastTabIndex = safeIndex;
@@ -127,10 +125,7 @@ class HomeController extends GetxController
   // SETUP TAB CONTROLLER
   // ==========================================================
 
-  void _setupTabController(
-    int length, {
-    int initialIndex = 0,
-  }) {
+  void _setupTabController(int length, {int initialIndex = 0}) {
     tabController?.removeListener(_onTabChanged);
     tabController?.dispose();
 
@@ -218,39 +213,22 @@ class HomeController extends GetxController
   // ==========================================================
 
   Future<void> loadCategoryIfNeeded(int index) async {
-    // ========================================================
-    // INDEX 0 = ALL
-    //
-    // Data sudah berasal dari home.latest
-    // ========================================================
-
-    if (index <= 0) {
-      return;
-    }
-
-    if (index >= categories.length) {
+    if (index <= 0 || index >= categories.length) {
       return;
     }
 
     final categoryId = categories[index].id;
 
-    // ========================================================
-    // SUDAH CACHE
-    // ========================================================
-
     if (categoryCache.containsKey(categoryId)) {
       return;
     }
-
-    // ========================================================
-    // SEDANG REQUEST
-    // ========================================================
 
     if (loadingCategories.contains(categoryId)) {
       return;
     }
 
     loadingCategories.add(categoryId);
+    update();
 
     try {
       final movies = await repository.category(categoryId);
@@ -272,6 +250,7 @@ class HomeController extends GetxController
       );
     } finally {
       loadingCategories.remove(categoryId);
+      update();
     }
   }
 
@@ -303,6 +282,33 @@ class HomeController extends GetxController
     final categoryId = categories[index].id;
 
     return categoryCache[categoryId] ?? [];
+  }
+
+  // ==========================================================
+  // CATEGORY LOADING STATE
+  // ==========================================================
+
+  bool isCategoryLoading(int index) {
+    // Home masih memuat data awal.
+    if (loading.value && home.value == null) {
+      return true;
+    }
+
+    // ALL menggunakan data dari home.latest.
+    if (index == 0) {
+      return false;
+    }
+
+    if (index < 0 || index >= categories.length) {
+      return false;
+    }
+
+    final categoryId = categories[index].id;
+
+    // Shimmer hanya muncul jika data belum tersedia
+    // dan request kategori masih berlangsung.
+    return !categoryCache.containsKey(categoryId) &&
+        loadingCategories.contains(categoryId);
   }
 
   // ==========================================================

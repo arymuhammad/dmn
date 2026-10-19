@@ -6,6 +6,7 @@ import '../../../data/helpers/platform_loading.dart';
 import '../controllers/home_controller.dart';
 import 'widget/appbar.dart';
 import 'widget/home_category_tab.dart';
+import 'widget/loading_template.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -22,7 +23,38 @@ class HomeView extends GetView<HomeController> {
       if (home == null || tabController == null) {
         return Scaffold(
           backgroundColor: Colors.black,
-          body: Center(child: platformLoading()),
+          body: SafeArea(
+            child: CustomScrollView(
+              physics: const NeverScrollableScrollPhysics(),
+              slivers: [
+                const SliverToBoxAdapter(child: HomeAppBar()),
+
+                // Placeholder banner
+                const SliverToBoxAdapter(child: HomeBannerSkeleton()),
+
+                // Placeholder tab kategori
+                const SliverToBoxAdapter(child: HomeCategorySkeleton()),
+
+                // Placeholder grid movie
+                SliverPadding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  sliver: SliverGrid(
+                    delegate: SliverChildBuilderDelegate(
+                      (context, index) => const VideoCardSkeleton(),
+                      childCount: 12,
+                    ),
+                    gridDelegate:
+                        const SliverGridDelegateWithMaxCrossAxisExtent(
+                          maxCrossAxisExtent: 150,
+                          crossAxisSpacing: 8,
+                          mainAxisSpacing: 8,
+                          childAspectRatio: .65,
+                        ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         );
       }
 
@@ -44,7 +76,10 @@ class HomeView extends GetView<HomeController> {
                 // ============================================================
                 SliverPersistentHeader(
                   pinned: true,
-                  delegate: BannerTabHeaderDelegate(controller: controller),
+                  delegate: BannerTabHeaderDelegate(
+                    controller: controller,
+                    screenWidth: MediaQuery.sizeOf(context).width,
+                  ),
                 ),
               ];
             },
@@ -64,17 +99,25 @@ class HomeView extends GetView<HomeController> {
 
 class BannerTabHeaderDelegate extends SliverPersistentHeaderDelegate {
   final HomeController controller;
+  final double screenWidth;
 
-  BannerTabHeaderDelegate({required this.controller});
+  BannerTabHeaderDelegate({
+    required this.controller,
+    required this.screenWidth,
+  });
 
   static const double bannerHeight = 260;
+  static const double tabletBannerHeight = 380;
   static const double tabBarHeight = 48;
+
+  double get responsiveBannerHeight =>
+      screenWidth >= 600 ? tabletBannerHeight : bannerHeight;
 
   @override
   double get minExtent => tabBarHeight;
 
   @override
-  double get maxExtent => bannerHeight;
+  double get maxExtent => responsiveBannerHeight;
 
   @override
   Widget build(
@@ -83,20 +126,11 @@ class BannerTabHeaderDelegate extends SliverPersistentHeaderDelegate {
     bool overlapsContent,
   ) {
     final progress = (shrinkOffset / 80).clamp(0.0, 1.0);
+
     return Stack(
       fit: StackFit.expand,
       children: [
-        // ==========================================================
-        // BANNER
-        // ==========================================================
-        Positioned.fill(child: const MovieBannerView()),
-
-        // ==========================================================
-        // TAB BAR
-        //
-        // TAB BAR ADA PALING ATAS
-        // DAN LANGSUNG DI BAWAH APP BAR
-        // ==========================================================
+        const Positioned.fill(child: MovieBannerView()),
         Positioned(
           top: 0,
           left: 0,
@@ -111,7 +145,6 @@ class BannerTabHeaderDelegate extends SliverPersistentHeaderDelegate {
                     progress,
                   )!,
               child: TabBar(
-                // onTap: controller.onCategoryTap,
                 controller: controller.tabController,
                 isScrollable: true,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -139,6 +172,8 @@ class BannerTabHeaderDelegate extends SliverPersistentHeaderDelegate {
 
   @override
   bool shouldRebuild(covariant BannerTabHeaderDelegate oldDelegate) {
-    return oldDelegate.controller != controller;
+    return oldDelegate.controller != controller ||
+        oldDelegate.screenWidth != screenWidth;
   }
 }
+

@@ -81,11 +81,17 @@ class HomeCategoryTab extends StatelessWidget {
           // ======================================================
           // MOVIES KHUSUS TAB INI
           // ======================================================
-          Obx(() {
-            final movies = controller.getMoviesForCategory(index);
+          GetBuilder<HomeController>(
+            builder: (controller) {
+              return Obx(() {
+                final index = controller.selectedCategory.value;
+                final movies = controller.getMoviesForCategory(index);
+                final isLoading = controller.isCategoryLoading(index);
 
-            return VideoGrid.sliver(movies);
-          }),
+                return VideoGrid.sliver(movies, isLoading: isLoading);
+              });
+            },
+          ),
         ],
       ),
     );
