@@ -181,7 +181,12 @@ class SubscriptionPrice extends StatelessWidget {
                         // CURRENT PACKAGE
                         // ==================================================
                         const SizedBox(height: 28),
-                        _buildCurrentSubscriptionStatus(activeSubscription),
+                        Obx(() {
+                          return _buildCurrentSubscriptionStatus(
+                            subC.activeSubscription,
+                          );
+                        }),
+
                         const SizedBox(height: 28),
                         // ==================================================
                         // HEADER

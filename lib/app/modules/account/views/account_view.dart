@@ -3,8 +3,10 @@ import 'package:dmn_play/app/modules/account/controllers/account_controller.dart
 import 'package:dmn_play/app/modules/account/views/widget/subscriptions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 import '../../../data/translations/controller/language_controller.dart';
+import '../../privacy_policy/views/privacy_policy_view.dart';
 import 'widget/header.dart';
 import 'widget/manage_devices.dart';
 import 'widget/vip_card.dart';
@@ -123,25 +125,38 @@ class AccountView extends GetView<AccountController> {
 
                   const SizedBox(height: 24),
 
-                  _SettingTile(icon: Icons.help_outline, title: 'help center'),
+                  _SettingTile(
+                    icon: Icons.help_outline,
+                    title: 'help center',
+                    onTap: () => Get.toNamed('/help-center'),
+                  ),
 
                   _SettingTile(
                     icon: Icons.privacy_tip_outlined,
                     title: 'privacy policy',
+                    onTap: () => Get.toNamed('/privacy-policy'),
                   ),
 
                   _SettingTile(
                     icon: Icons.description_outlined,
                     title: 'terms of use',
+                    onTap: () => Get.toNamed('/term-of-use'),
                   ),
 
                   const SizedBox(height: 32),
 
-                  const Center(
-                    child: Text(
-                      'Version 1.0.0',
-                      style: TextStyle(color: Colors.white38),
-                    ),
+                  FutureBuilder<PackageInfo>(
+                    future: PackageInfo.fromPlatform(),
+                    builder: (context, snapshot) {
+                      final version = snapshot.data?.version;
+
+                      return Center(
+                        child: Text(
+                          version == null ? 'Version' : 'Version $version',
+                          style: const TextStyle(color: Colors.white38),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),

@@ -86,7 +86,9 @@ class HomeView extends GetView<HomeController> {
 
             body: TabBarView(
               controller: controller.tabController,
-              children: List.generate(controller.categories.length, (index) {
+              children: List.generate(controller.categories.length + 1, (
+                index,
+              ) {
                 return HomeCategoryTab(controller: controller, index: index);
               }),
             ),
@@ -158,10 +160,10 @@ class BannerTabHeaderDelegate extends SliverPersistentHeaderDelegate {
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                 ),
-                tabs:
-                    controller.categories
-                        .map((e) => Tab(text: e.name.tr))
-                        .toList(),
+                tabs: [
+                  Tab(text: 'Semua'.tr),
+                  ...controller.categories.map((e) => Tab(text: e.name.tr)),
+                ],
               ),
             ),
           ),
@@ -176,4 +178,3 @@ class BannerTabHeaderDelegate extends SliverPersistentHeaderDelegate {
         oldDelegate.screenWidth != screenWidth;
   }
 }
-

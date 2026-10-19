@@ -40,72 +40,104 @@ class HomeCategoryTab extends StatelessWidget {
         );
       },
 
-      child: CustomScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
+      child: NotificationListener<ScrollNotification>(
+        onNotification: (notification) {
+          if (index == 0 &&
+              notification.metrics.axis == Axis.vertical &&
+              notification.metrics.extentAfter < 500) {
+            controller.loadMoreAllMovies();
+          }
 
-        slivers: [
-          // ======================================================
-          // TRENDING
-          // HANYA TAB ALL
-          // ======================================================
-          if (index == 0)
-            SliverToBoxAdapter(
-              child: SectionMovieHorizontal(
-                title: "trending".tr.capitalize ?? '',
-                movies: controller.home.value?.trending ?? [],
+          return false;
+        },
+        child: CustomScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+
+          slivers: [
+            // ======================================================
+            // TRENDING
+            // HANYA TAB ALL
+            // ======================================================
+            if (index == 0)
+              SliverToBoxAdapter(
+                child: SectionMovieHorizontal(
+                  title: "trending".tr.capitalize ?? '',
+                  movies: controller.home.value?.trending ?? [],
+                ),
               ),
-            ),
 
-          // ======================================================
-          // CONTINUE WATCHING
-          // ======================================================
-          if (index == 0) ContinueWatchingView(),
+            // ======================================================
+            // CONTINUE WATCHING
+            // ======================================================
+            if (index == 0) ContinueWatchingView(),
 
-          // ======================================================
-          // TITLE
-          // ======================================================
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(16, 24, 16, 12),
-              child: Text(
-                _getTitle(),
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+            // ======================================================
+            // TITLE
+            // ======================================================
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(16, 24, 16, 12),
+                child: Text(
+                  _getTitle(),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
-          ),
 
-          // ======================================================
-          // MOVIES KHUSUS TAB INI
-          // ======================================================
-          GetBuilder<HomeController>(
-            builder: (controller) {
-              return Obx(() {
-                final index = controller.selectedCategory.value;
-                final movies = controller.getMoviesForCategory(index);
-                final isLoading = controller.isCategoryLoading(index);
+            // ======================================================
+            // MOVIES KHUSUS TAB INI
+            // ======================================================
+            GetBuilder<HomeController>(
+              builder: (homeController) {
+                return Obx(() {
+                  final categoryIndex = index;
 
-                return VideoGrid.sliver(movies, isLoading: isLoading);
-              });
-            },
-          ),
-        ],
+                  final movies = homeController.getMoviesForCategory(
+                    categoryIndex,
+                  );
+
+                  final isLoading = homeController.isCategoryLoading(
+                    categoryIndex,
+                  );
+
+                  return VideoGrid.sliver(movies, isLoading: isLoading);
+                });
+              },
+            ),
+
+            if (index == 0)
+              Obx(
+                () =>
+                    controller.loadingMoreAllMovies.value
+                        ? const SliverToBoxAdapter(
+                          child: Padding(
+                            padding: EdgeInsets.all(20),
+                            child: Center(child: CircularProgressIndicator()),
+                          ),
+                        )
+                        : const SliverToBoxAdapter(child: SizedBox.shrink()),
+              ),
+          ],
+        ),
       ),
     );
   }
 
   String _getTitle() {
     if (index == 0) {
-      return "Discover".tr.capitalize ?? '';
+      return 'Semua'.tr;
     }
 
-    if (index >= controller.categories.length) {
+    final categoryIndex = index - 1;
+
+    if (categoryIndex < 0 || categoryIndex >= controller.categories.length) {
       return '';
     }
 
-    return controller.categories[index].name.tr.capitalize ?? '';
+    return controller.categories[categoryIndex].name.tr.capitalize ?? '';
   }
 }

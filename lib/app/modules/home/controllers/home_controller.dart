@@ -47,6 +47,14 @@ class HomeController extends GetxController
   // Category yang sedang request
   final Set<int> loadingCategories = {};
 
+  final allMovies = <MovieModel>[].obs;
+  final loadingAllMovies = false.obs;
+  final loadingMoreAllMovies = false.obs;
+  final allMoviesHasMore = true.obs;
+
+  int allMoviesPage = 1;
+  static const int allMoviesPageSize = 20;
+
   // ==========================================================
   // INIT
   // ==========================================================
@@ -77,38 +85,36 @@ class HomeController extends GetxController
       // ========================================================
       // TAB CONTROLLER
       // ========================================================
-
       final currentIndex = selectedCategory.value;
+      final tabCount = data.genres.length + 1;
 
-      if (tabController == null ||
-          tabController!.length != data.genres.length) {
-        _setupTabController(data.genres.length, initialIndex: currentIndex);
+      if (tabController == null || tabController!.length != tabCount) {
+        _setupTabController(tabCount, initialIndex: currentIndex);
       }
 
       // ========================================================
       // VALIDATE INDEX
       // ========================================================
-
-      final safeIndex =
-          data.genres.isEmpty
-              ? 0
-              : currentIndex.clamp(0, data.genres.length - 1);
+      final safeIndex = currentIndex.clamp(0, tabCount - 1);
 
       selectedCategory.value = safeIndex;
       _lastTabIndex = safeIndex;
 
       // ========================================================
-      // REFRESH
+      // REFRESH CACHE
       // ========================================================
-
       if (isRefresh) {
         categoryCache.clear();
       }
 
       // ========================================================
+      // LOAD ALL MOVIES
+      // ========================================================
+      await loadAllMovies(forceRefresh: isRefresh);
+
+      // ========================================================
       // PRELOAD CATEGORY AKTIF + BERIKUTNYA
       // ========================================================
-
       preloadAround(safeIndex);
     } catch (e) {
       debugPrint('[HOME] LOAD ERROR: $e');
@@ -118,6 +124,103 @@ class HomeController extends GetxController
       } else {
         loading.value = false;
       }
+    }
+  }
+
+  // ==========================================================
+  // LOAD ALL MOVIES
+  // ==========================================================
+
+  int _allMoviesRequestId = 0;
+
+  Future<void> loadAllMovies({bool forceRefresh = false}) async {
+    if (loadingAllMovies.value && !forceRefresh) return;
+
+    if (!forceRefresh && (allMovies.isNotEmpty || !allMoviesHasMore.value)) {
+      return;
+    }
+
+    final requestId = ++_allMoviesRequestId;
+
+    loadingAllMovies.value = true;
+
+    if (forceRefresh) {
+      allMovies.clear();
+      allMoviesPage = 1;
+      allMoviesHasMore.value = true;
+    }
+
+    try {
+      final result = await repository.allMovies(
+        page: 1,
+        limit: allMoviesPageSize,
+      );
+
+      // Abaikan hasil request lama jika sudah ada refresh baru.
+      if (requestId != _allMoviesRequestId) return;
+
+      final movies = result['items'] as List<MovieModel>;
+
+      allMovies.assignAll(movies);
+      allMoviesPage = result['page'] as int;
+      allMoviesHasMore.value = result['has_more'] as bool;
+
+      debugPrint(
+        '[HOME] ALL MOVIES PAGE=$allMoviesPage '
+        'COUNT=${movies.length} '
+        'HAS_MORE=${allMoviesHasMore.value}',
+      );
+    } catch (e) {
+      if (requestId == _allMoviesRequestId) {
+        debugPrint('[HOME] ALL MOVIES ERROR: $e');
+      }
+    } finally {
+      if (requestId == _allMoviesRequestId) {
+        loadingAllMovies.value = false;
+      }
+    }
+  }
+
+  // ==========================================================
+  // LOAD MORE ALL MOVIES
+  // ==========================================================
+  Future<void> loadMoreAllMovies() async {
+    if (loadingAllMovies.value ||
+        loadingMoreAllMovies.value ||
+        !allMoviesHasMore.value) {
+      return;
+    }
+
+    loadingMoreAllMovies.value = true;
+
+    try {
+      final nextPage = allMoviesPage + 1;
+
+      final result = await repository.allMovies(
+        page: nextPage,
+        limit: allMoviesPageSize,
+      );
+
+      final movies = result['items'] as List<MovieModel>;
+
+      // Hindari memasukkan film yang sama dua kali.
+      final existingIds = allMovies.map((movie) => movie.id).toSet();
+      final newMovies =
+          movies.where((movie) => !existingIds.contains(movie.id)).toList();
+
+      allMovies.addAll(newMovies);
+      allMoviesPage = result['page'] as int;
+      allMoviesHasMore.value = result['has_more'] as bool;
+
+      debugPrint(
+        '[HOME] ALL MOVIES PAGE=$allMoviesPage '
+        'ADDED=${newMovies.length} '
+        'HAS_MORE=${allMoviesHasMore.value}',
+      );
+    } catch (e) {
+      debugPrint('[HOME] LOAD MORE ERROR: $e');
+    } finally {
+      loadingMoreAllMovies.value = false;
     }
   }
 
@@ -213,11 +316,12 @@ class HomeController extends GetxController
   // ==========================================================
 
   Future<void> loadCategoryIfNeeded(int index) async {
-    if (index <= 0 || index >= categories.length) {
+    if (index <= 0 || index > categories.length) {
       return;
     }
 
-    final categoryId = categories[index].id;
+    final categoryIndex = index - 1;
+    final categoryId = categories[categoryIndex].id;
 
     if (categoryCache.containsKey(categoryId)) {
       return;
@@ -259,27 +363,19 @@ class HomeController extends GetxController
   // ==========================================================
 
   List<MovieModel> getMoviesForCategory(int index) {
-    // ========================================================
-    // ALL
-    // ========================================================
-
+    // Tab pertama: semua film.
     if (index == 0) {
-      return home.value?.latest ?? [];
+      return allMovies.toList();
     }
 
-    // ========================================================
-    // INVALID
-    // ========================================================
+    // Index UI 1 menjadi kategori backend index 0.
+    final categoryIndex = index - 1;
 
-    if (index < 0 || index >= categories.length) {
+    if (categoryIndex < 0 || categoryIndex >= categories.length) {
       return [];
     }
 
-    // ========================================================
-    // CATEGORY
-    // ========================================================
-
-    final categoryId = categories[index].id;
+    final categoryId = categories[categoryIndex].id;
 
     return categoryCache[categoryId] ?? [];
   }
@@ -289,24 +385,18 @@ class HomeController extends GetxController
   // ==========================================================
 
   bool isCategoryLoading(int index) {
-    // Home masih memuat data awal.
-    if (loading.value && home.value == null) {
-      return true;
-    }
-
-    // ALL menggunakan data dari home.latest.
     if (index == 0) {
+      return loadingAllMovies.value;
+    }
+
+    final categoryIndex = index - 1;
+
+    if (categoryIndex < 0 || categoryIndex >= categories.length) {
       return false;
     }
 
-    if (index < 0 || index >= categories.length) {
-      return false;
-    }
+    final categoryId = categories[categoryIndex].id;
 
-    final categoryId = categories[index].id;
-
-    // Shimmer hanya muncul jika data belum tersedia
-    // dan request kategori masih berlangsung.
     return !categoryCache.containsKey(categoryId) &&
         loadingCategories.contains(categoryId);
   }

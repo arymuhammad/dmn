@@ -17,6 +17,8 @@ abstract class Routes {
   static const EPISODE = _Paths.EPISODE;
   static const PLAYER = _Paths.PLAYER;
   static const HISTORY = _Paths.HISTORY;
+  static const TERM_OF_USE = _Paths.TERM_OF_USE;
+  static const HELP_CENTER = _Paths.HELP_CENTER;
 }
 
 abstract class _Paths {
@@ -35,4 +37,6 @@ abstract class _Paths {
   static const EPISODE = '/episode';
   static const PLAYER = '/player';
   static const HISTORY = '/history';
+  static const TERM_OF_USE = '/term-of-use';
+  static const HELP_CENTER = '/help-center';
 }

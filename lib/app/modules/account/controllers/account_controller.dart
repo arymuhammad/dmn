@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 
 import '../../../data/helpers/exception.dart';
+import '../../../data/helpers/iap_snackbar.dart';
 import '../../../data/models/active_subscription_model.dart';
 import '../../../data/models/subscription_model.dart';
 import '../../../data/models/user_device_model.dart';
@@ -19,7 +20,7 @@ import '../../home/controllers/home_controller.dart';
 // SESUAIKAN PATH INI dengan lokasi SuspendedDialog kamu
 import '../../login/views/widgets/suspended_dialog.dart';
 
-class AccountController extends GetxController {
+class AccountController extends GetxController with WidgetsBindingObserver {
   final AuthRepository repository;
   final HomeController homeController;
   final UserRepository userRepository;
@@ -81,6 +82,8 @@ class AccountController extends GetxController {
   bool _checkingSession = false;
   bool _suspendDialogShowing = false;
 
+  bool _isPurchaseDialogOpen = false;
+
   @override
   void onInit() {
     super.onInit();
@@ -93,7 +96,24 @@ class AccountController extends GetxController {
   }
 
   @override
+  void onReady() {
+    super.onReady();
+
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      debugPrint('[VIP] App kembali aktif, refresh subscription');
+      refreshSubscription();
+    }
+  }
+
+  @override
   void onClose() {
+    WidgetsBinding.instance.removeObserver(this);
+
     _stopSessionChecker();
 
     _purchaseSubscription?.cancel();
@@ -182,11 +202,13 @@ class AccountController extends GetxController {
       switch (purchase.status) {
         case PurchaseStatus.pending:
           isIapLoading.value = true;
+          _showPurchaseLoading();
           break;
 
         case PurchaseStatus.purchased:
         case PurchaseStatus.restored:
           isIapLoading.value = true;
+          _showPurchaseLoading();
 
           try {
             final transactionId = purchase.purchaseID;
@@ -199,8 +221,6 @@ class AccountController extends GetxController {
             Map<String, dynamic> response;
 
             if (Platform.isAndroid) {
-              // Di Android, serverVerificationData berisi
-              // purchase token yang perlu diverifikasi ke Google Play.
               final purchaseToken =
                   purchase.verificationData.serverVerificationData;
 
@@ -227,26 +247,31 @@ class AccountController extends GetxController {
 
             debugPrint('[IAP] Backend verification berhasil: $response');
 
-            // Selesaikan purchase hanya setelah backend menyatakan valid.
             if (purchase.pendingCompletePurchase) {
               await _inAppPurchase.completePurchase(purchase);
             }
 
             await refreshSubscription();
 
-            Get.snackbar('Berhasil', 'VIP berhasil diaktifkan.');
+            _hidePurchaseLoading();
+            isIapLoading.value = false;
+
+            showIapSnackbar(
+              title: 'VIP Aktif!',
+              message: 'Selamat! Langganan VIP DMN Play berhasil diaktifkan.',
+            );
           } catch (e, stackTrace) {
             debugPrint('[IAP] Verification error: $e');
             debugPrint('$stackTrace');
 
-            /*
-           * JANGAN completePurchase() jika backend gagal.
-           *
-           * Purchase akan tetap bisa diproses kembali.
-           */
-            Get.snackbar('Pembelian belum diproses', e.toString());
-          } finally {
+            _hidePurchaseLoading();
             isIapLoading.value = false;
+
+            showIapSnackbar(
+              title: 'Pembelian belum diproses',
+              message: e.toString(),
+              isError: true,
+            );
           }
 
           break;
@@ -254,11 +279,13 @@ class AccountController extends GetxController {
         case PurchaseStatus.error:
           debugPrint('[IAP] Purchase error: ${purchase.error}');
 
+          _hidePurchaseLoading();
           isIapLoading.value = false;
 
-          Get.snackbar(
-            'Purchase Error',
-            purchase.error?.message ?? 'Pembelian gagal.',
+          showIapSnackbar(
+            title: 'Pembelian gagal',
+            message: purchase.error?.message ?? 'Silakan coba kembali.',
+            isError: true,
           );
 
           break;
@@ -266,9 +293,53 @@ class AccountController extends GetxController {
         case PurchaseStatus.canceled:
           debugPrint('[IAP] Purchase dibatalkan');
 
+          _hidePurchaseLoading();
           isIapLoading.value = false;
+
           break;
       }
+    }
+  }
+
+  void _showPurchaseLoading() {
+    if (_isPurchaseDialogOpen) return;
+
+    _isPurchaseDialogOpen = true;
+
+    Get.dialog(
+      PopScope(
+        canPop: false,
+        child: const Dialog(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 28),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  width: 28,
+                  height: 28,
+                  child: CircularProgressIndicator(strokeWidth: 3),
+                ),
+                SizedBox(width: 20),
+                Expanded(
+                  child: Text('Menunggu proses pembayaran Google Play...'),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+      barrierDismissible: false,
+    );
+  }
+
+  void _hidePurchaseLoading() {
+    if (!_isPurchaseDialogOpen) return;
+
+    _isPurchaseDialogOpen = false;
+
+    if (Get.isDialogOpen == true) {
+      Get.back();
     }
   }
 
@@ -427,10 +498,8 @@ class AccountController extends GetxController {
   // }
 
   Future<void> subscribe(ProductDetails product) async {
-    // Belum login: simpan pilihan paket dan arahkan ke login.
     if (!isLogin) {
       _pendingSubscriptionProductId = product.id;
-
       Get.toNamed('/login');
       return;
     }
@@ -438,26 +507,40 @@ class AccountController extends GetxController {
     if (isIapLoading.value) return;
 
     if (!_iapProducts.containsKey(product.id)) {
-      Get.snackbar('Error', 'Produk tidak tersedia di store.');
+      showIapSnackbar(
+        title: 'Produk tidak tersedia',
+        message: 'Silakan coba lagi sebentar.',
+        isError: true,
+      );
       await _initIap();
       return;
     }
 
     try {
       isIapLoading.value = true;
+      _showPurchaseLoading();
 
       final purchaseParam = PurchaseParam(
         productDetails: _iapProducts[product.id]!,
       );
 
-      await _inAppPurchase.buyNonConsumable(purchaseParam: purchaseParam);
+      final launched = await _inAppPurchase.buyNonConsumable(
+        purchaseParam: purchaseParam,
+      );
+
+      debugPrint('[IAP] Purchase flow launched: $launched');
     } catch (e, stackTrace) {
       debugPrint('[IAP] Buy error: $e');
       debugPrint('$stackTrace');
 
+      _hidePurchaseLoading();
       isIapLoading.value = false;
 
-      Get.snackbar('Purchase Error', e.toString());
+      showIapSnackbar(
+        title: 'Purchase Error',
+        message: e.toString(),
+        isError: true,
+      );
     }
   }
 
@@ -482,10 +565,12 @@ class AccountController extends GetxController {
       final product = _iapProducts[productId];
 
       if (product == null) {
-        Get.snackbar(
-          'Produk tidak tersedia',
-          'Paket yang dipilih tidak ditemukan di Google Play. '
+        showIapSnackbar(
+          title: 'Produk tidak tersedia',
+          message:
+              'Paket yang dipilih tidak ditemukan di Google Play. '
               'Silakan pilih paket kembali.',
+          isError: true,
         );
         return;
       }
@@ -495,7 +580,11 @@ class AccountController extends GetxController {
       debugPrint('[IAP] Pending subscription error: $e');
       debugPrint('$stackTrace');
 
-      Get.snackbar('Purchase Error', e.toString());
+      showIapSnackbar(
+        title: 'Purchase Error',
+        message: e.toString(),
+        isError: true,
+      );
     }
   }
 
@@ -522,7 +611,39 @@ class AccountController extends GetxController {
   }
 
   Future<void> refreshSubscription() async {
-    await homeController.loadHome();
+    final token = await StorageService.readToken();
+
+    if (token == null || token.isEmpty) {
+      user.value = null;
+      isVip.value = false;
+      return;
+    }
+
+    try {
+      await homeController.loadHome();
+
+      final me = await repository.me();
+
+      final currentToken = await StorageService.readToken();
+
+      if (currentToken == null ||
+          currentToken.isEmpty ||
+          currentToken != token) {
+        return;
+      }
+
+      user.value = me;
+      isVip.value = me.isVip;
+
+      debugPrint(
+        '[VIP REFRESH] '
+        'isVip=${isVip.value} | '
+        'activeSubscription=${activeSubscription != null}',
+      );
+    } catch (e, stackTrace) {
+      debugPrint('[VIP REFRESH] Error: $e');
+      debugPrintStack(stackTrace: stackTrace);
+    }
   }
 
   void resetPackage() {
@@ -552,12 +673,7 @@ class AccountController extends GetxController {
       print('stackTrace: $stackTrace');
       print('======================================');
 
-      Get.snackbar(
-        'Error',
-        e.toString(),
-        backgroundColor: Colors.white,
-        colorText: Colors.black,
-      );
+      showIapSnackbar(title: 'Error', message: e.toString(), isError: true);
     } finally {
       isLoadingDevices.value = false;
     }
@@ -571,19 +687,9 @@ class AccountController extends GetxController {
 
       devices.removeWhere((item) => item.id == device.id);
 
-      Get.snackbar(
-        'Success',
-        'Device berhasil dihapus.',
-        backgroundColor: Colors.white,
-        colorText: Colors.black,
-      );
+      showIapSnackbar(title: 'Success', message: 'Device berhasil dihapus.');
     } catch (e) {
-      Get.snackbar(
-        'Error',
-        e.toString(),
-        backgroundColor: Colors.white,
-        colorText: Colors.black,
-      );
+      showIapSnackbar(title: 'Error', message: e.toString(), isError: true);
     } finally {
       deletingDeviceId.value = null;
     }

@@ -60,4 +60,30 @@ class HomeRepository {
       rethrow;
     }
   }
+
+  Future<Map<String, dynamic>> allMovies({int page = 1, int limit = 20}) async {
+    final res = await api.get('all-movies?page=$page&limit=$limit');
+
+    if (res.data is! Map) {
+      throw Exception('Invalid response: ${res.data}');
+    }
+
+    final responseData = res.data['data'];
+
+    if (responseData is! Map) {
+      throw Exception('Invalid pagination data: $responseData');
+    }
+
+    final items = responseData['items'];
+
+    if (items is! List) {
+      throw Exception('Invalid movie list: $items');
+    }
+
+    return {
+      'items': items.map((e) => MovieModel.fromJson(e)).toList(),
+      'page': responseData['page'] ?? page,
+      'has_more': responseData['has_more'] == true,
+    };
+  }
 }

@@ -1,10 +1,10 @@
 name: dmn_play
 description: "Play short video"
-publish_to: 'playstore' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.2+5
 
 environment:
-  sdk: ^3.7.2
+  sdk: '>=3.7.2 <4.0.0'
 
 
 dependencies:
@@ -45,6 +45,8 @@ dependencies:
   device_info_plus: ^12.4.0
   uuid: ^4.6.0
   in_app_purchase: ^3.3.0
+  webview_flutter: ^4.14.1
+  package_info_plus: ^9.0.1
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +55,14 @@ dev_dependencies:
 
   flutter_lints: ^5.0.0
   analyzer: ^8.1.1
+
+
+dependency_overrides:
+  media_kit:
+    git:
+      url: https://github.com/media-kit/media-kit.git
+      ref: 44ba261
+      path: media_kit
 
 
 flutter:
