@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		331C808B294A63AB00263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C807B294A618700263BE5 /* RunnerTests.swift */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		424E5CDF3070C752002BD5A7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424E5CDE3070C752002BD5A7 /* StoreKit.framework */; };
+		4256075D3084647900B7A2B1 /* FlutterGeneratedPluginSwiftPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 4256075C3084647900B7A2B1 /* FlutterGeneratedPluginSwiftPackage */; };
 		42F26642306FB5EE00C6F9F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42F26641306FB5EE00C6F9F5 /* GoogleService-Info.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8C79D0C1ECCD88B94C2FE62 /* Pods_Runner.framework in Frameworks */,
+				4256075D3084647900B7A2B1 /* FlutterGeneratedPluginSwiftPackage in Frameworks */,
 				424E5CDF3070C752002BD5A7 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +207,6 @@
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				8BE1E0C7A8B0B96E4FF1ABCC /* [CP] Embed Pods Frameworks */,
-				4C6B8A8DA0D56E9CF63D65CF /* [CP] Copy Pods Resources */,
 				425EF4E5306FA01F0034F246 /* Generate media_kit dSYMs */,
 			);
 			buildRules = (
@@ -246,6 +247,9 @@
 				Base,
 			);
 			mainGroup = 97C146E51CF9000F007C117D;
+			packageReferences = (
+				4256075B3084647900B7A2B1 /* XCLocalSwiftPackageReference "Flutter/ephemeral/Packages/FlutterGeneratedPluginSwiftPackage" */,
+			);
 			productRefGroup = 97C146EF1CF9000F007C117D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -313,23 +317,6 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nif [ \"$ACTION\" != \"install\" ]; then\n    exit 0\nfi\n\nFRAMEWORKS_DIR=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nDSYM_DIR=\"${DWARF_DSYM_FOLDER_PATH}\"\n\necho \"========================================\"\necho \"Generating media_kit dSYMs\"\necho \"Frameworks: $FRAMEWORKS_DIR\"\necho \"dSYMs:      $DSYM_DIR\"\necho \"========================================\"\n\nmkdir -p \"$DSYM_DIR\"\n\nfor NAME in \\\n    Ass \\\n    Avcodec \\\n    Avfilter \\\n    Avformat \\\n    Avutil \\\n    Dav1d \\\n    Freetype \\\n    Fribidi \\\n    Harfbuzz \\\n    Mbedcrypto \\\n    Mbedtls \\\n    Mbedx509 \\\n    Mpv \\\n    Png16 \\\n    Swresample \\\n    Swscale \\\n    Uchardet \\\n    Xml2\ndo\n    BINARY=\"${FRAMEWORKS_DIR}/${NAME}.framework/${NAME}\"\n    DSYM=\"${DSYM_DIR}/${NAME}.framework.dSYM\"\n\n    if [ ! -f \"$BINARY\" ]; then\n        echo \"WARNING: ${NAME}.framework tidak ditemukan\"\n        continue\n    fi\n\n    echo \"\"\n    echo \"Generating: ${NAME}\"\n\n    rm -rf \"$DSYM\"\n\n    dsymutil \"$BINARY\" -o \"$DSYM\"\n\n    echo \"Binary:\"\n    dwarfdump --uuid \"$BINARY\"\n\n    echo \"dSYM:\"\n    dwarfdump --uuid \"$DSYM/Contents/Resources/DWARF/${NAME}\"\ndone\n\necho \"\"\necho \"========================================\"\necho \"media_kit dSYM generation selesai\"\necho \"========================================\"\n";
 		};
-		4C6B8A8DA0D56E9CF63D65CF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5F8A52D17A69B2D77949951C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,9 +347,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -806,6 +797,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		4256075B3084647900B7A2B1 /* XCLocalSwiftPackageReference "Flutter/ephemeral/Packages/FlutterGeneratedPluginSwiftPackage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Flutter/ephemeral/Packages/FlutterGeneratedPluginSwiftPackage;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4256075C3084647900B7A2B1 /* FlutterGeneratedPluginSwiftPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlutterGeneratedPluginSwiftPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 97C146E61CF9000F007C117D /* Project object */;
 }
