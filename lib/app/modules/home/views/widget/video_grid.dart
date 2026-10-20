@@ -103,9 +103,27 @@ class VideoCard extends StatelessWidget {
             Image.network(
               movie.poster,
               fit: BoxFit.cover,
+              gaplessPlayback: true,
+              filterQuality: FilterQuality.low,
+              frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
+                if (wasSynchronouslyLoaded || frame != null) {
+                  return child;
+                }
+
+                return Container(
+                  color: Colors.grey.shade900,
+                  alignment: Alignment.center,
+                  child: const Icon(
+                    Icons.movie_outlined,
+                    color: Colors.white24,
+                    size: 32,
+                  ),
+                );
+              },
               errorBuilder: (_, __, ___) {
                 return Container(
                   color: Colors.grey.shade900,
+                  alignment: Alignment.center,
                   child: const Icon(
                     Icons.movie,
                     color: Colors.white30,

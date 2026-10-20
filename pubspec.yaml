@@ -16,7 +16,7 @@ dependencies:
   get: ^4.7.3
   # better_player: ^0.0.84
   firebase_messaging: 16.4.3
-  flutter_local_notifications: ^19.5.0
+  flutter_local_notifications: ^22.3.2
   flutter_cache_manager: ^3.4.1
   video_player: ^2.10.1
   subtitle_wrapper_package: ^2.2.1

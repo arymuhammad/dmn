@@ -1,4 +1,5 @@
 import 'package:dmn_play/app/modules/login/controllers/login_controller.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
 import '../data/helpers/currency_service.dart';
@@ -52,13 +53,25 @@ class InitialBinding extends Bindings {
     );
 
     // Push Notification
-    Get.put<PushNotificationService>(
+
+    // Push Notification
+    final pushNotificationService = Get.put<PushNotificationService>(
       PushNotificationService(
         Get.find<AuthRepository>(),
         Get.find<UserRepository>(),
       ),
       permanent: true,
     );
+
+    // Inisialisasi FCM saat aplikasi dimulai,
+    // tidak hanya ketika user login.
+    pushNotificationService.init().catchError((
+      Object e,
+      StackTrace stackTrace,
+    ) {
+      debugPrint('[FCM STARTUP] Init error: $e');
+      debugPrintStack(stackTrace: stackTrace);
+    });
 
     Get.put<HomeRepository>(
       HomeRepository(Get.find<ApiClient>()),

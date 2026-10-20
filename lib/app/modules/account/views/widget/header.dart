@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../routes/app_pages.dart';
+import '../../../notifications/views/widgets/notification_bell.dart';
 
 class ProfileHeader extends GetView<AccountController> {
   ProfileHeader({super.key});
@@ -83,9 +84,15 @@ class ProfileHeader extends GetView<AccountController> {
               ),
             ),
 
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.notifications_none, color: Colors.white),
+            NotificationBell(
+              onTap: () {
+                if (user == null) {
+                  Get.toNamed(Routes.LOGIN);
+                  return;
+                }
+
+                Get.toNamed(Routes.NOTIFICATIONS);
+              },
             ),
           ],
         ),

@@ -98,10 +98,9 @@ class MovieBannerController extends GetxController {
     // DATA SUDAH ADA
     // ==========================================================
 
-    if (banners.isNotEmpty) {
+    if (homeController.home.value != null) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (_disposed) return;
-
         _onBannersChanged();
       });
     }
@@ -263,7 +262,7 @@ class MovieBannerController extends GetxController {
     }
 
     try {
-      await player.open(Media( url), play: false);
+      await player.open(Media(url), play: false);
 
       if (_disposed) return;
 

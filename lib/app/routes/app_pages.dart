@@ -20,6 +20,9 @@ import '../modules/movie/bindings/movie_binding.dart';
 import '../modules/movie/views/movie_view.dart';
 import '../modules/navbar/bindings/navbar_binding.dart';
 import '../modules/navbar/views/navbar_view.dart';
+import '../modules/notifications/bindings/notifications_binding.dart';
+import '../modules/notifications/views/notifications_view.dart';
+import '../modules/notifications/views/widgets/notification_detail_view.dart';
 import '../modules/player/bindings/player_binding.dart';
 import '../modules/player/views/player_view.dart';
 import '../modules/privacy_policy/bindings/privacy_policy_binding.dart';
@@ -124,6 +127,18 @@ class AppPages {
       name: _Paths.HELP_CENTER,
       page: () => const HelpCenterView(),
       binding: HelpCenterBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATIONS,
+      page: () => const NotificationsView(),
+      binding: NotificationsBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: '/notifications/:id',
+      page: () => const NotificationDetailView(),
+      binding: NotificationsBinding(),
       transition: Transition.cupertino,
     ),
   ];

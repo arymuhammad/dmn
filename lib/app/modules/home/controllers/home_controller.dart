@@ -78,13 +78,23 @@ class HomeController extends GetxController
     }
 
     try {
+      final homeStopwatch = Stopwatch()..start();
+      debugPrint('[HOME TIMING] Mulai loadHome');
       final data = await repository.home();
 
+      // Pasang data utama lebih dahulu.
       home.value = data;
+      debugPrint(
+        '[HOME TIMING] Data diterima dan home.value diisi: '
+        '${homeStopwatch.elapsedMilliseconds} ms',
+      );
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        debugPrint(
+          '[HOME TIMING] Frame berikutnya: '
+          '${homeStopwatch.elapsedMilliseconds} ms',
+        );
+      });
 
-      // ========================================================
-      // TAB CONTROLLER
-      // ========================================================
       final currentIndex = selectedCategory.value;
       final tabCount = data.genres.length + 1;
 
@@ -92,38 +102,31 @@ class HomeController extends GetxController
         _setupTabController(tabCount, initialIndex: currentIndex);
       }
 
-      // ========================================================
-      // VALIDATE INDEX
-      // ========================================================
       final safeIndex = currentIndex.clamp(0, tabCount - 1);
 
       selectedCategory.value = safeIndex;
       _lastTabIndex = safeIndex;
 
-      // ========================================================
-      // REFRESH CACHE
-      // ========================================================
       if (isRefresh) {
         categoryCache.clear();
       }
 
-      // ========================================================
-      // LOAD ALL MOVIES
-      // ========================================================
-      await loadAllMovies(forceRefresh: isRefresh);
-
-      // ========================================================
-      // PRELOAD CATEGORY AKTIF + BERIKUTNYA
-      // ========================================================
-      preloadAround(safeIndex);
-    } catch (e) {
-      debugPrint('[HOME] LOAD ERROR: $e');
-    } finally {
-      if (isRefresh) {
-        refreshing.value = false;
-      } else {
+      // UI utama tidak perlu menunggu API daftar semua film.
+      if (!isRefresh) {
         loading.value = false;
       }
+
+      // Muat film dan kategori di belakang.
+      await Future.wait([
+        loadAllMovies(forceRefresh: isRefresh),
+        Future<void>(() => preloadAround(safeIndex)),
+      ]);
+    } catch (e, stackTrace) {
+      debugPrint('[HOME] LOAD ERROR: $e');
+      debugPrintStack(stackTrace: stackTrace);
+    } finally {
+      loading.value = false;
+      refreshing.value = false;
     }
   }
 

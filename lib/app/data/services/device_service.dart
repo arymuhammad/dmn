@@ -1,26 +1,30 @@
 import 'dart:io';
 
 import 'package:device_info_plus/device_info_plus.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:uuid/uuid.dart';
 
 class DeviceService {
   final DeviceInfoPlugin _deviceInfo = DeviceInfoPlugin();
+  static const FlutterSecureStorage _storage = FlutterSecureStorage();
 
+  static const String _deviceIdKey = 'dmnplay_device_id';
   // ============================================================
   // DEVICE ID
   // ============================================================
 
   Future<String> getDeviceId() async {
-    if (Platform.isAndroid) {
-      final info = await _deviceInfo.androidInfo;
-      return info.id;
+    String? deviceId = await _storage.read(key: _deviceIdKey);
+
+    if (deviceId != null && deviceId.isNotEmpty) {
+      return deviceId;
     }
 
-    if (Platform.isIOS) {
-      final info = await _deviceInfo.iosInfo;
-      return info.identifierForVendor ?? '';
-    }
+    deviceId = const Uuid().v4();
 
-    return Platform.localHostname;
+    await _storage.write(key: _deviceIdKey, value: deviceId);
+
+    return deviceId;
   }
 
   // ============================================================
@@ -52,15 +56,11 @@ class DeviceService {
 
       if (manufacturer.isNotEmpty &&
           model.isNotEmpty &&
-          !model.toLowerCase().contains(
-            manufacturer.toLowerCase(),
-          )) {
+          !model.toLowerCase().contains(manufacturer.toLowerCase())) {
         return '$manufacturer $model';
       }
 
-      return model.isNotEmpty
-          ? model
-          : 'Android Device';
+      return model.isNotEmpty ? model : 'Android Device';
     }
 
     if (Platform.isIOS) {

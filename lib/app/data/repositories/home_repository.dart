@@ -11,15 +11,24 @@ class HomeRepository {
   HomeRepository(this.api);
 
   Future<HomeModel> home() async {
+    final stopwatch = Stopwatch()..start();
     try {
       final res = await api.get("home");
       // print(res.data.runtimeType);
       // print(res.data);
+
+      debugPrint(
+        '[HOME TIMING] API response: ${stopwatch.elapsedMilliseconds} ms',
+      );
       if (res.data is! Map) {
         throw Exception("Invalid response: ${res.data}");
       }
 
       debugPrint('[HOME] URL      : ${res.realUri}');
+      debugPrint(
+        '[HOME TIMING] Parsing selesai: '
+        '${stopwatch.elapsedMilliseconds} ms',
+      );
       return HomeModel.fromJson(res.data["data"]);
     } on DioException catch (e) {
       debugPrint('========== HOME ERROR ==========');

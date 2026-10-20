@@ -1,9 +1,11 @@
+
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class StorageService {
   StorageService._();
 
-  static const FlutterSecureStorage _storage = FlutterSecureStorage();
+  static const FlutterSecureStorage _storage =
+      FlutterSecureStorage();
 
   static const String tokenKey = "token";
 
@@ -27,6 +29,8 @@ class StorageService {
   }
 
   static Future<void> clear() async {
-    await _storage.deleteAll();
+    // Hapus sesi login saja.
+    // Jangan hapus UUID perangkat.
+    await _storage.delete(key: tokenKey);
   }
 }
