@@ -74,11 +74,27 @@
           }
         },
         {
+          "client_id": "334660427780-82bn4viqmbhlkt092oamp2ghntrarm33.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dmnplay",
+            "certificate_hash": "ab48aaf9ef04527a7148fb1b41f0a3fea9a25b41"
+          }
+        },
+        {
           "client_id": "334660427780-rk5k50m84213rj91j8va038vn3leca1m.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.dmnplay",
             "certificate_hash": "255e36d64ac36cb8c1621c8b65a8c12b3b23e613"
+          }
+        },
+        {
+          "client_id": "334660427780-v5iumghk1mqotpimtlrh109opkm1vdkl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dmnplay",
+            "certificate_hash": "c979da53526214ef6573ae7eb6a68b70ecf46ad9"
           }
         },
         {

@@ -408,8 +408,8 @@ class AccountController extends GetxController with WidgetsBindingObserver {
       user.value = me;
       isVip.value = me.isVip;
 
-      // Pastikan status subscription terbaru dimuat dari backend.
-      await homeController.loadHome();
+      // Session checker cukup memvalidasi sesi dan memperbarui profil.
+      // Data Home dan subscription dimuat melalui proses refresh tersendiri.
 
       debugPrint(
         '[VIP STATUS] '

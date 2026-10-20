@@ -96,38 +96,92 @@ class LoginController extends GetxController {
     Get.toNamed("/login-email");
   }
 
+  // Future<void> onLoginSuccess(LoginResult result) async {
+  //   final account = Get.find<AccountController>();
+
+  //   account.user.value = result.user;
+  //   account.isVip.value = result.user!.isVip;
+
+  //   // PENTING:
+  //   // Restart session checker untuk user yang baru login.
+  //   account.startSessionChecker();
+
+  //   await Get.find<PushNotificationService>().init();
+
+  //   // ==========================================================
+  //   // REFRESH DATA DULU
+  //   // ==========================================================
+
+  //   if (Get.isRegistered<HomeController>()) {
+  //     await Get.find<HomeController>().loadHome(isRefresh: true);
+  //   }
+
+  //   if (Get.isRegistered<HistoryController>()) {
+  //     await Get.find<HistoryController>().loadHistory();
+  //   }
+
+  //   // ==========================================================
+  //   // BARU PINDAH KE NAVBAR
+  //   // ==========================================================
+
+  //   Get.offAllNamed('/navbar');
+
+  //   // Jika user memilih paket sebelum login, lanjutkan pembelian.
+  //   await account.processPendingSubscription();
+  // }
+
   Future<void> onLoginSuccess(LoginResult result) async {
     final account = Get.find<AccountController>();
+
+    debugPrint('[LOGIN SUCCESS] Mulai update account');
 
     account.user.value = result.user;
     account.isVip.value = result.user!.isVip;
 
-    // PENTING:
     // Restart session checker untuk user yang baru login.
     account.startSessionChecker();
 
-    await Get.find<PushNotificationService>().init();
-
-    // ==========================================================
-    // REFRESH DATA DULU
-    // ==========================================================
-
-    if (Get.isRegistered<HomeController>()) {
-      await Get.find<HomeController>().loadHome(isRefresh: true);
-    }
-
-    if (Get.isRegistered<HistoryController>()) {
-      await Get.find<HistoryController>().loadHistory();
-    }
-
-    // ==========================================================
-    // BARU PINDAH KE NAVBAR
-    // ==========================================================
-
+    // Pindah ke navbar SEGERA setelah login berhasil.
+    debugPrint('[LOGIN SUCCESS] Navigasi ke /navbar');
     Get.offAllNamed('/navbar');
-    
-    // Jika user memilih paket sebelum login, lanjutkan pembelian.
-    await account.processPendingSubscription();
+
+    // Proses berikutnya tidak boleh menahan navigasi.
+    try {
+      await Get.find<PushNotificationService>().init();
+      debugPrint('[LOGIN SUCCESS] Push notification selesai');
+    } catch (e, stackTrace) {
+      debugPrint('[LOGIN SUCCESS] Push notification error: $e');
+      debugPrintStack(stackTrace: stackTrace);
+    }
+
+    try {
+      if (Get.isRegistered<HomeController>()) {
+        await Get.find<HomeController>().loadHome(isRefresh: true);
+        debugPrint('[LOGIN SUCCESS] Home selesai');
+      }
+    } catch (e, stackTrace) {
+      debugPrint('[LOGIN SUCCESS] Home error: $e');
+      debugPrintStack(stackTrace: stackTrace);
+    }
+
+    try {
+      if (Get.isRegistered<HistoryController>()) {
+        await Get.find<HistoryController>().loadHistory();
+        debugPrint('[LOGIN SUCCESS] History selesai');
+      }
+    } catch (e, stackTrace) {
+      debugPrint('[LOGIN SUCCESS] History error: $e');
+      debugPrintStack(stackTrace: stackTrace);
+    }
+
+    // Jika user memilih paket sebelum login,
+    // lanjutkan pembelian setelah login.
+    try {
+      await account.processPendingSubscription();
+    } catch (e, stackTrace) {
+      debugPrint('[LOGIN SUCCESS] Pending subscription error: $e');
+      debugPrintStack(stackTrace: stackTrace);
+    }
   }
 
   void logout() {

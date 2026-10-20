@@ -29,7 +29,7 @@ class PushNotificationService {
       return;
     }
 
-    _initialized = true;
+    // _initialized = true;
 
     final messaging = FirebaseMessaging.instance;
 
@@ -56,12 +56,18 @@ class PushNotificationService {
       }
 
       if (apnsToken == null || apnsToken.isEmpty) {
-        debugPrint('❌ APNS TOKEN tidak tersedia');
+        debugPrint(
+          '❌ APNS TOKEN tidak tersedia'
+          'Init akan dicoba lagi saat dipanggil berikutnya.',
+        );
 
         // Jangan panggil getToken() kalau APNs token belum tersedia.
         return;
       }
     }
+
+    // Tandai initialized setelah APNS tersedia.
+    _initialized = true;
 
     final token = await messaging.getToken();
 
