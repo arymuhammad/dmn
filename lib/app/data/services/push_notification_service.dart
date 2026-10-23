@@ -134,15 +134,16 @@ class PushNotificationService {
 
   Future<void> _registerToken(String token) async {
     try {
-      debugPrint('[FCM] Token tersedia: ${token.isNotEmpty}');
-      debugPrint('[FCM] Mulai registrasi token ke backend');
+      // Guest tidak perlu registrasi token ke backend.
+      final authToken = await StorageService.readToken();
+
+      if (authToken == null || authToken.isEmpty) {
+        return;
+      }
 
       await userRepository.registerFcmToken(token: token);
-
-      debugPrint('[FCM] Registrasi token selesai');
-    } catch (e, stackTrace) {
+    } catch (e) {
       debugPrint('[FCM] REGISTER ERROR: $e');
-      debugPrint('[FCM] STACKTRACE: $stackTrace');
     }
   }
 
@@ -235,7 +236,6 @@ class PushNotificationService {
   }
 
   Future<void> _showForegroundNotification(RemoteMessage message) async {
-    
     final notification = message.notification;
 
     final title =
@@ -267,7 +267,7 @@ class PushNotificationService {
         DateTime.now().millisecondsSinceEpoch.remainder(2147483647);
 
     try {
-     await _localNotifications.show(
+      await _localNotifications.show(
         id: notificationId,
         title: title,
         body: body,

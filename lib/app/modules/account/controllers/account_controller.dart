@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:dio/dio.dart';
 import 'package:dmn_play/app/data/models/home_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,6 +20,7 @@ import '../../home/controllers/home_controller.dart';
 
 // SESUAIKAN PATH INI dengan lokasi SuspendedDialog kamu
 import '../../login/views/widgets/suspended_dialog.dart';
+import '../../notifications/controllers/notifications_controller.dart';
 
 class AccountController extends GetxController with WidgetsBindingObserver {
   final AuthRepository repository;
@@ -80,6 +82,8 @@ class AccountController extends GetxController with WidgetsBindingObserver {
   ];
 
   bool _checkingSession = false;
+
+  bool _sessionValidationFailed = false;
   bool _suspendDialogShowing = false;
 
   bool _isPurchaseDialogOpen = false;
@@ -105,8 +109,8 @@ class AccountController extends GetxController with WidgetsBindingObserver {
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
-      debugPrint('[VIP] App kembali aktif, refresh subscription');
       refreshSubscription();
+      _refreshNotifications();
     }
   }
 
@@ -382,23 +386,16 @@ class AccountController extends GetxController with WidgetsBindingObserver {
     if (token == null || token.isEmpty) {
       user.value = null;
       isVip.value = false;
-
       _stopSessionChecker();
-
       return;
     }
-
-    // // Jangan request auth/me kalau memang belum login
-    // if (user.value == null) {
-    //   return;
-    // }
 
     _checkingSession = true;
 
     try {
       final me = await repository.me();
 
-      // Jangan update kalau user sudah logout ketika request berjalan.
+      // Jangan update jika user sudah logout ketika request berjalan.
       final currentToken = await StorageService.readToken();
 
       if (currentToken == null || currentToken.isEmpty) {
@@ -408,8 +405,12 @@ class AccountController extends GetxController with WidgetsBindingObserver {
       user.value = me;
       isVip.value = me.isVip;
 
-      // Session checker cukup memvalidasi sesi dan memperbarui profil.
-      // Data Home dan subscription dimuat melalui proses refresh tersendiri.
+      final recovered = _sessionValidationFailed;
+      _sessionValidationFailed = false;
+
+      if (recovered) {
+        _refreshNotifications(onlyIfError: true);
+      }
 
       debugPrint(
         '[VIP STATUS] '
@@ -419,28 +420,33 @@ class AccountController extends GetxController with WidgetsBindingObserver {
 
       debugPrint('[SESSION] ${me.email ?? ''} masih aktif');
     } on AccountSuspendedException catch (e) {
-      debugPrint('======================================');
-      debugPrint('[SESSION] ACCOUNT SUSPENDED');
-      debugPrint('message : ${e.message}');
-      debugPrint('reason  : ${e.reason}');
-      debugPrint('======================================');
-
+      debugPrint('[SESSION] ACCOUNT SUSPENDED: ${e.message}');
       await _handleSuspended(e);
+    } on DioException catch (e) {
+      // Hanya hapus sesi jika server secara eksplisit
+      // menolak autentikasi karena token tidak valid.
+      if (e.response?.statusCode == 401) {
+        await StorageService.clear();
+
+        user.value = null;
+        isVip.value = false;
+
+        _stopSessionChecker();
+      } else {
+        _sessionValidationFailed = true;
+        // Koneksi terputus, timeout, dan server error:
+        // pertahankan sesi login.
+        debugPrint(
+          '[SESSION] Validasi gagal sementara. '
+          'Sesi dipertahankan. Status: ${e.response?.statusCode}',
+        );
+      }
     } catch (e, stackTrace) {
-      debugPrint('======================================');
-      debugPrint('[SESSION] CHECK ERROR');
-      debugPrint('error: $e');
-      debugPrint('======================================');
+      _sessionValidationFailed = true;
+
+      // Error tak terduga tidak boleh langsung menghapus token.
+      debugPrint('[SESSION] Error sementara: $e');
       debugPrintStack(stackTrace: stackTrace);
-
-      // Error selain suspend tetap menggunakan
-      // logic lama: clear session.
-      await StorageService.clear();
-
-      user.value = null;
-      isVip.value = false;
-
-      _stopSessionChecker();
     } finally {
       _checkingSession = false;
     }
@@ -693,6 +699,18 @@ class AccountController extends GetxController with WidgetsBindingObserver {
     } finally {
       deletingDeviceId.value = null;
     }
+  }
+
+  void _refreshNotifications({bool onlyIfError = false}) {
+    if (!Get.isRegistered<NotificationsController>()) return;
+
+    final controller = Get.find<NotificationsController>();
+
+    if (controller.isLoading.value) return;
+
+    if (onlyIfError && controller.errorMessage.value.isEmpty) return;
+
+    unawaited(controller.loadNotifications());
   }
 
   // ============================================
